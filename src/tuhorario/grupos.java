@@ -1,0 +1,240 @@
+package tuhorario;
+
+import javax.swing.JOptionPane;
+
+public class grupos {
+     int actions = 0;
+    action headact;
+    action actacti;
+    private grupo act;
+    private grupo head;
+    private int cant = 0;
+     public int ngrupos = 0;
+    
+    public grupos(){
+    }
+    
+    public void newaction(grupo grupo, String action){
+        if (grupo == null) return;
+        action nuevo;
+        nuevo = new action(action, grupo);
+        if (headact == null){
+            headact = nuevo;
+            actacti = nuevo;
+        } else {
+           if (actions > 31){
+               headact = headact.sig;
+               headact.ant = null;
+           }
+           nuevo.ant = actacti;
+           actacti.sig= nuevo;
+           actacti = nuevo;
+        }
+        actions++;
+    }
+    
+     private void undodelete(String name) {
+        grupo actual = head;
+        while (actual != null && !(actual.getName().equals(name))) {
+            actual = actual.next;
+        }
+        if (actual != null) {
+            if (actual == head){
+                head = actual.next;
+            }
+            if (actual == act){
+                this.act = actual.ant;
+            }
+            if (actual.ant != null) {
+                actual.ant.next = actual.next;
+                actual.ant = null;
+            }
+            if (actual.next!= null) {
+                actual.next.ant = actual.ant;
+                actual.next = null;
+            }
+        }
+        contargrupos();
+    }
+    
+   private void undonew(grupo nuevo) {
+        if (head == null) {
+            grupo localact = nuevo;
+            while (localact.next != null){
+                localact = localact.next;
+            }
+            this.head = nuevo;
+            this.act = localact;
+        } else {
+            grupo localact = nuevo;
+            while (localact.next != null){
+                localact = localact.next;
+            }
+            nuevo.ant = this.act;
+            this.act.next = nuevo;
+            this.act = localact;
+        }
+        
+        contargrupos();
+    }
+    
+    
+    
+    public void Undo(){
+        if (actacti == null) return;
+        if (actacti.type.equals("added")){
+            undodelete(actacti.genvolved.getName());
+        } else{
+            undonew(actacti.genvolved);
+        }
+        if (actacti == headact){
+            headact = null;
+            actacti = null;
+        }else{
+            actacti = actacti.ant;
+            actacti.sig = null;
+        }
+        actions--;
+    }
+    
+    public void newgrupo(String name){
+        grupo nuevo = new grupo(name);
+        if (head == null){
+            head = nuevo;
+            act = nuevo;
+        } else{
+            act.next = nuevo;
+            nuevo.ant = act;
+            this.act = nuevo;
+        }
+        newaction(nuevo, "added");
+        contargrupos();
+    }
+    
+    
+     public void contargrupos() { //contador de cursos
+        ngrupos = 0;
+        grupo actual = head;
+        while (actual != null) {
+            ngrupos++;
+            actual = actual.next;
+        }
+        
+    }
+     
+    public String[] nombregrupos(){
+        contargrupos();
+        String[] n =new String[ngrupos];
+        int ct=0;
+         grupo actual = head;
+        while (actual != null) {
+            n[ct]=actual.getName();
+            actual = actual.next;
+            ct++;
+        }
+        return n;
+    }
+   public void deletegrupo(String name) {
+        grupo actual = head;
+        while (actual != null && !(actual.getName().equals(name))) {
+            actual = actual.next;
+        }
+        if (actual != null) {
+            if (actual == head){
+                head = actual.next;
+            }
+            if (actual == act){
+                this.act = actual.ant;
+            }
+            if (actual.ant != null) {
+                actual.ant.next = actual.next;
+                actual.ant = null;
+            }
+            if (actual.next != null) {
+                actual.next.ant = actual.ant;
+                actual.next = null;
+            }
+        }
+        newaction(actual, "deleted");
+        contargrupos();
+    }
+    
+    public void contar(){
+        int cont = 0;
+        
+        grupo actual = head;
+        while(actual != null){
+            cont++;
+            actual = actual.next;
+        }
+        this.cant = cont;
+    }
+    
+    
+    public String[] toopciones(){
+        contar();
+        String[] opciones = new String[this.cant];
+        grupo actual = head;
+        int cont = 0;
+        while(actual != null && cont < this.cant){
+            opciones[cont] = cont + " " + actual.getName();
+            cont++;
+            actual = actual.next;
+        }
+        return opciones;
+    }
+    
+    
+    public static String askforname(){
+        String name = (String) JOptionPane.showInputDialog(null, "Escribir nombre del grupo", "",JOptionPane.PLAIN_MESSAGE);
+        if (name == null) return"";
+        while (name.length() > 15){
+            name = JOptionPane.showInputDialog(null, "Escribir nombre no tan largo del grupo", "",JOptionPane.PLAIN_MESSAGE);
+        }
+        return name;
+    }
+    
+    
+    public void menuof(int nu){
+        contar();
+        if (this.cant < nu){
+            return;
+        }
+        
+        grupo actual = head;
+        for (int i=0; i < nu; i++){
+            actual = actual.next;
+        }
+        
+        actual.menu();
+    }
+    
+      public String toText(){
+        String text = "";
+        grupo actual = this.head;
+        while (actual != null){
+            text += actual.toText() + "&";
+            actual = actual.next;
+        }
+        return text;
+    }
+    
+    public void readText(String text){
+        String[] datos = text.split("\\&");
+        grupo ant = null;
+        for (int i = 0; i < datos.length; i++) {
+            String [] separado = datos[i].split("\\$");
+            if (separado.length != 2) continue;
+            grupo nuevo = new grupo(separado[0]);
+            nuevo.getList().readText(separado[1]);
+            
+            if (ant == null){
+                this.head = nuevo;
+            }
+            
+            nuevo.conect(ant);
+            this.act = nuevo;
+            ant = nuevo;
+        }
+    }
+}
