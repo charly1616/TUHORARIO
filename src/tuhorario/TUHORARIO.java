@@ -6,6 +6,10 @@ public class TUHORARIO {
     
     public static void main(String[] args) {
         
+        
+        
+        
+        
         grupos grupos = new grupos();
         grupos.newgrupo("ING SISTEMAS II");
         int opcion = 0;
