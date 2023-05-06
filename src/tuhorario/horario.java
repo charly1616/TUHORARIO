@@ -397,29 +397,24 @@ public class horario extends Listacursos {
         return show;
     }
     
-    
-    public void readText(String text) {
+    public void readText(String text, Listacursos list) {
         String[] datos = text.split("\\`");
-        curso nuevo = null;
         for (int i = 0; i < datos.length; i++) {
             if (datos[i].length() == 0) {
                 continue;
             }
             curso nuevo2 = new curso(datos[i]);
-            if (nuevo == null) {
-                nuevo = nuevo2;
+            String [] partes = datos[i].split("\\<");
+            if (partes.length != 3){
+                System.out.println(partes.length);
                 continue;
             }
-            if (this.cabeza == null) {
-                this.cabeza = nuevo2;
-                this.act = nuevo2;
-            } else {
-                this.act = nuevo2;
-            }
-            nuevo2.conect(nuevo);
-            nuevo = nuevo2;
+            String nombre = partes[0];
+            int ndias = Integer.parseInt(partes[1]);
+            String code = (partes[2]);
+            System.out.println(nombre + " " + ndias + " "+code);
+            nuevocurso(nombre, ndias, list, code);
         }
     }
-    
     
 }

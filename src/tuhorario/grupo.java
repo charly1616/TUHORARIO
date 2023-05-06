@@ -13,8 +13,6 @@ public class grupo {
     
     public grupo(String name){
         this.name = name;
-        this.list = new Listacursos();
-        this.hora = new horario(list);
         init();
     }
     
@@ -159,6 +157,10 @@ public class grupo {
     
     public horario getHor(){
         return this.hora;
+    }
+    
+    public Listacursos getList(){
+        return this.list;
     }
     
     public void menucurs(curso curso) {
