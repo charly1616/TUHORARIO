@@ -2,8 +2,15 @@ package tuhorario;
 
 import javax.swing.JOptionPane;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.FileReader;
+import java.io.BufferedReader;
+import java.io.PrintWriter;
+import java.io.File;
+
 public class grupos {
-     int actions = 0;
+    int actions = 0;
     action headact;
     action actacti;
     private grupo act;
@@ -107,6 +114,7 @@ public class grupos {
             nuevo.ant = act;
             this.act = nuevo;
         }
+        nuevo.toText();
         newaction(nuevo, "added");
         contargrupos();
     }
@@ -209,21 +217,68 @@ public class grupos {
         actual.menu();
     }
     
-      public String toText(){
+    
+    public void ReadGrupos(){
+        String ruta ="Grupos.txt";
+        
+        try {
+            FileReader reader = new FileReader(ruta);
+            BufferedReader buffer = new BufferedReader(reader);
+            String line;
+            String txt = "";
+            while ((line = buffer.readLine()) != null) {
+                txt += line + "\n";
+            }
+            readText(txt);
+            buffer.close();
+            reader.close();
+        } catch (IOException e) {
+            System.out.println("Error reading file: " + e.getMessage());
+        }
+    }
+    
+    
+    public void SaveGrupos(){
+        try {
+            String ruta ="Grupos.txt";
+            FileWriter Saver = new FileWriter(ruta,true);
+            ClearGrupos();
+            Saver.append(toText());
+            Saver.close();
+        } catch (IOException e){
+            System.out.println("ERROR");
+        }
+        
+    }
+    
+    public void ClearGrupos(){
+        File archivo = new File("Grupos.txt");
+        
+        try {
+            PrintWriter writer = new PrintWriter(archivo);
+            writer.print("");
+            writer.close();
+        } catch (IOException e) {
+            System.out.println("Error mientras se limpiaba el archivo: " + e.getMessage());
+        }
+    }
+    
+    
+    public String toText(){
         String text = "";
         grupo actual = this.head;
         while (actual != null){
-            text += actual.toText() + "&";
+            text += actual.toText() + "\n";
             actual = actual.next;
         }
         return text;
     }
     
     public void readText(String text){
-        String[] datos = text.split("\\&");
+        String[] datos = text.split("\n");
         grupo ant = null;
         for (int i = 0; i < datos.length; i++) {
-            String [] separado = datos[i].split("\\$");
+            String [] separado = datos[i].split("\\:");
             if (separado.length != 2) continue;
             grupo nuevo = new grupo(separado[0]);
             nuevo.getList().readText(separado[1]);

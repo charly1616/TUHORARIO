@@ -388,25 +388,33 @@ public class Listacursos {
         String text = "";
         curso actual = this.cabeza;
         while (actual != null){
-            text += actual.toText()+"°";
+            text += actual.toText()+"`";
             actual = actual.sig;
         }
         return text;
     }
-    
-    
-    public void readText(String text){
-        String[] datos = text.split("\\°");
+
+    public void readText(String text) {
+        String[] datos = text.split("\\`");
         curso nuevo = null;
         for (int i = 0; i < datos.length; i++) {
+            if (datos[i].length() == 0) {
+                continue;
+            }
             curso nuevo2 = new curso(datos[i]);
-            if  (nuevo == null) {
+            if (nuevo == null) {
                 nuevo = nuevo2;
                 continue;
+            }
+            if (this.cabeza == null) {
+                this.cabeza = nuevo2;
+                this.act = nuevo2;
+            } else {
+                this.act = nuevo2;
             }
             nuevo2.conect(nuevo);
             nuevo = nuevo2;
         }
     }
-    
+
 }

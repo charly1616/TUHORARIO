@@ -11,12 +11,12 @@ public class TUHORARIO {
         
         
         grupos grupos = new grupos();
-        grupos.newgrupo("ING SISTEMAS II");
+        grupos.ReadGrupos();
         int opcion = 0;
         do {
             String[] opciones = {"1 Entrar a grupo","2. Crear grupo","3. Eliminar grupo"};
             String chose = (String) JOptionPane.showInputDialog(null,"Ingrese su opción", "MENU DE OPCIONES PARA LOS GRUPOS",JOptionPane.PLAIN_MESSAGE, null, opciones, opciones[0]);
-            if (chose == null) return;
+            if (chose == null){ grupos.SaveGrupos();  return;}
             opcion = Character.getNumericValue(chose.charAt(0));
             switch (opcion){
                 case 1:
@@ -35,11 +35,13 @@ public class TUHORARIO {
                     int j= JOptionPane.showConfirmDialog(null, "¿Estás seguro??", "CONFIRMACIÓN",
                 JOptionPane.OK_OPTION, JOptionPane.WARNING_MESSAGE);
                     if (j!=0) {
-                       return;
+                       grupos.SaveGrupos();  return;
                     }
                     grupos.deletegrupo(grupos.askforname());
                     break;
             }
         } while (true);
+        
+        
     }
 }

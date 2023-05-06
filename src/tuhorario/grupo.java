@@ -208,8 +208,9 @@ public class grupo {
     
     public String toText(){
         String text = "";
-        text += this.name+"$";
+        text += this.name+":";
         text += this.list.toText();
+        System.out.println(text);
         return text;
     }
     

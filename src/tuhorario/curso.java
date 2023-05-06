@@ -31,6 +31,7 @@ public class curso {
         }
         this.nombre = partes[0];
         this.ndias = Integer.parseInt(partes[1]);
+        this.listaopc = new opciones(ndias);
         this.listaopc.deencript(partes[2]);
     }
     
@@ -93,5 +94,5 @@ public class curso {
         text += this.listaopc.encript();
         return text;
     }
-    
+     
 }
