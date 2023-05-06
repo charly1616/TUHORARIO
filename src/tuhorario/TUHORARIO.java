@@ -12,7 +12,6 @@ public class TUHORARIO {
         
         grupos grupos = new grupos();
         grupos.ReadGrupos();
-        grupos.readText("INGSOFTWAREII:PROCESOS<1<[dhk,.ckn,.chk,.]`ALGORITMIA<2<[dhk,chk,.dkn,chk,.bor,aor,.dsv,csv,.]`CALCULO<2<[coq,aoq,.dqs,boq,.dik,bik,.ckm,aik,.ekm,bkm,.dkm,bkm,.ekm,akm,.eik,akm,.]`ALGEBRA<1<[akm,.bkm,.ckm,.bkm,.boq,.ajl,.ekm,.bln,.djl,.]`DESAROLLO<2<[dln,bkm,.dkm,bkm,.ckm,akm,.doq,aoq,.]`\nINGHOFTWAREII:PROCESOS<1<[dhk,.ckn,.chk,.]`ALGORITMIA<2<[dhk,chk,.dkn,chk,.bor,aor,.dsv,csv,.]`CALCULO<2<[coq,aoq,.dqs,boq,.dik,bik,.ckm,aik,.ekm,bkm,.dkm,bkm,.ekm,akm,.eik,akm,.]`ALGEBRA<1<[akm,.bkm,.ckm,.bkm,.boq,.ajl,.ekm,.bln,.djl,.]`DESAROLLO<2<[dln,bkm,.dkm,bkm,.ckm,akm,.doq,aoq,.]`");
         int opcion = 0;
         do {
             String[] opciones = {"1 Entrar a grupo","2. Crear grupo","3. Eliminar grupo"};

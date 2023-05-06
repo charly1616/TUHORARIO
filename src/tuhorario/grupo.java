@@ -13,20 +13,8 @@ public class grupo {
     
     public grupo(String name){
         this.name = name;
-        init();
     }
     
-    
-    public void init() {
-
-        if (this.name.equals("ING SISTEMAS II")){
-            hora.nuevocurso("PROCESOS", 1, list,"[chk,.ckn,.dhk,.]");
-            hora.nuevocurso("ALGORITMIA", 2, list,"[csv,dsv,.aor,bor,.chk,dkn,.chk,dhk,.]");
-            hora.nuevocurso("CALCULO", 2, list,"[akm,eik,.akm,ekm,.bkm,dkm,.bkm,ekm,.aik,ckm,.bik,dik,.boq,dqs,.aoq,coq,.]");
-            hora.nuevocurso("ALGEBRA", 1, list,"[djl,.bln,.ekm,.ajl,.boq,.bkm,.ckm,.bkm,.akm,.]");
-            hora.nuevocurso("DESARROLLO", 2, list,"[aoq,doq,.akm,ckm,.bkm,dkm,.bkm,dln,.]");
-        }
-    }
 
     public String getName() {
         return name;
