@@ -281,8 +281,7 @@ public class grupos {
             String [] separado = datos[i].split("\\:");
             if (separado.length != 2) continue;
             grupo nuevo = new grupo(separado[0]);
-            nuevo.getList().readText(separado[1]);
-            
+            nuevo.getHor().readText(separado[0]+separado[1]);
             if (ant == null){
                 this.head = nuevo;
             }

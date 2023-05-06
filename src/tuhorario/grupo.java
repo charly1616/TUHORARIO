@@ -116,7 +116,7 @@ public class grupo {
         int menu2;
 
         do {String[] opciones = {"1. Crear cursos","2. Editar cursos","3. Eliminar curso","4. Devolverse","5. Limpiar "};
-            String choosen = (String)JOptionPane.showInputDialog(null,hora.toedit()+"Ingrese su opción ", "ADMINISTRAR CURSOS_",
+            String choosen = (String)JOptionPane.showInputDialog(null,hora.toedit()+"Ingrese su opción ", "ADMINISTRAR CURSOS",
                     JOptionPane.PLAIN_MESSAGE,null,opciones,opciones[2]);
             if (choosen == null) break;
             menu2 = Character.getNumericValue(choosen.charAt(0));
@@ -157,8 +157,8 @@ public class grupo {
 
     }
     
-    public Listacursos getList(){
-        return this.list;
+    public horario getHor(){
+        return this.hora;
     }
     
     public void menucurs(curso curso) {
@@ -209,7 +209,7 @@ public class grupo {
     public String toText(){
         String text = "";
         text += this.name+":";
-        text += this.list.toText();
+        text += this.hora.toText();
         System.out.println(text);
         return text;
     }
