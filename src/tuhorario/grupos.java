@@ -278,17 +278,16 @@ public class grupos {
         String[] datos = text.split("\n");
         grupo ant = null;
         for (int i = 0; i < datos.length; i++) {
+            System.out.println("creando: "+datos[i]);
             String [] separado = datos[i].split("\\:");
             if (separado.length != 2) continue;
-            grupo nuevo = new grupo(separado[0]);
+            System.out.println("creando: "+datos[i]);
+            newgrupo(separado[0]);
+            grupo nuevo = this.act;
             nuevo.getHor().readText(separado[1],nuevo.getList());
-            if (ant == null){
-                this.head = nuevo;
-            }
             
-            nuevo.conect(ant);
             this.act = nuevo;
-            ant = nuevo;
+            contargrupos();
         }
     }
 }
