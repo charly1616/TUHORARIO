@@ -173,7 +173,7 @@ public class Listacursos {
     public String pedirname() {
        
         String nombre = JOptionPane.showInputDialog("Dijite el nombre (Máximo 10 letras)");
-        while(nombre!=null){
+   
 
         while (nombre.length() > 10) {
             nombre = JOptionPane.showInputDialog("Dijite nuevamente, el nombre es muy largo ");
@@ -182,8 +182,8 @@ public class Listacursos {
             JOptionPane.showMessageDialog(null, "Ese nombre está repetido");
         }
         return nombre;
-        }
-        return "";
+       
+        
     }
     
 
@@ -193,11 +193,7 @@ public class Listacursos {
         String[] days = {"1", "2", "3", "4"};
         String n = (String)JOptionPane.showInputDialog(null, "Cantidad de dias del curso:", 
                 "CANTIDAD DE DIAS", JOptionPane.PLAIN_MESSAGE, null, days, days[0]);
-        if (Day==0) {
-            Day = Integer.parseInt("");
-        }
-        
-        
+
         return Day;
     }
 
