@@ -1,7 +1,7 @@
-package tuhorario;
+package THlogica;
 
 import javax.swing.JOptionPane;
-import static tuhorario.dia.convertirHora;
+import static THlogica.dia.convertirHora;
 
 public class horario extends Listacursos {
     

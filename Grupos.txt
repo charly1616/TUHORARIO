@@ -1,2 +1,3 @@
 ING SISTEMAS II:`PROCESOS II<1<[dhk,.ckn,.chk,.]`ALGORITMIA<2<[dhk,chk,.dkn,chk,.bor,aor,.dsv,csv,.]`CALCULO<2<[coq,aoq,.dqs,boq,.dik,bik,.ckm,aik,.ekm,bkm,.dkm,bkm,.ekm,akm,.eik,akm,.]`ALGEBRA<1<[akm,.bkm,.ckm,.bkm,.boq,.ajl,.ekm,.bln,.djl,.]`DESAROLLO II<2<[dln,bkm,.dkm,bkm,.ckm,akm,.doq,aoq,.]
 ING CIVIL II:`PROCESOS II<1<[dhk,.ckn,.chk,.]`CALCULO<2<[coq,aoq,.dqs,boq,.dik,bik,.ckm,aik,.ekm,bkm,.dkm,bkm,.ekm,akm,.eik,akm,.]`DESAROLLO II<2<[dln,bkm,.dkm,bkm,.ckm,akm,.doq,aoq,.]`ALGEBRA<1<[akm,.bkm,.ckm,.bkm,.boq,.ajl,.ekm,.bln,.djl,.]
+ING BIOMEDICAII:`PROCESOS<1<[dhk,.ckn,.chk,.]

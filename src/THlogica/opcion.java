@@ -1,4 +1,4 @@
-package tuhorario;
+package THlogica;
 
 import javax.swing.JOptionPane;
 
