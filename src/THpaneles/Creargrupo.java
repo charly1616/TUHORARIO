@@ -1,10 +1,8 @@
 
 package THpaneles;
 
-/**
- *
- * @author juand
- */
+import java.awt.geom.RoundRectangle2D;
+
 public class Creargrupo extends javax.swing.JPanel {
 
     /**
@@ -12,6 +10,7 @@ public class Creargrupo extends javax.swing.JPanel {
      */
     public Creargrupo() {
         initComponents();
+        
     }
 
     /**
@@ -25,12 +24,16 @@ public class Creargrupo extends javax.swing.JPanel {
 
         jPanel1 = new javax.swing.JPanel();
         creandog = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        Entrada = new javax.swing.JLabel();
+        Dia = new javax.swing.JLabel();
+        Salida = new javax.swing.JLabel();
         dias = new javax.swing.JComboBox<>();
-        jSpinner4 = new javax.swing.JSpinner();
-        jSpinner5 = new javax.swing.JSpinner();
+        nSalida = new javax.swing.JSpinner();
+        nEntrada = new javax.swing.JSpinner();
+        jSeparator1 = new javax.swing.JSeparator();
+        AM = new javax.swing.JToggleButton();
+        PM = new javax.swing.JToggleButton();
+        Cancelar = new javax.swing.JLabel();
 
         jPanel1.setBackground(new java.awt.Color(176, 235, 176));
         jPanel1.setForeground(new java.awt.Color(0, 0, 0));
@@ -38,32 +41,67 @@ public class Creargrupo extends javax.swing.JPanel {
 
         creandog.setBackground(new java.awt.Color(169, 209, 142));
         creandog.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 17)); // NOI18N
-        creandog.setForeground(new java.awt.Color(0, 102, 0));
+        creandog.setForeground(new java.awt.Color(255, 255, 255));
         creandog.setText("CREANDO GRUPO");
         jPanel1.add(creandog, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, 170, -1));
 
-        jLabel1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 16)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 102, 0));
-        jLabel1.setText("Entrada");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 70, -1));
+        Entrada.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 16)); // NOI18N
+        Entrada.setForeground(new java.awt.Color(255, 255, 255));
+        Entrada.setText("Cancelar");
+        jPanel1.add(Entrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, 80, -1));
 
-        jLabel2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 16)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 102, 0));
-        jLabel2.setText("Dia");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 80, 50, -1));
+        Dia.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 16)); // NOI18N
+        Dia.setForeground(new java.awt.Color(255, 255, 255));
+        Dia.setText("Dia");
+        jPanel1.add(Dia, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, 50, -1));
 
-        jLabel3.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 16)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 102, 0));
-        jLabel3.setText("Salida");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, 70, -1));
+        Salida.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 16)); // NOI18N
+        Salida.setForeground(new java.awt.Color(255, 255, 255));
+        Salida.setText("Salida");
+        jPanel1.add(Salida, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 70, -1));
 
         dias.setBackground(new java.awt.Color(209, 243, 222));
         dias.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
         dias.setForeground(new java.awt.Color(102, 102, 102));
         dias.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado" }));
-        jPanel1.add(dias, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, 120, 20));
-        jPanel1.add(jSpinner4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 190, 70, 30));
-        jPanel1.add(jSpinner5, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 140, 70, 30));
+        jPanel1.add(dias, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 70, 120, 20));
+
+        nSalida.setModel(new javax.swing.SpinnerNumberModel(8, 1, 12, 1));
+        jPanel1.add(nSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 200, 70, 30));
+
+        nEntrada.setModel(new javax.swing.SpinnerNumberModel(6, 1, 12, 1));
+        jPanel1.add(nEntrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 140, 70, -1));
+
+        jSeparator1.setBackground(new java.awt.Color(0, 102, 0));
+        jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, 300, 10));
+
+        AM.setBackground(new java.awt.Color(112, 173, 71));
+        AM.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
+        AM.setForeground(new java.awt.Color(204, 255, 204));
+        AM.setText("PM");
+        AM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AMActionPerformed(evt);
+            }
+        });
+        jPanel1.add(AM, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 200, 70, -1));
+
+        PM.setBackground(new java.awt.Color(112, 173, 71));
+        PM.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
+        PM.setForeground(new java.awt.Color(204, 255, 204));
+        PM.setText("AM");
+        PM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PMActionPerformed(evt);
+            }
+        });
+        jPanel1.add(PM, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 140, 70, -1));
+
+        Cancelar.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 16)); // NOI18N
+        Cancelar.setForeground(new java.awt.Color(255, 255, 255));
+        Cancelar.setText("Entrada");
+        jPanel1.add(Cancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, 70, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -77,15 +115,27 @@ public class Creargrupo extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void AMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AMActionPerformed
+
+    private void PMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PMActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JToggleButton AM;
+    private javax.swing.JLabel Cancelar;
+    private javax.swing.JLabel Dia;
+    private javax.swing.JLabel Entrada;
+    private javax.swing.JToggleButton PM;
+    private javax.swing.JLabel Salida;
     private javax.swing.JLabel creandog;
     private javax.swing.JComboBox<String> dias;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JSpinner jSpinner4;
-    private javax.swing.JSpinner jSpinner5;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSpinner nEntrada;
+    private javax.swing.JSpinner nSalida;
     // End of variables declaration//GEN-END:variables
 }
