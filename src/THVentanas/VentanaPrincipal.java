@@ -37,6 +37,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         header = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         switchven = new javax.swing.JTabbedPane();
+        edit = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -55,7 +59,27 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         getContentPane().add(header, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1180, 60));
 
         switchven.setBackground(new java.awt.Color(237, 253, 246));
-        getContentPane().add(switchven, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 1180, 590));
+        switchven.setTabPlacement(javax.swing.JTabbedPane.RIGHT);
+        switchven.setToolTipText("TOOLTIP");
+
+        edit.setBackground(new java.awt.Color(204, 204, 204));
+        edit.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel1.setBackground(new java.awt.Color(209, 243, 222));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        edit.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 0, 300, 660));
+
+        jPanel2.setBackground(new java.awt.Color(237, 253, 246));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        edit.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 0, 540, 660));
+
+        jPanel3.setBackground(new java.awt.Color(237, 253, 246));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        edit.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 340, 660));
+
+        switchven.addTab("tab1", edit);
+
+        getContentPane().add(switchven, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 1230, 660));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -96,8 +120,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel edit;
     private javax.swing.JPanel header;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JTabbedPane switchven;
     // End of variables declaration//GEN-END:variables
 }
