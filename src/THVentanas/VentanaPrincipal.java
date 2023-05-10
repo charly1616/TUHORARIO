@@ -107,9 +107,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         name.setForeground(new java.awt.Color(255, 255, 255));
         name.setText("#TUHORARIO");
         header.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, 220, 20));
-        header.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 0, 50, 50));
-        header.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 0, 50, 50));
-        header.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 0, 50, 50));
+        header.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 20, 30, 30));
+
+        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/icons8_edit_45px_3.png"))); // NOI18N
+        jButton9.setContentAreaFilled(false);
+        header.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 20, 30, 30));
+        header.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 20, 30, 30));
 
         getContentPane().add(header, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1180, 60));
 
