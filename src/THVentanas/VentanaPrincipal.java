@@ -41,12 +41,24 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         min = new javax.swing.JLabel();
         exit = new javax.swing.JLabel();
         name = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
         switchven = new javax.swing.JTabbedPane();
         edit = new javax.swing.JPanel();
         Gruposed = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        gruptitle = new javax.swing.JLabel();
+        newgup = new javax.swing.JButton();
         cursosed = new javax.swing.JPanel();
+        newgup1 = new javax.swing.JButton();
+        gruptitle1 = new javax.swing.JLabel();
+        newgup2 = new javax.swing.JButton();
+        newgup3 = new javax.swing.JButton();
         opcionsed = new javax.swing.JPanel();
+        newgup4 = new javax.swing.JButton();
+        newgup5 = new javax.swing.JButton();
+        newgup6 = new javax.swing.JButton();
+        gruptitle2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -95,6 +107,23 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         name.setText("#TUHORARIO");
         header.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, 220, 20));
 
+        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jButton1.setBorder(null);
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        header.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 10, 40, 40));
+
+        jButton3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/icons8_edit_45px_2.png"))); // NOI18N
+        jButton3.setBorder(null);
+        jButton3.setContentAreaFilled(false);
+        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        header.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 10, 40, 40));
+
+        jButton4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jButton4.setBorder(null);
+        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        header.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 10, 40, 40));
+
         getContentPane().add(header, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1180, 60));
 
         switchven.setBackground(new java.awt.Color(237, 253, 246));
@@ -107,19 +136,107 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         Gruposed.setBackground(new java.awt.Color(237, 253, 246));
         Gruposed.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(127, 127, 127));
-        jLabel1.setText("Grupos");
-        Gruposed.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 50, 20));
+        gruptitle.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
+        gruptitle.setForeground(new java.awt.Color(127, 127, 127));
+        gruptitle.setText("Grupos");
+        Gruposed.add(gruptitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 100, 20));
+
+        newgup.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 20)); // NOI18N
+        newgup.setForeground(new java.awt.Color(127, 127, 127));
+        newgup.setText("+");
+        newgup.setBorder(null);
+        newgup.setContentAreaFilled(false);
+        newgup.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Gruposed.add(newgup, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 20, 20, 20));
 
         edit.add(Gruposed, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 340, 670));
 
         cursosed.setBackground(new java.awt.Color(209, 243, 222));
         cursosed.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        newgup1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 20)); // NOI18N
+        newgup1.setForeground(new java.awt.Color(127, 127, 127));
+        newgup1.setText("+");
+        newgup1.setBorder(null);
+        newgup1.setContentAreaFilled(false);
+        newgup1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        cursosed.add(newgup1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 20, 20, 20));
+
+        gruptitle1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
+        gruptitle1.setForeground(new java.awt.Color(127, 127, 127));
+        gruptitle1.setText("Cursos");
+        cursosed.add(gruptitle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 100, 20));
+
+        newgup2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 20)); // NOI18N
+        newgup2.setForeground(new java.awt.Color(127, 127, 127));
+        newgup2.setText("u");
+        newgup2.setBorder(null);
+        newgup2.setContentAreaFilled(false);
+        newgup2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        newgup2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                newgup2ActionPerformed(evt);
+            }
+        });
+        cursosed.add(newgup2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 20, 20, 20));
+
+        newgup3.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 20)); // NOI18N
+        newgup3.setForeground(new java.awt.Color(127, 127, 127));
+        newgup3.setText("l");
+        newgup3.setBorder(null);
+        newgup3.setContentAreaFilled(false);
+        newgup3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        newgup3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                newgup3ActionPerformed(evt);
+            }
+        });
+        cursosed.add(newgup3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 20, 20, 20));
+
         edit.add(cursosed, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 0, 300, 670));
 
         opcionsed.setBackground(new java.awt.Color(237, 253, 246));
         opcionsed.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        newgup4.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 20)); // NOI18N
+        newgup4.setForeground(new java.awt.Color(127, 127, 127));
+        newgup4.setText("+");
+        newgup4.setBorder(null);
+        newgup4.setContentAreaFilled(false);
+        newgup4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        opcionsed.add(newgup4, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 20, 20, 20));
+
+        newgup5.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 20)); // NOI18N
+        newgup5.setForeground(new java.awt.Color(127, 127, 127));
+        newgup5.setText("l");
+        newgup5.setBorder(null);
+        newgup5.setContentAreaFilled(false);
+        newgup5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        newgup5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                newgup5ActionPerformed(evt);
+            }
+        });
+        opcionsed.add(newgup5, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 20, 20, 20));
+
+        newgup6.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 20)); // NOI18N
+        newgup6.setForeground(new java.awt.Color(127, 127, 127));
+        newgup6.setText("u");
+        newgup6.setBorder(null);
+        newgup6.setContentAreaFilled(false);
+        newgup6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        newgup6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                newgup6ActionPerformed(evt);
+            }
+        });
+        opcionsed.add(newgup6, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 20, 20, 20));
+
+        gruptitle2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
+        gruptitle2.setForeground(new java.awt.Color(127, 127, 127));
+        gruptitle2.setText("Opciones");
+        opcionsed.add(gruptitle2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 100, 20));
+
         edit.add(opcionsed, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 0, 540, 670));
 
         switchven.addTab("tab1", edit);
@@ -146,6 +263,22 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         
         setLocation(x-move.getX()-15,y+move.getY()-25);
     }//GEN-LAST:event_moveMouseDragged
+
+    private void newgup2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newgup2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_newgup2ActionPerformed
+
+    private void newgup3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newgup3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_newgup3ActionPerformed
+
+    private void newgup5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newgup5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_newgup5ActionPerformed
+
+    private void newgup6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newgup6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_newgup6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -187,11 +320,23 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel cursosed;
     private javax.swing.JPanel edit;
     private javax.swing.JLabel exit;
+    private javax.swing.JLabel gruptitle;
+    private javax.swing.JLabel gruptitle1;
+    private javax.swing.JLabel gruptitle2;
     private javax.swing.JPanel header;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel min;
     private javax.swing.JLabel move;
     private javax.swing.JLabel name;
+    private javax.swing.JButton newgup;
+    private javax.swing.JButton newgup1;
+    private javax.swing.JButton newgup2;
+    private javax.swing.JButton newgup3;
+    private javax.swing.JButton newgup4;
+    private javax.swing.JButton newgup5;
+    private javax.swing.JButton newgup6;
     private javax.swing.JPanel opcionsed;
     private javax.swing.JTabbedPane switchven;
     // End of variables declaration//GEN-END:variables
