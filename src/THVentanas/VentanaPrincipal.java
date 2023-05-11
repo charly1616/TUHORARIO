@@ -82,13 +82,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         labelop = new javax.swing.JLabel();
         back2 = new javax.swing.JButton();
         add3 = new javax.swing.JButton();
-        code = new custom.TextField();
+        jTextField1 = new javax.swing.JTextField();
         See = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setFocusableWindowState(false);
         setUndecorated(true);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -343,37 +342,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         opcionsed.add(add3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 20, 20, 20));
 
-        code.setBackground(new java.awt.Color(169, 209, 142));
-        code.setBorder(null);
-        code.setForeground(new java.awt.Color(255, 255, 255));
-        code.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        code.setText("Codigo");
-        code.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 10)); // NOI18N
-        code.setRound(15);
-        code.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                codeFocusLost(evt);
-            }
-        });
-        code.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                codeMouseClicked(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                codeMouseReleased(evt);
-            }
-        });
-        code.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                codeActionPerformed(evt);
-            }
-        });
-        code.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                codePropertyChange(evt);
-            }
-        });
-        opcionsed.add(code, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 60, 330, 20));
+        jTextField1.setText("jTextField1");
+        opcionsed.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 270, 120));
 
         edit.add(opcionsed, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 0, 540, 670));
 
@@ -528,31 +498,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private void add3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_add3ActionPerformed
-
-    private void codeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_codeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_codeActionPerformed
-
-    private void codeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_codeMouseClicked
-        if (this.code.getText().equals("Codigo")) {
-            this.code.setText("");
-        }
-    }//GEN-LAST:event_codeMouseClicked
-
-    private void codePropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_codePropertyChange
-        
-    }//GEN-LAST:event_codePropertyChange
-
-    private void codeMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_codeMouseReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_codeMouseReleased
-
-    private void codeFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_codeFocusLost
-        if (this.code.getText().equals("")) {
-            this.code.setText("Codigo");
-        }
-    }//GEN-LAST:event_codeFocusLost
-
     
     
     
@@ -598,7 +543,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton back2;
     private javax.swing.JButton brush;
     private javax.swing.JButton brush2;
-    private custom.TextField code;
     private javax.swing.JPanel cursosed;
     private javax.swing.JPanel downthing;
     private javax.swing.JPanel edit;
@@ -606,6 +550,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel header;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JButton key;
     private javax.swing.JLabel labelcursos;
     private javax.swing.JLabel labelgrupos;
