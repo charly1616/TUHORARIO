@@ -7,6 +7,7 @@ package THVentanas;
 import THlogica.curso;
 import THlogica.grupo;
 import THlogica.grupos;
+import THpaneles.CrearGroup;
 import THpaneles.GroupCard;
 
 
@@ -82,7 +83,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         labelop = new javax.swing.JLabel();
         back2 = new javax.swing.JButton();
         add3 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
+        textField1 = new custom.TextField();
         See = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
@@ -194,7 +195,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         edit.setBackground(new java.awt.Color(204, 204, 204));
         edit.setFocusable(false);
-        edit.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        edit.setLayout(null);
 
         Gruposed.setBackground(new java.awt.Color(237, 253, 246));
         Gruposed.setFocusable(false);
@@ -209,6 +210,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         add.setContentAreaFilled(false);
         add.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         add.setFocusPainted(false);
+        add.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout GruposedLayout = new javax.swing.GroupLayout(Gruposed);
         Gruposed.setLayout(GruposedLayout);
@@ -229,7 +235,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                     .addComponent(add, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
-        edit.add(Gruposed, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 340, 670));
+        edit.add(Gruposed);
+        Gruposed.setBounds(0, 0, 340, 670);
 
         cursosed.setBackground(new java.awt.Color(209, 243, 222));
         cursosed.setFocusable(false);
@@ -279,7 +286,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         cursosed.add(brush, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, 20, 20));
 
-        edit.add(cursosed, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 0, 300, 670));
+        edit.add(cursosed);
+        cursosed.setBounds(340, 0, 300, 670);
 
         opcionsed.setBackground(new java.awt.Color(237, 253, 246));
         opcionsed.setFocusable(false);
@@ -342,10 +350,15 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         opcionsed.add(add3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 20, 20, 20));
 
-        jTextField1.setText("jTextField1");
-        opcionsed.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 270, 120));
+        textField1.setBackground(new java.awt.Color(102, 255, 102));
+        textField1.setBorder(null);
+        textField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        textField1.setText("textField1");
+        textField1.setRound(30);
+        opcionsed.add(textField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 300, 30));
 
-        edit.add(opcionsed, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 0, 540, 670));
+        edit.add(opcionsed);
+        opcionsed.setBounds(640, 0, 540, 670);
 
         switchven.addTab("tab1", edit);
 
@@ -451,30 +464,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     
     
     
-    private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_backActionPerformed
-
-    private void add2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_add2ActionPerformed
-
-    private void brushActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_brushActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_brushActionPerformed
-
-    private void keyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_keyActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_keyActionPerformed
-
-    private void brush2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_brush2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_brush2ActionPerformed
-
-    private void back2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_back2ActionPerformed
-
     private void toEDITActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toEDITActionPerformed
         
         this.switchven.setSelectedIndex(0);
@@ -498,6 +487,44 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private void add3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_add3ActionPerformed
+
+    private void back2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_back2ActionPerformed
+
+    private void keyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_keyActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_keyActionPerformed
+
+    private void brush2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_brush2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_brush2ActionPerformed
+
+    private void brushActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_brushActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_brushActionPerformed
+
+    private void add2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_add2ActionPerformed
+
+    private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_backActionPerformed
+
+    private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
+        CrearGroup nuevo = new CrearGroup();
+        nuevo.padre = this;
+        nuevo.variable = grupos;
+
+
+        this.edit.add(nuevo);
+        nuevo.setLocation(200,20);
+        nuevo.setSize(400, 300);
+        nuevo.repaint();
+        repaint();
+
+    }//GEN-LAST:event_addActionPerformed
     
     
     
@@ -550,7 +577,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel header;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JButton key;
     private javax.swing.JLabel labelcursos;
     private javax.swing.JLabel labelgrupos;
@@ -560,6 +586,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel name;
     private javax.swing.JPanel opcionsed;
     private javax.swing.JTabbedPane switchven;
+    private custom.TextField textField1;
     private javax.swing.JButton toCustom;
     private javax.swing.JButton toEDIT;
     private javax.swing.JButton toGENER;
