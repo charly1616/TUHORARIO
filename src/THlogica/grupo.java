@@ -5,8 +5,13 @@ import javax.swing.JOptionPane;
 public class grupo {
     
     private String name;
+    
+    private String Semestre = "0";
+    
     grupo next;
     grupo ant;
+    
+    
     
     private Listacursos list = new Listacursos();
     private horario hora = new horario(list);
@@ -199,9 +204,38 @@ public class grupo {
     public String toText(){
         String text = "";
         text += this.name+":";
+        text += this.Semestre+":";
         text += this.hora.toText();
         System.out.println(text);
         return text;
     }
+    
+    
+    public int contar(){
+        this.hora.contarcursos();
+        return this.hora.ncursos;
+    }
+
+    public horario getHora() {
+        return hora;
+    }
+
+    public void setSemestre(String Semestre) {
+        this.Semestre = Semestre;
+    }
+
+    public String getSemestre() {
+        return Semestre;
+    }
+
+    public grupo getNext() {
+        return next;
+    }
+
+    public grupo getAnt() {
+        return ant;
+    }
+    
+    
     
 }

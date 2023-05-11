@@ -390,6 +390,10 @@ public class Listacursos {
         return text;
     }
 
+    public int getNcursos() {
+        return ncursos;
+    }
+
     
 
 }

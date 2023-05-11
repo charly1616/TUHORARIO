@@ -120,7 +120,7 @@ public class grupos {
     }
     
     
-     public void contargrupos() { //contador de cursos
+    public void contargrupos() { //contador de cursos
         ngrupos = 0;
         grupo actual = head;
         while (actual != null) {
@@ -280,14 +280,40 @@ public class grupos {
         for (int i = 0; i < datos.length; i++) {
             System.out.println("creando: "+datos[i]);
             String [] separado = datos[i].split("\\:");
-            if (separado.length != 2) continue;
+            if (separado.length != 3) continue;
             System.out.println("creando: "+datos[i]);
             newgrupo(separado[0]);
             grupo nuevo = this.act;
-            nuevo.getHor().readText(separado[1],nuevo.getList());
+            System.out.println(separado[1]);
+            nuevo.setSemestre(separado[1]);
+            nuevo.getHor().readText(separado[2],nuevo.getList());
             
             this.act = nuevo;
             contargrupos();
         }
     }
+
+    public grupo getAct() {
+        return act;
+    }
+
+    public void setAct(grupo act) {
+        this.act = act;
+    }
+
+    public grupo getHead() {
+        return head;
+    }
+
+    public void setHead(grupo head) {
+        this.head = head;
+    }
+
+    public int getCant() {
+        return cant;
+    }
+    
+    
+    
+    
 }
