@@ -136,7 +136,7 @@ public class GroupCard extends javax.swing.JPanel {
     }//GEN-LAST:event_whiteMouseClicked
 
     private void deleteComponentMoved(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_deleteComponentMoved
-//        System.out.println("JUJUJU  " + this.delete.getX() + "   " + this.delete.getY());
+//        System.out.println("JUJUJU  " + this.delete.getX() + "   " + this.delete.getY()); //
         
         if (this.chosen) {
             chose();
