@@ -140,7 +140,6 @@
               <Image iconType="3" name="/THimages/icons8_save_22px.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Guardar"/>
-            <Property name="contentAreaFilled" type="boolean" value="false"/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Hand Cursor"/>
             </Property>
@@ -169,7 +168,6 @@
               <Image iconType="3" name="/THimages/icons8_close_20px.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Cancelar"/>
-            <Property name="contentAreaFilled" type="boolean" value="false"/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Hand Cursor"/>
             </Property>

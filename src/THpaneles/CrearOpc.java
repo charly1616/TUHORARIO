@@ -1,6 +1,7 @@
 
 package THpaneles;
 
+import THlogica.opcion;
 import THlogica.opciones;
 import java.awt.Color;
 import java.awt.geom.RoundRectangle2D;
@@ -162,7 +163,7 @@ public class CrearOpc extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        variable.nuevaopcion(true);
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -175,6 +176,7 @@ public class CrearOpc extends javax.swing.JPanel {
 
     private void bttentrada2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttentrada2ActionPerformed
         cmbiarM(this.bttentrada2);
+        
     }//GEN-LAST:event_bttentrada2ActionPerformed
     
     
