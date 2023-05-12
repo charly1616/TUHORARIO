@@ -305,7 +305,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         cursosedLayout.setVerticalGroup(
             cursosedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(cursosedLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addGap(14, 14, 14)
                 .addGroup(cursosedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelcursos, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(add2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -314,7 +314,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         );
 
         edit.add(cursosed);
-        cursosed.setBounds(340, 0, 300, 670);
+        cursosed.setBounds(340, 10, 300, 660);
 
         opcionsed.setBackground(new java.awt.Color(237, 253, 246));
         opcionsed.setFocusable(false);
@@ -380,9 +380,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         textField1.setBackground(new java.awt.Color(153, 255, 153));
         textField1.setBorder(null);
         textField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        textField1.setText("textField1");
-        textField1.setRound(30);
-        opcionsed.add(textField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 300, 30));
+        textField1.setText("codigo");
+        textField1.setRound(15);
+        opcionsed.add(textField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 300, 20));
 
         edit.add(opcionsed);
         opcionsed.setBounds(640, 0, 540, 670);
@@ -507,6 +507,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             actual = actual.getSig();
             comp++;
         }
+        this.revalidate();
+        this.cursosed.revalidate();
+        this.cursosed.repaint();
+        this.See.repaint();
     }
     
     public void unchoseChosencurso(){
@@ -531,9 +535,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             Component group = curso.get(i);
             SwingUtilities.invokeLater(new Runnable() {
                 public void run() {
-                    Gruposed.remove(group);
-                    Gruposed.revalidate();
-                    Gruposed.repaint();
+                    cursosed.remove(group);
+                    cursosed.revalidate();
+                    cursosed.repaint();
                 }
             });
         }
@@ -631,7 +635,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_brush2ActionPerformed
 
     private void brushActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_brushActionPerformed
-        // TODO add your handling code here:
+        this.RemoveCursocards();
     }//GEN-LAST:event_brushActionPerformed
 
     private void add2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add2ActionPerformed

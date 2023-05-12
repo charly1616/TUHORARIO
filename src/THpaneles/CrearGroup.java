@@ -41,7 +41,6 @@ public class CrearGroup extends javax.swing.JPanel {
         name = new custom.TextField();
 
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        setFocusTraversalPolicyProvider(true);
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         fond.setBackground(new java.awt.Color(176, 235, 176));
@@ -110,10 +109,11 @@ public class CrearGroup extends javax.swing.JPanel {
         });
         fond.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, -1, 30));
 
-        name.setBackground(new java.awt.Color(153, 255, 153));
+        name.setBackground(new java.awt.Color(204, 255, 204));
         name.setBorder(null);
         name.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         name.setText("nombre");
+        name.setRound(25);
         fond.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 80, 150, 30));
 
         add(fond, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 300));
