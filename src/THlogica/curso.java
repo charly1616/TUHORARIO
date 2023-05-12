@@ -94,5 +94,20 @@ public class curso {
         text += this.listaopc.encript();
         return text;
     }
+
+    public curso getSig() {
+        return sig;
+    }
+
+    public opciones getListaopc() {
+        return listaopc;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+    
+     
+     
      
 }

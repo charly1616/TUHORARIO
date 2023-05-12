@@ -394,6 +394,10 @@ public class Listacursos {
         return ncursos;
     }
 
+    public curso getCabeza() {
+        return cabeza;
+    }
+
     
 
 }

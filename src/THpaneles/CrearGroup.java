@@ -1,6 +1,7 @@
 
 package THpaneles;
 
+import THVentanas.VentanaPrincipal;
 import THlogica.grupos;
 import java.awt.Color;
 import java.awt.geom.RoundRectangle2D;
@@ -9,7 +10,7 @@ import javax.swing.JFrame;
 public class CrearGroup extends javax.swing.JPanel {
 
     public grupos variable;
-    public JFrame padre;
+    public VentanaPrincipal padre;
     
     public CrearGroup() {
         
@@ -37,14 +38,22 @@ public class CrearGroup extends javax.swing.JPanel {
         jSeparator1 = new javax.swing.JSeparator();
         jButton2 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
-        name = new javax.swing.JTextField();
+        name = new custom.TextField();
 
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        setDoubleBuffered(false);
+        setFocusTraversalPolicyProvider(true);
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         fond.setBackground(new java.awt.Color(176, 235, 176));
         fond.setForeground(new java.awt.Color(0, 0, 0));
+        fond.setAutoscrolls(true);
+        fond.setFocusCycleRoot(true);
+        fond.setInheritsPopupMenu(true);
+        fond.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                fondMouseMoved(evt);
+            }
+        });
         fond.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         creandog.setBackground(new java.awt.Color(169, 209, 142));
@@ -56,7 +65,7 @@ public class CrearGroup extends javax.swing.JPanel {
         Dia.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 16)); // NOI18N
         Dia.setForeground(new java.awt.Color(255, 255, 255));
         Dia.setText("Nombre del grupo:");
-        fond.add(Dia, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 160, -1));
+        fond.add(Dia, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 160, 30));
 
         Entrada.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 16)); // NOI18N
         Entrada.setForeground(new java.awt.Color(255, 255, 255));
@@ -76,19 +85,23 @@ public class CrearGroup extends javax.swing.JPanel {
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/icons8_save_22px.png"))); // NOI18N
         jButton2.setText("Guardar");
+        jButton2.setBorder(null);
+        jButton2.setContentAreaFilled(false);
         jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        fond.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 260, -1, -1));
+        fond.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 260, -1, 30));
 
         jButton1.setBackground(new java.awt.Color(141, 196, 162));
         jButton1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/icons8_close_20px.png"))); // NOI18N
         jButton1.setText("Cancelar");
+        jButton1.setBorder(null);
+        jButton1.setContentAreaFilled(false);
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -97,30 +110,33 @@ public class CrearGroup extends javax.swing.JPanel {
         });
         fond.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, -1, 30));
 
-        name.setBackground(new java.awt.Color(209, 243, 222));
-        name.setForeground(new java.awt.Color(102, 102, 102));
-        name.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nameActionPerformed(evt);
-            }
-        });
-        fond.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 70, 180, -1));
+        name.setBackground(new java.awt.Color(153, 255, 153));
+        name.setBorder(null);
+        name.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        name.setText("nombre");
+        fond.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 80, 150, 30));
 
         add(fond, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 300));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
        variable.newgrupo(name.getText());
-       variable.getAct().setSemestre(this.semestre.toString());
+       variable.getAct().setSemestre(this.semestre.getValue().toString());
+       
+       padre.UpdateGroupCards();
+       this.jButton1.doClick();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        System.exit(0);
+        padre.getEdit().remove(this);
+        padre.getEdit().revalidate();
+        padre.getEdit().repaint();
+        padre.repaint();
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nameActionPerformed
+    private void fondMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fondMouseMoved
+        repaint();
+    }//GEN-LAST:event_fondMouseMoved
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -131,7 +147,7 @@ public class CrearGroup extends javax.swing.JPanel {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTextField name;
+    private custom.TextField name;
     private javax.swing.JSpinner semestre;
     // End of variables declaration//GEN-END:variables
 }

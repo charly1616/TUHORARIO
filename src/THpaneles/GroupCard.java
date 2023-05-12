@@ -102,8 +102,9 @@ public class GroupCard extends javax.swing.JPanel {
         white.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 180, 30));
 
         delete.setBackground(new java.awt.Color(255, 255, 255));
-        delete.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 20)); // NOI18N
-        delete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/editfuntions/addGray20.png"))); // NOI18N
+        delete.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
+        delete.setForeground(new java.awt.Color(125, 125, 125));
+        delete.setText("x");
         delete.setBorder(null);
         delete.setContentAreaFilled(false);
         delete.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -128,7 +129,9 @@ public class GroupCard extends javax.swing.JPanel {
     private void whiteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_whiteMouseClicked
         ventana.unchoseChosen();
         ventana.setGroupChosen(this.thisGrupo);
-        ventana.setGroupchosen(this);
+        ventana.setGroupchoosen(this);
+        
+        ventana.UpdateCursoCards();
         
         this.chosen = true;
         chose();

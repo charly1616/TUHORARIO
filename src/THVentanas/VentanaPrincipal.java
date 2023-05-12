@@ -7,8 +7,8 @@ package THVentanas;
 import THlogica.curso;
 import THlogica.grupo;
 import THlogica.grupos;
-import THpaneles.CrearGroup;
-import THpaneles.GroupCard;
+import THlogica.horario;
+import THpaneles.*;
 
 
 
@@ -28,12 +28,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private grupos grupos = new grupos();
     
     private grupo groupChosen = null;
-    private GroupCard groupchosen;
+    private GroupCard groupchoosen;
     private ArrayList <GroupCard>grupo = new ArrayList <GroupCard>(); //GroupCard
     
     
     private curso cursoChosen = null;
-    
+    private CursoCard cursochoosen;
+    private ArrayList <CursoCard>curso = new ArrayList <CursoCard>();
     
     
     public VentanaPrincipal() {
@@ -91,6 +92,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         setResizable(false);
+        addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                formMouseMoved(evt);
+            }
+        });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         header.setBackground(new java.awt.Color(169, 209, 142));
@@ -232,7 +238,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addGap(20, 20, 20)
                 .addGroup(GruposedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelgrupos, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(add, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(add, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(630, 630, 630))
         );
 
         edit.add(Gruposed);
@@ -240,7 +247,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         cursosed.setBackground(new java.awt.Color(209, 243, 222));
         cursosed.setFocusable(false);
-        cursosed.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         back.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
         back.setForeground(new java.awt.Color(127, 127, 127));
@@ -253,12 +259,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 backActionPerformed(evt);
             }
         });
-        cursosed.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 20, 20, 20));
 
         labelcursos.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         labelcursos.setForeground(new java.awt.Color(127, 127, 127));
         labelcursos.setText("Cursos");
-        cursosed.add(labelcursos, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, 20));
 
         add2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
         add2.setForeground(new java.awt.Color(127, 127, 127));
@@ -271,7 +275,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 add2ActionPerformed(evt);
             }
         });
-        cursosed.add(add2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 20, 20, 20));
 
         brush.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
         brush.setForeground(new java.awt.Color(127, 127, 127));
@@ -284,7 +287,31 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 brushActionPerformed(evt);
             }
         });
-        cursosed.add(brush, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, 20, 20));
+
+        javax.swing.GroupLayout cursosedLayout = new javax.swing.GroupLayout(cursosed);
+        cursosed.setLayout(cursosedLayout);
+        cursosedLayout.setHorizontalGroup(
+            cursosedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(cursosedLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(labelcursos)
+                .addGap(112, 112, 112)
+                .addComponent(add2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(brush, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        cursosedLayout.setVerticalGroup(
+            cursosedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(cursosedLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(cursosedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelcursos, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(add2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(brush, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(back, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
 
         edit.add(cursosed);
         cursosed.setBounds(340, 0, 300, 670);
@@ -350,7 +377,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         opcionsed.add(add3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 20, 20, 20));
 
-        textField1.setBackground(new java.awt.Color(102, 255, 102));
+        textField1.setBackground(new java.awt.Color(153, 255, 153));
         textField1.setBorder(null);
         textField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         textField1.setText("textField1");
@@ -394,6 +421,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_moveMouseDragged
 
     
+    //<editor-fold defaultstate="collapsed" desc=" GROUPCARDS METODOS">
     
     private void GroupCards(){
         grupo actual = grupos.getHead();
@@ -411,6 +439,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             nueva.setLocation(30, 70 + comp*80);
             nueva.setSize(270, 60);
             
+            grupo.add(nueva);
             
             actual = actual.getNext();
             comp++;
@@ -418,29 +447,120 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }
     
     public void unchoseChosen(){
-        if (this.groupChosen == null) {
-            return;
-        }
-        groupchosen.unchose();
-        groupchosen.setChosen(false);
+        if (this.groupChosen == null) { return; }
+        groupchoosen.unchose();
+        groupchoosen.setChosen(false);
+        
+        this.unchoseChosencurso();
+        UpdateCursoCards();
+    }
+    
+    
+    public void UpdateGroupCards(){
+        RemoveGroupscards();
+        GroupCards();
     }
     
     
     private void RemoveGroupscards(){
+        
+        System.out.println(this.groupChosen.toString());
         for (int i = 0; i < grupo.size(); i++) {
-            this.remove(grupo.get(i));
+            Component group = grupo.get(i);
+            System.out.println(group.toString());
+            SwingUtilities.invokeLater(new Runnable() {
+                public void run() {
+                    Gruposed.remove(group);
+                    Gruposed.revalidate();
+                    Gruposed.repaint();
+                }
+            });
+        }
+        this.grupo.clear();
+        this.repaint();
+    }
+    //</editor-fold>
+    
+    
+    //<editor-fold defaultstate="collapsed" desc=" CURSOCARDS METODOS">
+    private void CursoCards(){
+        if (groupChosen == null) {return; }
+        curso actual = groupChosen.getHora().getCabeza();
+        
+        int comp = 0;
+        while (actual != null){
+            
+            CursoCard nueva = new CursoCard();
+            nueva.setVentana(this);
+            nueva.setThisCurso(actual);
+            nueva.setDias(actual.ndias+"");
+            actual.getListaopc().contaropciones();
+            nueva.setOpciones(actual.getListaopc().nopciones);
+            
+            
+            this.cursosed.add(nueva);
+            nueva.setLocation(30, 90 + comp*80);
+            nueva.setSize(240, 60);
+            
+            curso.add(nueva);
+            
+            actual = actual.getSig();
+            comp++;
         }
     }
     
+    public void unchoseChosencurso(){
+        if (this.cursoChosen == null) {
+            return;
+        }
+        cursochoosen.unchose();
+        cursochoosen.setChosen(false);
+        
+    }
+    
+    
+    public void UpdateCursoCards(){
+        RemoveCursocards();
+        CursoCards();
+    }
+    
+    
+    private void RemoveCursocards(){
+        
+        for (int i = 0; i < curso.size(); i++) {
+            Component group = curso.get(i);
+            SwingUtilities.invokeLater(new Runnable() {
+                public void run() {
+                    Gruposed.remove(group);
+                    Gruposed.revalidate();
+                    Gruposed.repaint();
+                }
+            });
+        }
+        this.curso.clear();
+        this.repaint();
+    }
+    //</editor-fold>
     
     //<editor-fold defaultstate="collapsed" desc=" setters y getters">
+
     
-    public GroupCard getGroupchosen() {
-        return groupchosen;
+    
+    public CursoCard getCursochoosen() {
+        return cursochoosen;
     }
 
-    public void setGroupchosen(GroupCard groupchosen) {
-        this.groupchosen = groupchosen;
+    public void setCursochoosen(CursoCard cursochosen) {
+        this.cursochoosen = cursochosen;
+    }
+    
+    
+    public GroupCard getGroupchoosen() {
+        return groupchoosen;
+    }
+
+    public void setGroupchoosen(GroupCard groupchosen) {
+        this.groupchoosen = groupchosen;
     }
 
     public grupo getGroupChosen() {
@@ -449,6 +569,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     public void setGroupChosen(grupo groupChosen) {
         this.groupChosen = groupChosen;
+        this.unchoseChosencurso();
+        this.UpdateCursoCards();
+        
     }
 
     public curso getCursoChosen() {
@@ -458,7 +581,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public void setCursoChosen(curso cursoChosen) {
         this.cursoChosen = cursoChosen;
     }
+    
+    public JPanel getEdit() {
+        return edit;
+    }
+    
+    
     //</editor-fold>
+    
     
     
     
@@ -485,7 +615,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_toGENERActionPerformed
 
     private void add3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add3ActionPerformed
-        // TODO add your handling code here:
+        RemoveGroupscards();
     }//GEN-LAST:event_add3ActionPerformed
 
     private void back2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back2ActionPerformed
@@ -525,6 +655,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         repaint();
 
     }//GEN-LAST:event_addActionPerformed
+
+    private void formMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseMoved
+
+    }//GEN-LAST:event_formMouseMoved
     
     
     
