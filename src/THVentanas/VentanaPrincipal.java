@@ -12,6 +12,8 @@ import THpaneles.*;
 
 
 
+
+
 import java.awt.MouseInfo;
 import java.awt.PointerInfo;
 import java.awt.Toolkit;
@@ -21,6 +23,7 @@ import java.awt.geom.RoundRectangle2D;
 import java.awt.*;
 import java.util.ArrayList;
 import javax.swing.*;
+import raven.GlassPanePopup;
 
 
 public class VentanaPrincipal extends javax.swing.JFrame {
@@ -40,6 +43,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public VentanaPrincipal() {
         
         initComponents();
+        
+        GlassPanePopup.install(this);
+        
+        
         grupos.ReadGrupos();
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/THimages/icon.png")));
         setShape(new RoundRectangle2D.Double(0,0,getWidth(),getHeight(),24,24));
@@ -85,6 +92,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         back2 = new javax.swing.JButton();
         add3 = new javax.swing.JButton();
         textField1 = new custom.TextField();
+        optionCard3 = new THpaneles.OptionCard();
+        optionCard4 = new THpaneles.OptionCard();
         See = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
@@ -318,7 +327,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         opcionsed.setBackground(new java.awt.Color(237, 253, 246));
         opcionsed.setFocusable(false);
-        opcionsed.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         brush2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
         brush2.setForeground(new java.awt.Color(127, 127, 127));
@@ -331,7 +339,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 brush2ActionPerformed(evt);
             }
         });
-        opcionsed.add(brush2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 20, 20, 20));
 
         key.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
         key.setForeground(new java.awt.Color(127, 127, 127));
@@ -344,12 +351,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 keyActionPerformed(evt);
             }
         });
-        opcionsed.add(key, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 60, -1, 20));
 
         labelop.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         labelop.setForeground(new java.awt.Color(127, 127, 127));
         labelop.setText("Opciones");
-        opcionsed.add(labelop, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, 20));
 
         back2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
         back2.setForeground(new java.awt.Color(127, 127, 127));
@@ -362,7 +367,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 back2ActionPerformed(evt);
             }
         });
-        opcionsed.add(back2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 20, 20, 20));
 
         add3.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
         add3.setForeground(new java.awt.Color(127, 127, 127));
@@ -375,17 +379,68 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 add3ActionPerformed(evt);
             }
         });
-        opcionsed.add(add3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 20, 20, 20));
 
-        textField1.setBackground(new java.awt.Color(153, 255, 153));
+        textField1.setBackground(new java.awt.Color(169, 209, 142));
         textField1.setBorder(null);
+        textField1.setForeground(new java.awt.Color(255, 255, 255));
         textField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         textField1.setText("codigo");
+        textField1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         textField1.setRound(15);
-        opcionsed.add(textField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 300, 20));
+
+        optionCard3.setPreferredSize(new java.awt.Dimension(183, 30));
+
+        optionCard4.setPreferredSize(new java.awt.Dimension(183, 30));
+
+        javax.swing.GroupLayout opcionsedLayout = new javax.swing.GroupLayout(opcionsed);
+        opcionsed.setLayout(opcionsedLayout);
+        opcionsedLayout.setHorizontalGroup(
+            opcionsedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(opcionsedLayout.createSequentialGroup()
+                .addGroup(opcionsedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(opcionsedLayout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(labelop)
+                        .addGap(316, 316, 316)
+                        .addComponent(add3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(brush2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(back2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(opcionsedLayout.createSequentialGroup()
+                        .addGap(110, 110, 110)
+                        .addComponent(textField1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
+                        .addComponent(key))
+                    .addGroup(opcionsedLayout.createSequentialGroup()
+                        .addGap(39, 39, 39)
+                        .addComponent(optionCard3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(42, 42, 42)
+                        .addComponent(optionCard4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        opcionsedLayout.setVerticalGroup(
+            opcionsedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(opcionsedLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(opcionsedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelop, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(add3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(brush2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(back2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addGroup(opcionsedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(textField1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(key, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(53, 53, 53)
+                .addGroup(opcionsedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(optionCard3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(optionCard4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
 
         edit.add(opcionsed);
-        opcionsed.setBounds(640, 0, 540, 670);
+        opcionsed.setBounds(640, 10, 540, 660);
 
         switchven.addTab("tab1", edit);
 
@@ -443,6 +498,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             
             actual = actual.getNext();
             comp++;
+            
+            
         }
     }
     
@@ -506,6 +563,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             
             actual = actual.getSig();
             comp++;
+        
+            
         }
         this.revalidate();
         this.cursosed.revalidate();
@@ -540,6 +599,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                     cursosed.repaint();
                 }
             });
+            
+            
         }
         this.curso.clear();
         this.repaint();
@@ -635,26 +696,39 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_brush2ActionPerformed
 
     private void brushActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_brushActionPerformed
-        this.RemoveCursocards();
+        this.groupChosen.getHor().limpiarcurs();
+        this.UpdateCursoCards();
     }//GEN-LAST:event_brushActionPerformed
 
     private void add2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add2ActionPerformed
-        // TODO add your handling code here:
+        if (this.groupChosen == null) {
+            return;
+        }
+        
+        CrearCurso nuevo = new CrearCurso();
+        nuevo.variable = this.groupChosen.getHora();
+        nuevo.setSize(400, 300);
+
+        GlassPanePopup.showPopup(nuevo);
+
+        nuevo.repaint();
+        repaint();
+
     }//GEN-LAST:event_add2ActionPerformed
 
     private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
-        // TODO add your handling code here:
+        this.groupChosen.getHor().Undo();
+        this.UpdateCursoCards();
     }//GEN-LAST:event_backActionPerformed
 
     private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
         CrearGroup nuevo = new CrearGroup();
         nuevo.padre = this;
         nuevo.variable = grupos;
-
-
-        this.edit.add(nuevo);
-        nuevo.setLocation(200,20);
         nuevo.setSize(400, 300);
+
+        GlassPanePopup.showPopup(nuevo);
+        
         nuevo.repaint();
         repaint();
 
@@ -723,6 +797,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel move;
     private javax.swing.JLabel name;
     private javax.swing.JPanel opcionsed;
+    private THpaneles.OptionCard optionCard3;
+    private THpaneles.OptionCard optionCard4;
     private javax.swing.JTabbedPane switchven;
     private custom.TextField textField1;
     private javax.swing.JButton toCustom;

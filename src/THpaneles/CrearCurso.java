@@ -8,7 +8,7 @@ import java.awt.geom.RoundRectangle2D;
 
 public class CrearCurso extends javax.swing.JPanel {
     Listacursos list;
-    horario variable;
+    public horario variable;
     public CrearCurso() {
         initComponents();
        
@@ -48,7 +48,6 @@ public class CrearCurso extends javax.swing.JPanel {
         name = new javax.swing.JTextField();
 
         jPanel1.setBackground(new java.awt.Color(176, 235, 176));
-        jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED));
         jPanel1.setForeground(new java.awt.Color(0, 0, 0));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 

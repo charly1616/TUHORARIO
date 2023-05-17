@@ -233,7 +233,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="button.MyButton" name="bttsalida">
+        <Component class="custom.MyButton" name="bttsalida">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="35" green="82" red="54" type="rgb"/>
@@ -273,7 +273,7 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="button.MyButton" name="bttentrada2">
+        <Component class="custom.MyButton" name="bttentrada2">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="47" green="ad" red="70" type="rgb"/>

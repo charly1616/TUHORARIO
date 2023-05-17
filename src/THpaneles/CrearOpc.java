@@ -38,8 +38,8 @@ public class CrearOpc extends javax.swing.JPanel {
         Cancelar = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        bttsalida = new button.MyButton();
-        bttentrada2 = new button.MyButton();
+        bttsalida = new custom.MyButton();
+        bttentrada2 = new custom.MyButton();
 
         jPanel1.setBackground(new java.awt.Color(176, 235, 176));
         jPanel1.setForeground(new java.awt.Color(0, 0, 0));
@@ -180,7 +180,7 @@ public class CrearOpc extends javax.swing.JPanel {
     }//GEN-LAST:event_bttentrada2ActionPerformed
     
     
-    public void cmbiarM(button.MyButton boton){
+    public void cmbiarM(custom.MyButton boton){
         if (boton.getText().equals("AM")){
             boton.setText("PM");
             boton.setBackground(new Color(84,130,53));
@@ -202,8 +202,8 @@ public class CrearOpc extends javax.swing.JPanel {
     private javax.swing.JLabel Cancelar;
     private javax.swing.JLabel Dia;
     private javax.swing.JLabel Salida;
-    private button.MyButton bttentrada2;
-    private button.MyButton bttsalida;
+    private custom.MyButton bttentrada2;
+    private custom.MyButton bttsalida;
     private javax.swing.JLabel creandog;
     private javax.swing.JComboBox<String> dias;
     private javax.swing.JButton jButton1;

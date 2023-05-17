@@ -3,9 +3,7 @@ package THpaneles;
 
 import THVentanas.VentanaPrincipal;
 import THlogica.grupos;
-import java.awt.Color;
-import java.awt.geom.RoundRectangle2D;
-import javax.swing.JFrame;
+import raven.GlassPanePopup;
 
 public class CrearGroup extends javax.swing.JPanel {
 
@@ -15,9 +13,14 @@ public class CrearGroup extends javax.swing.JPanel {
     public CrearGroup() {
         
         initComponents();
+        
+        
         setLocation(20,20);
     }
-
+    
+    
+    
+    
     public grupos getVariable() {
         return variable;
     }
@@ -64,16 +67,16 @@ public class CrearGroup extends javax.swing.JPanel {
         Dia.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 16)); // NOI18N
         Dia.setForeground(new java.awt.Color(255, 255, 255));
         Dia.setText("Nombre del grupo:");
-        fond.add(Dia, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 160, 30));
+        fond.add(Dia, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 160, 30));
 
         Entrada.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 16)); // NOI18N
         Entrada.setForeground(new java.awt.Color(255, 255, 255));
         Entrada.setText("Semestre:");
-        fond.add(Entrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, 100, -1));
+        fond.add(Entrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 190, 100, -1));
 
         semestre.setModel(new javax.swing.SpinnerNumberModel(1, 1, 10, 1));
         semestre.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        fond.add(semestre, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 150, 70, 30));
+        fond.add(semestre, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 190, 100, -1));
 
         jSeparator1.setBackground(new java.awt.Color(0, 102, 0));
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
@@ -85,14 +88,16 @@ public class CrearGroup extends javax.swing.JPanel {
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/icons8_save_22px.png"))); // NOI18N
         jButton2.setText("Guardar");
         jButton2.setBorder(null);
+        jButton2.setBorderPainted(false);
         jButton2.setContentAreaFilled(false);
         jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton2.setFocusPainted(false);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        fond.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 260, -1, 30));
+        fond.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 260, -1, 30));
 
         jButton1.setBackground(new java.awt.Color(141, 196, 162));
         jButton1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
@@ -100,21 +105,23 @@ public class CrearGroup extends javax.swing.JPanel {
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/icons8_close_20px.png"))); // NOI18N
         jButton1.setText("Cancelar");
         jButton1.setBorder(null);
+        jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.setFocusPainted(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        fond.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, -1, 30));
+        fond.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 260, -1, 30));
 
         name.setBackground(new java.awt.Color(204, 255, 204));
         name.setBorder(null);
         name.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         name.setText("nombre");
         name.setRound(25);
-        fond.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 80, 150, 30));
+        fond.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 120, 150, 30));
 
         add(fond, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 300));
     }// </editor-fold>//GEN-END:initComponents
@@ -124,14 +131,11 @@ public class CrearGroup extends javax.swing.JPanel {
        variable.getAct().setSemestre(this.semestre.getValue().toString());
        
        padre.UpdateGroupCards();
-       this.jButton1.doClick();
+       GlassPanePopup.closePopupLast();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        padre.getEdit().remove(this);
-        padre.getEdit().revalidate();
-        padre.getEdit().repaint();
-        padre.repaint();
+        GlassPanePopup.closePopupLast();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void fondMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fondMouseMoved

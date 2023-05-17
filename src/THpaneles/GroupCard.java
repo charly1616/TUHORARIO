@@ -50,7 +50,7 @@ public class GroupCard extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        white = new javax.swing.JPanel();
+        bg = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         data = new javax.swing.JLabel();
         name = new javax.swing.JLabel();
@@ -61,19 +61,17 @@ public class GroupCard extends javax.swing.JPanel {
         setDoubleBuffered(false);
         setRequestFocusEnabled(false);
         setVerifyInputWhenFocusTarget(false);
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        white.setBackground(new java.awt.Color(255, 255, 255));
-        white.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        white.setDoubleBuffered(false);
-        white.setRequestFocusEnabled(false);
-        white.setVerifyInputWhenFocusTarget(false);
-        white.addMouseListener(new java.awt.event.MouseAdapter() {
+        bg.setBackground(new java.awt.Color(255, 255, 255));
+        bg.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        bg.setDoubleBuffered(false);
+        bg.setRequestFocusEnabled(false);
+        bg.setVerifyInputWhenFocusTarget(false);
+        bg.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                whiteMouseClicked(evt);
+                bgMouseClicked(evt);
             }
         });
-        white.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 102, 153));
 
@@ -81,25 +79,21 @@ public class GroupCard extends javax.swing.JPanel {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 10, Short.MAX_VALUE)
+            .addGap(0, 12, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 60, Short.MAX_VALUE)
         );
 
-        white.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 10, 60));
-
         data.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         data.setForeground(new java.awt.Color(204, 204, 204));
         data.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         data.setText("2 semestre | 3 cursos");
-        white.add(data, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, 190, -1));
 
         name.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
         name.setForeground(new java.awt.Color(104, 104, 104));
         name.setText("Ing. Civil");
-        white.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 180, 30));
 
         delete.setBackground(new java.awt.Color(255, 255, 255));
         delete.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
@@ -121,12 +115,46 @@ public class GroupCard extends javax.swing.JPanel {
                 deleteComponentMoved(evt);
             }
         });
-        white.add(delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 0, 30, 60));
 
-        add(white, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 60));
+        javax.swing.GroupLayout bgLayout = new javax.swing.GroupLayout(bg);
+        bg.setLayout(bgLayout);
+        bgLayout.setHorizontalGroup(
+            bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(bgLayout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(name, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(bgLayout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addComponent(data, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(10, 10, 10)
+                .addComponent(delete, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        bgLayout.setVerticalGroup(
+            bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(bgLayout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(name, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(data))
+            .addComponent(delete, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(bg, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(bg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void whiteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_whiteMouseClicked
+    private void bgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bgMouseClicked
         ventana.unchoseChosen();
         ventana.setGroupChosen(this.thisGrupo);
         ventana.setGroupchoosen(this);
@@ -136,7 +164,7 @@ public class GroupCard extends javax.swing.JPanel {
         this.chosen = true;
         chose();
         
-    }//GEN-LAST:event_whiteMouseClicked
+    }//GEN-LAST:event_bgMouseClicked
 
     private void deleteComponentMoved(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_deleteComponentMoved
 //        System.out.println("JUJUJU  " + this.delete.getX() + "   " + this.delete.getY()); //
@@ -161,7 +189,7 @@ public class GroupCard extends javax.swing.JPanel {
             
             this.jPanel1.setSize(20,60);
             
-            this.white.repaint();
+            this.bg.repaint();
         });
     }
     
@@ -174,7 +202,7 @@ public class GroupCard extends javax.swing.JPanel {
             
             this.jPanel1.setSize(10,60);
             
-            this.white.repaint();
+            this.bg.repaint();
         });
     }
     
@@ -250,10 +278,10 @@ public class GroupCard extends javax.swing.JPanel {
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel bg;
     private javax.swing.JLabel data;
     private javax.swing.JButton delete;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel name;
-    private javax.swing.JPanel white;
     // End of variables declaration//GEN-END:variables
 }
