@@ -8,7 +8,7 @@ import java.awt.geom.RoundRectangle2D;
 
 public class CrearOpc extends javax.swing.JPanel {
 
-    opciones variable;
+    public opciones variable;
     public CrearOpc() {
         initComponents();
         

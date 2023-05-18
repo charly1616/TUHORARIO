@@ -28,10 +28,15 @@ public class CursoCard extends javax.swing.JPanel {
     public CursoCard() {
         initComponents();
         
-        int r = (int) (Math.random() * 250);
-        int g = (int) (Math.random() * 250);
-        int b = (int) (Math.random() * 250);
-        this.jPanel1.setBackground(new Color(r,g,b));
+//        int r = (int) (Math.random() * 250);
+//        int g = (int) (Math.random() * 250);
+//        int b = (int) (Math.random() * 250);
+//        this.jPanel1.setBackground(new Color(r,g,b));
+    }
+    
+    public void convertTextToColor(String text) {
+        int hashCode = text.hashCode();
+        this.jPanel1.setBackground(new Color(hashCode));
     }
     
     
@@ -44,7 +49,7 @@ public class CursoCard extends javax.swing.JPanel {
             
             this.jPanel1.setSize(20,60);
             
-            this.White.repaint();
+            this.bg.repaint();
         });
     }
     
@@ -57,7 +62,7 @@ public class CursoCard extends javax.swing.JPanel {
             
             this.jPanel1.setSize(10,60);
             
-            this.White.repaint();
+            this.bg.repaint();
         });
     }
     
@@ -115,6 +120,7 @@ public class CursoCard extends javax.swing.JPanel {
         
         this.name.setText(namee);
         this.data.setText(this.dias + "Día | " + this.opciones + " Opciones");
+        this.convertTextToColor(namee);
     }
 
     public horario getThisCursos() {
@@ -148,7 +154,7 @@ public class CursoCard extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        White = new javax.swing.JPanel();
+        bg = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         name = new javax.swing.JLabel();
         data = new javax.swing.JLabel();
@@ -156,13 +162,13 @@ public class CursoCard extends javax.swing.JPanel {
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        White.setBackground(new java.awt.Color(255, 255, 255));
-        White.addMouseListener(new java.awt.event.MouseAdapter() {
+        bg.setBackground(new java.awt.Color(255, 255, 255));
+        bg.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                WhiteMouseClicked(evt);
+                bgMouseClicked(evt);
             }
         });
-        White.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        bg.setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 204));
 
@@ -177,18 +183,21 @@ public class CursoCard extends javax.swing.JPanel {
             .addGap(0, 60, Short.MAX_VALUE)
         );
 
-        White.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 10, 60));
+        bg.add(jPanel1);
+        jPanel1.setBounds(0, 0, 10, 60);
 
         name.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
         name.setForeground(new java.awt.Color(104, 104, 104));
         name.setText("DESARROLLO");
-        White.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 130, 30));
+        bg.add(name);
+        name.setBounds(30, 10, 130, 30);
 
         data.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         data.setForeground(new java.awt.Color(204, 204, 204));
         data.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         data.setText("1 dia | 9 opciones");
-        White.add(data, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, 150, -1));
+        bg.add(data);
+        data.setBounds(70, 40, 150, 15);
 
         delete.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
         delete.setForeground(new java.awt.Color(125, 125, 125));
@@ -203,9 +212,15 @@ public class CursoCard extends javax.swing.JPanel {
                 deleteComponentMoved(evt);
             }
         });
-        White.add(delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 30, 60));
+        delete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteActionPerformed(evt);
+            }
+        });
+        bg.add(delete);
+        delete.setBounds(240, 0, 30, 60);
 
-        add(White, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 240, 60));
+        add(bg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 240, 60));
     }// </editor-fold>//GEN-END:initComponents
 
     private void deleteComponentMoved(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_deleteComponentMoved
@@ -217,18 +232,34 @@ public class CursoCard extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_deleteComponentMoved
 
-    private void WhiteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_WhiteMouseClicked
-        ventana.unchoseChosencurso();
-        ventana.setCursoChosen(this.thisCurso);
-        ventana.setCursochoosen(this);
+    private void bgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bgMouseClicked
         
-        this.chosen = true;
-        chose();
-    }//GEN-LAST:event_WhiteMouseClicked
+        if (!this.chosen) {
+            ventana.unchoseChosencurso();
+            ventana.setCursoChosen(this.thisCurso);
+            ventana.setCursochoosen(this);
+            
+            
+            ventana.UpdateOpcionCards();
+            this.chosen = true;
+            chose();
+        }else{
+            ventana.unchoseChosencurso();
+            this.chosen = false;
+            this.unchose();
+            ventana.UpdateOpcionCards();
+        }
+    }//GEN-LAST:event_bgMouseClicked
+
+    private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
+        this.thisCursos.deletecurso(this.thisCurso.getNombre());
+        ventana.UpdateCursoCards();
+        ventana.unchoseChosencurso();
+    }//GEN-LAST:event_deleteActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel White;
+    private javax.swing.JPanel bg;
     private javax.swing.JLabel data;
     private javax.swing.JButton delete;
     private javax.swing.JPanel jPanel1;

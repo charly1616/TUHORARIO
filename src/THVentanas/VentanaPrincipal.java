@@ -8,6 +8,8 @@ import THlogica.curso;
 import THlogica.grupo;
 import THlogica.grupos;
 import THlogica.horario;
+import THlogica.opcion;
+import THlogica.opciones;
 import THpaneles.*;
 
 
@@ -38,6 +40,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private curso cursoChosen = null;
     private CursoCard cursochoosen;
     private ArrayList <CursoCard>curso = new ArrayList <CursoCard>();
+    
+    
+    private opcion opcionChosen = null;
+    private OptionCard opcionchoosen;
+    private ArrayList <OptionCard>opcion = new ArrayList <OptionCard>();
     
     
     public VentanaPrincipal() {
@@ -92,8 +99,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         back2 = new javax.swing.JButton();
         add3 = new javax.swing.JButton();
         textField1 = new custom.TextField();
-        optionCard3 = new THpaneles.OptionCard();
-        optionCard4 = new THpaneles.OptionCard();
         See = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
@@ -327,6 +332,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         opcionsed.setBackground(new java.awt.Color(237, 253, 246));
         opcionsed.setFocusable(false);
+        opcionsed.setLayout(null);
 
         brush2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
         brush2.setForeground(new java.awt.Color(127, 127, 127));
@@ -339,6 +345,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 brush2ActionPerformed(evt);
             }
         });
+        opcionsed.add(brush2);
+        brush2.setBounds(440, 20, 20, 20);
 
         key.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
         key.setForeground(new java.awt.Color(127, 127, 127));
@@ -351,10 +359,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 keyActionPerformed(evt);
             }
         });
+        opcionsed.add(key);
+        key.setBounds(440, 60, 26, 20);
 
         labelop.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         labelop.setForeground(new java.awt.Color(127, 127, 127));
         labelop.setText("Opciones");
+        opcionsed.add(labelop);
+        labelop.setBounds(30, 20, 64, 20);
 
         back2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
         back2.setForeground(new java.awt.Color(127, 127, 127));
@@ -367,6 +379,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 back2ActionPerformed(evt);
             }
         });
+        opcionsed.add(back2);
+        back2.setBounds(470, 20, 20, 20);
 
         add3.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
         add3.setForeground(new java.awt.Color(127, 127, 127));
@@ -379,6 +393,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 add3ActionPerformed(evt);
             }
         });
+        opcionsed.add(add3);
+        add3.setBounds(410, 20, 20, 20);
 
         textField1.setBackground(new java.awt.Color(169, 209, 142));
         textField1.setBorder(null);
@@ -387,57 +403,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         textField1.setText("codigo");
         textField1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         textField1.setRound(15);
-
-        optionCard3.setPreferredSize(new java.awt.Dimension(183, 30));
-
-        optionCard4.setPreferredSize(new java.awt.Dimension(183, 30));
-
-        javax.swing.GroupLayout opcionsedLayout = new javax.swing.GroupLayout(opcionsed);
-        opcionsed.setLayout(opcionsedLayout);
-        opcionsedLayout.setHorizontalGroup(
-            opcionsedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(opcionsedLayout.createSequentialGroup()
-                .addGroup(opcionsedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(opcionsedLayout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(labelop)
-                        .addGap(316, 316, 316)
-                        .addComponent(add3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(brush2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(back2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(opcionsedLayout.createSequentialGroup()
-                        .addGap(110, 110, 110)
-                        .addComponent(textField1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(30, 30, 30)
-                        .addComponent(key))
-                    .addGroup(opcionsedLayout.createSequentialGroup()
-                        .addGap(39, 39, 39)
-                        .addComponent(optionCard3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(42, 42, 42)
-                        .addComponent(optionCard4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        opcionsedLayout.setVerticalGroup(
-            opcionsedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(opcionsedLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addGroup(opcionsedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelop, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(add3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(brush2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(back2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
-                .addGroup(opcionsedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(textField1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(key, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(53, 53, 53)
-                .addGroup(opcionsedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(optionCard3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(optionCard4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
-        );
+        opcionsed.add(textField1);
+        textField1.setBounds(110, 60, 300, 20);
 
         edit.add(opcionsed);
         opcionsed.setBounds(640, 10, 540, 660);
@@ -505,11 +472,17 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     
     public void unchoseChosen(){
         if (this.groupChosen == null) { return; }
+        this.groupChosen = null;
+        
         groupchoosen.unchose();
         groupchoosen.setChosen(false);
         
         this.unchoseChosencurso();
+        this.unchoseChosenopcion();
+        
+        
         UpdateCursoCards();
+        UpdateOpcionCards();
     }
     
     
@@ -520,6 +493,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     
     
     private void RemoveGroupscards(){
+        if (this.groupChosen == null) {
+            return;
+        }
         
         System.out.println(this.groupChosen.toString());
         for (int i = 0; i < grupo.size(); i++) {
@@ -548,6 +524,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         while (actual != null){
             
             CursoCard nueva = new CursoCard();
+            nueva.setThisCursos(groupChosen.getHora());
             nueva.setVentana(this);
             nueva.setThisCurso(actual);
             nueva.setDias(actual.ndias+"");
@@ -576,8 +553,15 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         if (this.cursoChosen == null) {
             return;
         }
+        this.cursoChosen = null;
+        
         cursochoosen.unchose();
         cursochoosen.setChosen(false);
+        
+        this.unchoseChosenopcion();
+        
+        UpdateCursoCards();
+        UpdateOpcionCards();
         
     }
     
@@ -602,10 +586,94 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             
             
         }
+        
         this.curso.clear();
         this.repaint();
     }
     //</editor-fold>
+    
+    
+    
+    //<editor-fold defaultstate="collapsed" desc=" OPCIONCARDS METODOS">
+    private void OpcionCards(){
+        if (cursoChosen == null) {return; }
+        opcion actual = cursoChosen.getListaopc().getCabeza();
+        int lasth = 0;
+        
+        int comp = 0;
+        while (actual != null){
+            
+            OptionCard nueva = new OptionCard();
+            nueva.setThisOpciones(cursoChosen.getListaopc());
+            nueva.setVentana(this);
+            nueva.setThisOpcion(actual);
+            
+            
+            this.opcionsed.add(nueva);
+            
+            
+            if (comp%2 == 0) {
+                lasth = 120 + (10 + 15*actual.getNdias()) * comp;
+                nueva.setLocation(60, (lasth));
+            } else {
+                
+                nueva.setLocation(290, (lasth));
+            }
+            
+            
+            opcion.add(nueva);
+            
+            actual = actual.getSig();
+            comp++;
+        
+            
+        }
+        this.revalidate();
+        this.opcionsed.revalidate();
+        this.opcionsed.repaint();
+        this.See.repaint();
+    }
+    
+    public void unchoseChosenopcion(){
+        if (this.opcionChosen == null) {
+            return;
+        }
+        this.opcionChosen = null;
+        
+        opcionchoosen.unchose();
+        opcionchoosen.setChosen(false);
+    }
+    
+    
+    public void UpdateOpcionCards(){
+        RemoveOpcioncards();
+        OpcionCards();
+    }
+    
+    
+    private void RemoveOpcioncards(){
+        
+        for (int i = 0; i < opcion.size(); i++) {
+            Component op = opcion.get(i);
+            SwingUtilities.invokeLater(new Runnable() {
+                public void run() {
+                    opcionsed.remove(op);
+                    opcionsed.revalidate();
+                    opcionsed.repaint();
+                }
+            });
+            
+            
+        }
+        
+        this.curso.clear();
+        this.repaint();
+    }
+    //</editor-fold>
+    
+    
+    
+    
     
     //<editor-fold defaultstate="collapsed" desc=" setters y getters">
 
@@ -635,6 +703,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public void setGroupChosen(grupo groupChosen) {
         this.groupChosen = groupChosen;
         this.unchoseChosencurso();
+        this.unchoseChosenopcion();
         this.UpdateCursoCards();
         
     }
@@ -645,6 +714,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     public void setCursoChosen(curso cursoChosen) {
         this.cursoChosen = cursoChosen;
+        this.unchoseChosenopcion();
+        this.UpdateOpcionCards();
     }
     
     public JPanel getEdit() {
@@ -654,6 +725,22 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     
     //</editor-fold>
     
+    public opcion getOpcionChosen() {
+        return opcionChosen;
+    }
+
+    public void setOpcionChosen(opcion opcionChosen) {
+        this.unchoseChosenopcion();
+        this.opcionChosen = opcionChosen;
+    }
+
+    public OptionCard getOpcionchoosen() {
+        return opcionchoosen;
+    }
+
+    public void setOpcionchoosen(OptionCard opcionchoosen) {
+        this.opcionchoosen = opcionchoosen;
+    }
     
     
     
@@ -680,7 +767,19 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_toGENERActionPerformed
 
     private void add3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add3ActionPerformed
-        RemoveGroupscards();
+        if (this.cursoChosen == null) return;
+        
+        for (int i = 0; i < cursoChosen.ndias; i++) {
+            CrearOpc nuevo = new CrearOpc();
+            nuevo.variable = this.cursoChosen.getListaopc();
+            nuevo.setSize(400, 300);
+
+            GlassPanePopup.showPopup(nuevo);
+
+            nuevo.repaint();
+            repaint();
+        }
+        
     }//GEN-LAST:event_add3ActionPerformed
 
     private void back2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back2ActionPerformed
@@ -698,12 +797,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private void brushActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_brushActionPerformed
         this.groupChosen.getHor().limpiarcurs();
         this.UpdateCursoCards();
+        this.UpdateGroupCards();
     }//GEN-LAST:event_brushActionPerformed
 
     private void add2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add2ActionPerformed
         if (this.groupChosen == null) {
             return;
         }
+        
         
         CrearCurso nuevo = new CrearCurso();
         nuevo.variable = this.groupChosen.getHora();
@@ -713,7 +814,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         nuevo.repaint();
         repaint();
-
     }//GEN-LAST:event_add2ActionPerformed
 
     private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
@@ -797,8 +897,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel move;
     private javax.swing.JLabel name;
     private javax.swing.JPanel opcionsed;
-    private THpaneles.OptionCard optionCard3;
-    private THpaneles.OptionCard optionCard4;
     private javax.swing.JTabbedPane switchven;
     private custom.TextField textField1;
     private javax.swing.JButton toCustom;

@@ -67,7 +67,7 @@ public class CrearCurso extends javax.swing.JPanel {
         Entrada.setText("Numero de dias:");
         jPanel1.add(Entrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 170, -1));
 
-        ndias.setModel(new javax.swing.SpinnerNumberModel(1, 1, 6, 1));
+        ndias.setModel(new javax.swing.SpinnerNumberModel(1, 1, 3, 1));
         ndias.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.add(ndias, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 150, 70, 30));
 
@@ -80,7 +80,10 @@ public class CrearCurso extends javax.swing.JPanel {
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/icons8_save_22px.png"))); // NOI18N
         jButton2.setText("Guardar");
+        jButton2.setBorderPainted(false);
         jButton2.setContentAreaFilled(false);
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton2.setFocusPainted(false);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -93,7 +96,10 @@ public class CrearCurso extends javax.swing.JPanel {
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/icons8_close_20px.png"))); // NOI18N
         jButton1.setText("Cancelar");
+        jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.setFocusPainted(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);

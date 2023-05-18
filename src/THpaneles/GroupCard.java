@@ -33,14 +33,14 @@ public class GroupCard extends javax.swing.JPanel {
 //        this.repaint();
 //        this.white.repaint();
         
-
-
-        int r = (int) (Math.random() * 250);
-        int g = (int) (Math.random() * 250);
-        int b = (int) (Math.random() * 250);
-        this.jPanel1.setBackground(new Color(r,g,b));
     }
-
+    
+    public void convertTextToColor(String text) {
+        int hashCode = text.hashCode();
+        this.jPanel1.setBackground(new Color(hashCode));
+    }
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -72,6 +72,7 @@ public class GroupCard extends javax.swing.JPanel {
                 bgMouseClicked(evt);
             }
         });
+        bg.setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(255, 102, 153));
 
@@ -86,14 +87,21 @@ public class GroupCard extends javax.swing.JPanel {
             .addGap(0, 60, Short.MAX_VALUE)
         );
 
+        bg.add(jPanel1);
+        jPanel1.setBounds(0, 0, 12, 60);
+
         data.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         data.setForeground(new java.awt.Color(204, 204, 204));
         data.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         data.setText("2 semestre | 3 cursos");
+        bg.add(data);
+        data.setBounds(70, 40, 190, 15);
 
         name.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
         name.setForeground(new java.awt.Color(104, 104, 104));
         name.setText("Ing. Civil");
+        bg.add(name);
+        name.setBounds(30, 10, 180, 30);
 
         delete.setBackground(new java.awt.Color(255, 255, 255));
         delete.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
@@ -115,32 +123,13 @@ public class GroupCard extends javax.swing.JPanel {
                 deleteComponentMoved(evt);
             }
         });
-
-        javax.swing.GroupLayout bgLayout = new javax.swing.GroupLayout(bg);
-        bg.setLayout(bgLayout);
-        bgLayout.setHorizontalGroup(
-            bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(bgLayout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(name, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(bgLayout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addComponent(data, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(10, 10, 10)
-                .addComponent(delete, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        bgLayout.setVerticalGroup(
-            bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(bgLayout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addComponent(name, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(data))
-            .addComponent(delete, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
+        delete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteActionPerformed(evt);
+            }
+        });
+        bg.add(delete);
+        delete.setBounds(270, 0, 30, 60);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -150,19 +139,30 @@ public class GroupCard extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(bg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(bg, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void bgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bgMouseClicked
-        ventana.unchoseChosen();
-        ventana.setGroupChosen(this.thisGrupo);
-        ventana.setGroupchoosen(this);
         
-        ventana.UpdateCursoCards();
+        if (!this.chosen) {
+            ventana.unchoseChosen();
+            ventana.setGroupChosen(this.thisGrupo);
+            ventana.setGroupchoosen(this);
+
+            ventana.UpdateCursoCards();
+            ventana.UpdateOpcionCards();
+            
+            this.chosen = true;
+            chose();
+        } else {
+            ventana.unchoseChosen();
+            this.chosen = false;
+            this.unchose();
+            ventana.UpdateCursoCards();
+            ventana.UpdateOpcionCards();
+        }
         
-        this.chosen = true;
-        chose();
         
     }//GEN-LAST:event_bgMouseClicked
 
@@ -179,6 +179,12 @@ public class GroupCard extends javax.swing.JPanel {
     private void deleteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_deleteMouseClicked
         
     }//GEN-LAST:event_deleteMouseClicked
+
+    private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
+        thisGrupos.deletegrupo(thisGrupo.getName());
+        ventana.UpdateGroupCards();
+        ventana.unchoseChosen();
+    }//GEN-LAST:event_deleteActionPerformed
     
     
     private void chose(){
@@ -267,6 +273,7 @@ public class GroupCard extends javax.swing.JPanel {
         
         this.name.setText(namee);
         this.data.setText("Semestre " + this.semester + " | " + this.curses + " cursos");
+        this.convertTextToColor(namee);
     }
 
     public grupos getThisGrupos() {

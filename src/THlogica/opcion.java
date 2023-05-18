@@ -25,8 +25,12 @@ public class opcion {
             System.out.println("TIMES");
         }
     }
+
+    public int getNdias() {
+        return ndias;
+    }
      
-     
+    
 
 
     private int pedirDia() {
@@ -118,7 +122,51 @@ public class opcion {
         }
         return Most;
     }
+    
+    public int[] getDias(){
+        int[] diass = new int [3];
+        int cont = 0;
+        dia actu = act;
+        while (actu != null) {
+            diass[cont] = actu.getDia();
+            cont++;
+            actu = actu.ant;
+        }
+        return diass;
+    }
+    
+    public int[] getHDSS(){
+        int[] diass = new int [3];
+        int cont = 0;
+        dia actu = act;
+        while (actu != null) {
+            diass[cont] = actu.getHds();
+            cont++;
+            actu = actu.ant;
+        }
+        return diass;
+    }
+    
+    
+    public int[] getHD(){
+        int[] diass = new int [3];
+        int cont = 0;
+        dia actu = act;
+        while (actu != null) {
+            diass[cont] = actu.getHd();
+            cont++;
+            actu = actu.ant;
+        }
+        return diass;
+    }
 
+    public opcion getSig() {
+        return sig;
+    }
+    
+    
+    
+    
     //DETECTA SI LA HORA DADA SE CRUZA CON ALGUN DÍA
     public boolean checkoverlap(int day, int start, int end) {
         dia actu = act;

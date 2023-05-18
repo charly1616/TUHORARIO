@@ -5,23 +5,28 @@
 package THpaneles;
 
 import java.awt.*;
+import javax.swing.*;
+import javax.swing.border.Border;
+import java.awt.*;
 import java.awt.geom.RoundRectangle2D;
 import THVentanas.VentanaPrincipal;
+import THlogica.dia;
 import THlogica.opcion;
 import THlogica.opciones;
+import javax.swing.BorderFactory;
 import javax.swing.SwingUtilities;
+import javax.swing.border.Border;
 
 public class OptionCard extends javax.swing.JPanel {
-    opciones variable;
-    VentanaPrincipal padre;
     
-    int[] disabled  = {187,187,187};
+    int[] disabled  = {245,245,245};
     int[][] hour = {{255,255,255},{255,255,204},{255,204,153},{94,101,232},{47,85,151}};
     
-    private int He = 2;
-    private int Hs = 5;
-    private int day = 0;
+    private int[] He = {2,0,0};
+    private int[] Hs = {5,0,0};
+    private int[] day = {0,0,0};
     
+    private int days = 3;
     
     private VentanaPrincipal ventana;
     private opcion thisOpcion;
@@ -32,21 +37,11 @@ public class OptionCard extends javax.swing.JPanel {
     
     
     public OptionCard() {
-        setSize(180, 30);
         initComponents();
         this.del.setVisible(false);
-        
+
     }
-    
-    @Override
-    protected void paintComponent(Graphics gg){
-        
-        Graphics2D g2 = (Graphics2D) gg.create();
-        g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-        g2.setColor(this.getBackground());
-        g2.fill(new RoundRectangle2D.Double(0,0, 180, 30, 30,30));
-        g2.dispose();
-    }
+  
     
     
     
@@ -59,17 +54,84 @@ public class OptionCard extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        sun = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         del = new javax.swing.JButton();
+        DAYS = new javax.swing.JPanel();
+        DAY3 = new javax.swing.JPanel();
+        sun2 = new javax.swing.JLabel();
+        DATA2 = new javax.swing.JLabel();
+        DAY2 = new javax.swing.JPanel();
+        sun1 = new javax.swing.JLabel();
+        DATA1 = new javax.swing.JLabel();
+        DAY1 = new javax.swing.JPanel();
+        sun = new javax.swing.JLabel();
+        DATA = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(237, 239, 237));
+        setBackground(new java.awt.Color(153, 153, 153));
+        setOpaque(false);
         addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 formMouseClicked(evt);
             }
         });
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setLayout(null);
+
+        del.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
+        del.setForeground(new java.awt.Color(102, 102, 102));
+        del.setText("x");
+        del.setBorder(null);
+        del.setBorderPainted(false);
+        del.setContentAreaFilled(false);
+        del.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        del.setEnabled(false);
+        del.setFocusPainted(false);
+        del.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        add(del);
+        del.setBounds(150, -2, 29, 30);
+
+        DAYS.setPreferredSize(new java.awt.Dimension(0, 0));
+
+        DAY3.setBackground(new java.awt.Color(255, 255, 255));
+        DAY3.setLayout(null);
+
+        sun2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 65)); // NOI18N
+        sun2.setForeground(new java.awt.Color(47, 85, 151));
+        sun2.setText("•");
+        sun2.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentMoved(java.awt.event.ComponentEvent evt) {
+                sun2ComponentMoved(evt);
+            }
+        });
+        DAY3.add(sun2);
+        sun2.setBounds(153, -26, 30, 80);
+
+        DATA2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
+        DATA2.setForeground(new java.awt.Color(102, 102, 102));
+        DATA2.setText("JUE   12 AM - 2 PM");
+        DAY3.add(DATA2);
+        DATA2.setBounds(20, 8, 130, 15);
+
+        DAY2.setBackground(new java.awt.Color(255, 255, 255));
+        DAY2.setLayout(null);
+
+        sun1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 65)); // NOI18N
+        sun1.setForeground(new java.awt.Color(47, 85, 151));
+        sun1.setText("•");
+        sun1.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentMoved(java.awt.event.ComponentEvent evt) {
+                sun1ComponentMoved(evt);
+            }
+        });
+        DAY2.add(sun1);
+        sun1.setBounds(153, -26, 30, 80);
+
+        DATA1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
+        DATA1.setForeground(new java.awt.Color(102, 102, 102));
+        DATA1.setText("JUE   12 AM - 2 PM");
+        DAY2.add(DATA1);
+        DATA1.setBounds(20, 8, 130, 15);
+
+        DAY1.setBackground(new java.awt.Color(245, 245, 245));
+        DAY1.setLayout(null);
 
         sun.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 65)); // NOI18N
         sun.setForeground(new java.awt.Color(47, 85, 151));
@@ -79,27 +141,58 @@ public class OptionCard extends javax.swing.JPanel {
                 sunComponentMoved(evt);
             }
         });
-        add(sun, new org.netbeans.lib.awtextra.AbsoluteConstraints(153, -27, 30, 80));
+        DAY1.add(sun);
+        sun.setBounds(153, -26, 30, 80);
 
-        jLabel2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel2.setText("JUE   12 AM - 2 PM");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 8, 130, -1));
+        DATA.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
+        DATA.setForeground(new java.awt.Color(102, 102, 102));
+        DATA.setText("JUE   12 AM - 2 PM");
+        DAY1.add(DATA);
+        DATA.setBounds(20, 8, 130, 15);
 
-        del.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
-        del.setForeground(new java.awt.Color(102, 102, 102));
-        del.setText("x");
-        del.setBorder(null);
-        del.setBorderPainted(false);
-        del.setContentAreaFilled(false);
-        del.setEnabled(false);
-        del.setFocusPainted(false);
-        add(del, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 0, -1, 30));
+        javax.swing.GroupLayout DAYSLayout = new javax.swing.GroupLayout(DAYS);
+        DAYS.setLayout(DAYSLayout);
+        DAYSLayout.setHorizontalGroup(
+            DAYSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DAYSLayout.createSequentialGroup()
+                .addComponent(DAY1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(DAYSLayout.createSequentialGroup()
+                .addGroup(DAYSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(DAY3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(DAY2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        DAYSLayout.setVerticalGroup(
+            DAYSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DAYSLayout.createSequentialGroup()
+                .addComponent(DAY1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(DAY2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(DAY3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        add(DAYS);
+        DAYS.setBounds(0, 0, 180, 90);
     }// </editor-fold>//GEN-END:initComponents
 
     private void formMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseClicked
-        this.chosen = true;
-        chose();
+        if (!this.chosen) {
+            ventana.unchoseChosenopcion();
+            ventana.setOpcionChosen(this.thisOpcion);
+            ventana.setOpcionchoosen(this);
+            
+            
+            this.chosen = true;
+            chose();
+        } else {
+            ventana.unchoseChosenopcion();
+            this.chosen = false;
+            this.unchose();
+        }
+        
+        
     }//GEN-LAST:event_formMouseClicked
 
     private void sunComponentMoved(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_sunComponentMoved
@@ -109,13 +202,28 @@ public class OptionCard extends javax.swing.JPanel {
             unchose();
         }
     }//GEN-LAST:event_sunComponentMoved
+
+    private void sun1ComponentMoved(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_sun1ComponentMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sun1ComponentMoved
+
+    private void sun2ComponentMoved(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_sun2ComponentMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sun2ComponentMoved
     
     
     
     private void chose(){
         SwingUtilities.invokeLater(() -> {
             this.sun.setLocation(130,this.sun.getY());
-            this.setBackground(Color.white);
+            this.DAY1.setBackground(Color.white);
+            
+            this.sun1.setLocation(130,this.sun.getY());
+            this.DAY2.setBackground(Color.white);
+            
+            this.sun2.setLocation(130,this.sun.getY());
+            this.DAY3.setBackground(Color.white);
+            
             this.del.setEnabled(true);
             this.del.setVisible(true);
         });
@@ -125,15 +233,110 @@ public class OptionCard extends javax.swing.JPanel {
     public void unchose(){
         SwingUtilities.invokeLater(() -> {
             this.sun.setLocation(153,this.sun.getY());
-            this.setBackground(new Color(disabled[0],disabled[1],disabled[2]));
+            this.DAY1.setBackground(new Color(disabled[0],disabled[1],disabled[2]));
+            
+            this.sun1.setLocation(153,this.sun.getY());
+            this.DAY2.setBackground(new Color(disabled[0],disabled[1],disabled[2]));
+            
+            this.sun2.setLocation(153,this.sun.getY());
+            this.DAY3.setBackground(new Color(disabled[0],disabled[1],disabled[2]));
+            
             this.del.setEnabled(false);
             this.del.setVisible(false);
         });
     }
+    
+    
+    
+    
+    
 
+    //<editor-fold defaultstate="collapsed" desc=" setters y getters">
+    public void setThisOpciones(opciones thisOpciones) {
+        this.thisOpciones = thisOpciones;
+    }    
+    
+
+    public VentanaPrincipal getVentana() {
+        return ventana;
+    }
+
+    public void setVentana(VentanaPrincipal ventana) {
+        this.ventana = ventana;
+    }
+
+    public opcion getThisOpcion() {
+        return thisOpcion;
+    }
+
+    public void setThisOpcion(opcion thisOpcion) {
+        this.thisOpcion = thisOpcion;
+        
+        
+        if (this.thisOpcion != null){
+            days = this.thisOpcion.getNdias();
+        }
+        SwingUtilities.invokeLater(() -> {
+
+            this.setSize(180, 30*days);
+            
+            this.del.setLocation(del.getX(), -2 + 15*(days-1));
+            
+            this.DAYS.repaint();
+            this.revalidate();
+            this.repaint();
+
+        });
+        
+        for (int i = 0; i < days; i++) {
+            He[i] = thisOpcion.getHD()[i];
+            Hs[i] = thisOpcion.getHDSS()[i];
+            day[i] = thisOpcion.getDias()[i];
+        }
+        
+        
+        
+        
+        String dataone = dia.nombreDia(day[0]) + dia.convertirHora(He[0]) +" - "+ dia.convertirHora(Hs[0]);
+        String datatwo = dia.nombreDia(day[1]) + dia.convertirHora(He[1]) +" - "+ dia.convertirHora(Hs[1]);
+        String datathr = dia.nombreDia(day[2]) + dia.convertirHora(He[2]) +" - "+ dia.convertirHora(Hs[2]);
+        dataone = dataone.toUpperCase();
+        datatwo = datatwo.toUpperCase();
+        datathr = datathr.toUpperCase();
+        this.DATA.setText(dataone);
+        this.DATA1.setText(datatwo);
+        this.DATA2.setText(datathr);
+    }
+
+    public opciones getThisOpciones() {
+        return thisOpciones;
+    }
+    
+    
+    
+    //</editor-fold>
+    
+    public boolean isChosen() {
+        return chosen;
+    }
+
+    public void setChosen(boolean chosen) {
+        this.chosen = chosen;
+    }
+    
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel DATA;
+    private javax.swing.JLabel DATA1;
+    private javax.swing.JLabel DATA2;
+    private javax.swing.JPanel DAY1;
+    private javax.swing.JPanel DAY2;
+    private javax.swing.JPanel DAY3;
+    private javax.swing.JPanel DAYS;
     private javax.swing.JButton del;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel sun;
+    private javax.swing.JLabel sun1;
+    private javax.swing.JLabel sun2;
     // End of variables declaration//GEN-END:variables
 }

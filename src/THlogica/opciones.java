@@ -205,4 +205,11 @@ public class opciones {
         }
     }
 
+    public opcion getCabeza() {
+        return cabeza;
+    }
+    
+    
+    
+    
 }
