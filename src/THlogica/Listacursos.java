@@ -22,6 +22,7 @@ public class Listacursos {
         while (actual != null && !(actual.nombre.equals(name))) {
             actual = actual.sig;
         }
+        if (actual == null)  return;
         if (actual != null) {
             if (actual == cabeza){
                 cabeza = actual.sig;

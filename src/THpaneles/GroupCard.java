@@ -26,12 +26,6 @@ public class GroupCard extends javax.swing.JPanel {
     
     public GroupCard() {
         initComponents();
-//        setOpaque(false);
-//        this.white.setOpaque(false);
-//        this.setBackground(new Color(255,255,255,0.5f));
-//        this.white.setBackground(new Color(255,255,255,0.5f));
-//        this.repaint();
-//        this.white.repaint();
         
     }
     
@@ -75,12 +69,13 @@ public class GroupCard extends javax.swing.JPanel {
         bg.setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(255, 102, 153));
+        jPanel1.setPreferredSize(new java.awt.Dimension(8, 60));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 12, Short.MAX_VALUE)
+            .addGap(0, 8, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -88,7 +83,7 @@ public class GroupCard extends javax.swing.JPanel {
         );
 
         bg.add(jPanel1);
-        jPanel1.setBounds(0, 0, 12, 60);
+        jPanel1.setBounds(0, 0, 8, 60);
 
         data.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         data.setForeground(new java.awt.Color(204, 204, 204));
@@ -182,7 +177,12 @@ public class GroupCard extends javax.swing.JPanel {
 
     private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
         thisGrupos.deletegrupo(thisGrupo.getName());
+        
         ventana.UpdateGroupCards();
+        ventana.UpdateCursoCards();
+        ventana.UpdateOpcionCards();
+        ventana.unchoseChosencurso();
+        ventana.unchoseChosenopcion();
         ventana.unchoseChosen();
     }//GEN-LAST:event_deleteActionPerformed
     
@@ -193,7 +193,7 @@ public class GroupCard extends javax.swing.JPanel {
             this.delete.setLocation(230,0);
             this.delete.setEnabled(true);
             
-            this.jPanel1.setSize(20,60);
+            this.jPanel1.setSize(18,60);
             
             this.bg.repaint();
         });
@@ -206,7 +206,7 @@ public class GroupCard extends javax.swing.JPanel {
             this.delete.setLocation(270,0);
             this.delete.setEnabled(false);
             
-            this.jPanel1.setSize(10,60);
+            this.jPanel1.setSize(6,60);
             
             this.bg.repaint();
         });

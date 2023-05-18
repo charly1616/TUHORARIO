@@ -17,7 +17,14 @@ public class opciones {
     public opciones(int ndias) { //CONSTRUCTOR
         this.ndias = ndias;
     }
-
+    
+    
+    public void clearopcions(){
+        newaction(cabeza, "deleted");
+        cabeza = null;
+        act = null;
+    }
+    
     public void deleteopcion(int n) { //ELIMINA UNA OPCION
         if (n > nopciones) {
             return;
@@ -48,6 +55,11 @@ public class opciones {
         contaropciones();
     }
     
+    
+    public void deleteopcion(opcion n){
+        deleteopcion(this.number(n));
+    }
+    
     private void newaction(opcion opcion, String action){ // CREA UNA NUEVA ACCION
         if (opcion == null) return;
         action nuevo;
@@ -65,6 +77,71 @@ public class opciones {
            actacti = nuevo;
         }
         actions++;
+    }
+    
+    
+    private void undodelete(opcion var) {
+        opcion actual = cabeza;
+        while (actual != null && !(actual.equals(var))) {
+            actual = actual.sig;
+        }
+        if (actual != null) {
+            if (actual == cabeza){
+                cabeza = actual.sig;
+            }
+            if (actual == act){
+                this.act = actual.ant;
+            }
+            if (actual.ant != null) {
+                actual.ant.sig = actual.sig;
+                actual.ant = null;
+            }
+            if (actual.sig != null) {
+                actual.sig.ant = actual.ant;
+                actual.sig = null;
+            }
+        }
+        this.contaropciones();
+    }
+    
+   private void undonew(opcion var) {
+        if (cabeza == null) {
+            opcion localact = var;
+            while (localact.sig != null){
+                localact = localact.sig;
+            }
+            this.cabeza = var;
+            this.act = localact;
+        } else {
+            opcion localact = var;
+            while (localact.sig != null){
+                localact = localact.sig;
+            }
+            var.ant = this.act;
+            this.act.sig = var;
+            this.act = localact;
+        }
+        
+        this.contaropciones();
+    }
+    
+    public void Undo(){
+        
+        if (actacti == null) return;
+        if (actacti.type.equals("added")){
+            undodelete(actacti.oenvolved);
+        } else{
+            System.out.println("ADIING");
+            undonew(actacti.oenvolved);
+        }
+        if (actacti == headact){
+            headact = null;
+            actacti = null;
+        }else{
+            actacti = actacti.ant;
+            actacti.sig = null;
+        }
+        actions--;
     }
     
     

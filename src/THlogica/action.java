@@ -15,12 +15,12 @@ public class action {
         this.type = type;
         this.cenvolved = cenvolved;
     }
-      public action(String type, opcion cenvolved) { 
+      public action(String type, opcion oenvolved) { 
         this.type = type;
         this.oenvolved = oenvolved;
     }
       
-    public action(String type, grupo cenvolved) { 
+    public action(String type, grupo genvolved) { 
         this.type = type;
         this.oenvolved = oenvolved;
     }

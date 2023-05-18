@@ -85,6 +85,11 @@ public class OptionCard extends javax.swing.JPanel {
         del.setEnabled(false);
         del.setFocusPainted(false);
         del.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        del.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                delActionPerformed(evt);
+            }
+        });
         add(del);
         del.setBounds(150, -2, 29, 30);
 
@@ -210,6 +215,15 @@ public class OptionCard extends javax.swing.JPanel {
     private void sun2ComponentMoved(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_sun2ComponentMoved
         // TODO add your handling code here:
     }//GEN-LAST:event_sun2ComponentMoved
+
+    private void delActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delActionPerformed
+        if (this.thisOpcion == null) return;
+        
+        this.thisOpciones.deleteopcion(thisOpcion);
+        
+        ventana.UpdateOpcionCards();
+        ventana.unchoseChosenopcion();
+    }//GEN-LAST:event_delActionPerformed
     
     
     

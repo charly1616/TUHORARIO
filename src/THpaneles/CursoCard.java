@@ -41,13 +41,13 @@ public class CursoCard extends javax.swing.JPanel {
     
     
     
-    private void chose(){
+    public void chose(){
         SwingUtilities.invokeLater(() -> {
             this.data.setLocation(30,40);
             this.delete.setLocation(200,0);
             this.delete.setEnabled(true);
             
-            this.jPanel1.setSize(20,60);
+            this.jPanel1.setSize(18,60);
             
             this.bg.repaint();
         });
@@ -60,7 +60,7 @@ public class CursoCard extends javax.swing.JPanel {
             this.delete.setLocation(270,0);
             this.delete.setEnabled(false);
             
-            this.jPanel1.setSize(10,60);
+            this.jPanel1.setSize(6,60);
             
             this.bg.repaint();
         });
@@ -160,8 +160,6 @@ public class CursoCard extends javax.swing.JPanel {
         data = new javax.swing.JLabel();
         delete = new javax.swing.JButton();
 
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
         bg.setBackground(new java.awt.Color(255, 255, 255));
         bg.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -171,12 +169,13 @@ public class CursoCard extends javax.swing.JPanel {
         bg.setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 204));
+        jPanel1.setPreferredSize(new java.awt.Dimension(6, 60));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 10, Short.MAX_VALUE)
+            .addGap(0, 6, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -184,7 +183,7 @@ public class CursoCard extends javax.swing.JPanel {
         );
 
         bg.add(jPanel1);
-        jPanel1.setBounds(0, 0, 10, 60);
+        jPanel1.setBounds(0, 0, 6, 60);
 
         name.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
         name.setForeground(new java.awt.Color(104, 104, 104));
@@ -220,16 +219,25 @@ public class CursoCard extends javax.swing.JPanel {
         bg.add(delete);
         delete.setBounds(240, 0, 30, 60);
 
-        add(bg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 240, 60));
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(bg, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(bg, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
     }// </editor-fold>//GEN-END:initComponents
 
     private void deleteComponentMoved(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_deleteComponentMoved
-        
-        if (this.chosen) {
-            chose();
-        } else{
-            unchose();
-        }
+//        
+//        if (this.chosen) {
+//            chose();
+//        } else{
+//            unchose();
+//        }
     }//GEN-LAST:event_deleteComponentMoved
 
     private void bgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bgMouseClicked
@@ -252,9 +260,15 @@ public class CursoCard extends javax.swing.JPanel {
     }//GEN-LAST:event_bgMouseClicked
 
     private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
-        this.thisCursos.deletecurso(this.thisCurso.getNombre());
+        if (thisCurso == null) {
+            return;
+        }
+        this.thisCursos.deletecurso(thisCurso.getNombre());
+        
         ventana.UpdateCursoCards();
+        ventana.UpdateOpcionCards();
         ventana.unchoseChosencurso();
+        ventana.unchoseChosenopcion();
     }//GEN-LAST:event_deleteActionPerformed
 
 
