@@ -78,7 +78,7 @@ public class CrearGroup extends javax.swing.JPanel {
         semestre.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         fond.add(semestre, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 190, 100, -1));
 
-        jSeparator1.setBackground(new java.awt.Color(0, 102, 0));
+        jSeparator1.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
         fond.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 300, 10));
 

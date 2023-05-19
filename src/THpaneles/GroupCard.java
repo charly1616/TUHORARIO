@@ -92,7 +92,7 @@ public class GroupCard extends javax.swing.JPanel {
         bg.add(data);
         data.setBounds(70, 40, 190, 15);
 
-        name.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
+        name.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
         name.setForeground(new java.awt.Color(104, 104, 104));
         name.setText("Ing. Civil");
         bg.add(name);

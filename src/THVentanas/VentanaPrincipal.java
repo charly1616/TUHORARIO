@@ -56,7 +56,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         
         grupos.ReadGrupos();
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/THimages/icon.png")));
-        setShape(new RoundRectangle2D.Double(0,0,getWidth(),getHeight(),24,24));
+        setShape(new RoundRectangle2D.Double(0,0,getWidth(),getHeight(),18,18));
         setLocationRelativeTo(null);
         
         
@@ -82,6 +82,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         toEDIT = new javax.swing.JButton();
         toGENER = new javax.swing.JButton();
         downthing = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         switchven = new javax.swing.JTabbedPane();
         edit = new javax.swing.JPanel();
         Gruposed = new javax.swing.JPanel();
@@ -98,10 +99,16 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         labelop = new javax.swing.JLabel();
         back2 = new javax.swing.JButton();
         add3 = new javax.swing.JButton();
-        textField1 = new custom.TextField();
+        CODE = new custom.TextField();
         See = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
+        filts = new javax.swing.JPanel();
+        schetxt = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        schetxt1 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jSeparator2 = new javax.swing.JSeparator();
+        view = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -205,6 +212,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         );
 
         header.add(downthing, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 45, 30, 6));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/icono.png"))); // NOI18N
+        header.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 40, 40));
 
         getContentPane().add(header, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1180, 60));
 
@@ -365,30 +375,97 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         opcionsed.add(add3);
         add3.setBounds(410, 20, 20, 20);
 
-        textField1.setBackground(new java.awt.Color(169, 209, 142));
-        textField1.setBorder(null);
-        textField1.setForeground(new java.awt.Color(255, 255, 255));
-        textField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        textField1.setText("codigo");
-        textField1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
-        textField1.setRound(15);
-        opcionsed.add(textField1);
-        textField1.setBounds(110, 60, 300, 20);
+        CODE.setBackground(new java.awt.Color(169, 209, 142));
+        CODE.setBorder(null);
+        CODE.setForeground(new java.awt.Color(255, 255, 255));
+        CODE.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        CODE.setText("codigo");
+        CODE.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
+        CODE.setRound(20);
+        CODE.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                CODEFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                CODEFocusLost(evt);
+            }
+        });
+        CODE.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CODEMouseClicked(evt);
+            }
+        });
+        opcionsed.add(CODE);
+        CODE.setBounds(110, 60, 300, 25);
 
         edit.add(opcionsed);
         opcionsed.setBounds(640, 10, 540, 670);
 
         switchven.addTab("tab1", edit);
 
-        See.setBackground(new java.awt.Color(204, 255, 204));
+        See.setBackground(new java.awt.Color(237, 253, 246));
         See.setFocusable(false);
         See.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        See.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, 220, 480));
+
+        filts.setBackground(new java.awt.Color(209, 243, 222));
+        filts.setLayout(null);
+
+        schetxt.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
+        schetxt.setForeground(new java.awt.Color(102, 102, 102));
+        schetxt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        schetxt.setText("Filtros");
+        filts.add(schetxt);
+        schetxt.setBounds(70, 230, 120, 30);
+
+        jLabel2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(127, 127, 127));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Horario recomendado");
+        filts.add(jLabel2);
+        jLabel2.setBounds(60, 180, 160, 17);
+
+        jLabel3.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(127, 127, 127));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Horarios generados");
+        filts.add(jLabel3);
+        jLabel3.setBounds(60, 90, 160, 17);
+
+        schetxt1.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 56)); // NOI18N
+        schetxt1.setForeground(new java.awt.Color(102, 102, 102));
+        schetxt1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        schetxt1.setText("319");
+        filts.add(schetxt1);
+        schetxt1.setBounds(60, 30, 160, 60);
+
+        jSeparator1.setBackground(new java.awt.Color(255, 255, 255));
+        jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
+        filts.add(jSeparator1);
+        jSeparator1.setBounds(20, 110, 230, 10);
+
+        jSeparator2.setBackground(new java.awt.Color(255, 255, 255));
+        jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
+        filts.add(jSeparator2);
+        jSeparator2.setBounds(20, 220, 230, 10);
+
+        See.add(filts, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 670));
+
+        view.setBackground(new java.awt.Color(237, 253, 246));
+
+        javax.swing.GroupLayout viewLayout = new javax.swing.GroupLayout(view);
+        view.setLayout(viewLayout);
+        viewLayout.setHorizontalGroup(
+            viewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 920, Short.MAX_VALUE)
+        );
+        viewLayout.setVerticalGroup(
+            viewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 660, Short.MAX_VALUE)
+        );
+
+        See.add(view, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 10, 920, 660));
 
         switchven.addTab("tab2", See);
-
-        jPanel2.setFocusable(false);
-        switchven.addTab("tab3", jPanel2);
 
         getContentPane().add(switchven, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 1180, 700));
 
@@ -612,6 +689,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     
     
     public void UpdateOpcionCards(){
+        
+        CODE.setText("codigo");
         RemoveOpcioncards();
         OpcionCards();
     }
@@ -760,7 +839,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_back2ActionPerformed
 
     private void keyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_keyActionPerformed
-        // TODO add your handling code here:
+        if (this.CODE.getText().equals("codigo") || this.CODE.getText().equals("")) {
+            this.CODE.setText(this.cursoChosen.getListaopc().encript());
+        } else {
+            this.cursoChosen.getListaopc().deencript(CODE.getText());
+            this.CODE.setText("codigo");
+            this.UpdateOpcionCards();
+        }
     }//GEN-LAST:event_keyActionPerformed
 
     private void brush2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_brush2ActionPerformed
@@ -818,6 +903,24 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private void formMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseMoved
 
     }//GEN-LAST:event_formMouseMoved
+
+    private void CODEMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CODEMouseClicked
+        if (this.CODE.getText().equals("codigo")) {
+            this.CODE.setText("");
+        }
+    }//GEN-LAST:event_CODEMouseClicked
+
+    private void CODEFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_CODEFocusLost
+        if (this.CODE.getText().equals("")) {
+            this.CODE.setText("codigo");
+        }
+    }//GEN-LAST:event_CODEFocusLost
+
+    private void CODEFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_CODEFocusGained
+        if (this.CODE.getText().equals("codigo")) {
+            this.CODE.setText("");
+        }
+    }//GEN-LAST:event_CODEFocusGained
     
     
     
@@ -854,6 +957,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private custom.TextField CODE;
     private javax.swing.JPanel Gruposed;
     private javax.swing.JPanel See;
     private javax.swing.JButton add;
@@ -867,9 +971,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel downthing;
     private javax.swing.JPanel edit;
     private javax.swing.JLabel exit;
+    private javax.swing.JPanel filts;
     private javax.swing.JPanel header;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JButton key;
     private javax.swing.JLabel labelcursos;
     private javax.swing.JLabel labelgrupos;
@@ -878,10 +986,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel move;
     private javax.swing.JLabel name;
     private javax.swing.JPanel opcionsed;
+    private javax.swing.JLabel schetxt;
+    private javax.swing.JLabel schetxt1;
     private javax.swing.JTabbedPane switchven;
-    private custom.TextField textField1;
     private javax.swing.JButton toCustom;
     private javax.swing.JButton toEDIT;
     private javax.swing.JButton toGENER;
+    private javax.swing.JPanel view;
     // End of variables declaration//GEN-END:variables
 }

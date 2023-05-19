@@ -14,7 +14,8 @@ public class MyButton extends JButton {
     public boolean isOver() {
         return over;
     }
-
+    
+    
     public void setOver(boolean over) {
         this.over = over;
     }
