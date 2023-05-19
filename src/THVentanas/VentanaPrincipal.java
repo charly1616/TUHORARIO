@@ -93,6 +93,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         labelcursos = new javax.swing.JLabel();
         add2 = new javax.swing.JButton();
         brush = new javax.swing.JButton();
+        spinner2 = new custom.Spinner();
         opcionsed = new javax.swing.JPanel();
         brush2 = new javax.swing.JButton();
         key = new javax.swing.JButton();
@@ -111,6 +112,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         view = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 255));
         setUndecorated(true);
         setResizable(false);
         addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -252,7 +254,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         add.setBounds(288, 24, 20, 20);
 
         edit.add(Gruposed);
-        Gruposed.setBounds(0, 0, 340, 680);
+        Gruposed.setBounds(0, 0, 340, 690);
 
         cursosed.setBackground(new java.awt.Color(209, 243, 222));
         cursosed.setFocusable(false);
@@ -305,9 +307,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         cursosed.add(brush);
         brush.setBounds(220, 14, 20, 20);
+        cursosed.add(spinner2);
+        spinner2.setBounds(100, 230, 100, 42);
 
         edit.add(cursosed);
-        cursosed.setBounds(340, 10, 300, 670);
+        cursosed.setBounds(340, 10, 300, 680);
 
         opcionsed.setBackground(new java.awt.Color(237, 253, 246));
         opcionsed.setFocusable(false);
@@ -339,7 +343,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
         opcionsed.add(key);
-        key.setBounds(440, 60, 28, 20);
+        key.setBounds(440, 60, 26, 20);
 
         labelop.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         labelop.setForeground(new java.awt.Color(127, 127, 127));
@@ -399,7 +403,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         CODE.setBounds(110, 60, 300, 25);
 
         edit.add(opcionsed);
-        opcionsed.setBounds(640, 10, 540, 670);
+        opcionsed.setBounds(640, 10, 540, 680);
 
         switchven.addTab("tab1", edit);
 
@@ -467,7 +471,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         switchven.addTab("tab2", See);
 
-        getContentPane().add(switchven, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 1180, 700));
+        getContentPane().add(switchven, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 1180, 710));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -988,6 +992,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel opcionsed;
     private javax.swing.JLabel schetxt;
     private javax.swing.JLabel schetxt1;
+    private custom.Spinner spinner2;
     private javax.swing.JTabbedPane switchven;
     private javax.swing.JButton toCustom;
     private javax.swing.JButton toEDIT;

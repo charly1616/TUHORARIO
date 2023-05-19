@@ -27,6 +27,8 @@ public class SpinnerUI extends BasicSpinnerUI {
     @Override
     protected Component createNextButton() {
         ArrowButton cmd = new ArrowButton(true);
+        cmd.setBackground(BGcolor);
+        cmd.setForeground(Fcolor);
         installNextButtonListeners(cmd);
         return cmd;
     }
@@ -34,10 +36,51 @@ public class SpinnerUI extends BasicSpinnerUI {
     @Override
     protected Component createPreviousButton() {
         ArrowButton cmd = new ArrowButton(false);
+        cmd.setBackground(BGcolor);
+        cmd.setForeground(Fcolor);
         installPreviousButtonListeners(cmd);
         return cmd;
     }
+    
+    private Color BGcolor = new Color(255,255,255);
+    private Color Fcolor =  new Color(255,255,0);
+    private Color Btncolor = new Color(255,0,255);
+    private Color BtnFcolor =  new Color(0,255,255);
 
+    public Color getBGcolor() {
+        return BGcolor;
+    }
+
+    public void setBGcolor(Color BGcolor) {
+        this.BGcolor = BGcolor;
+    }
+
+    public Color getFcolor() {
+        return Fcolor;
+    }
+
+    public void setFcolor(Color Fcolor) {
+        this.Fcolor = Fcolor;
+    }
+
+    public Color getBtncolor() {
+        return Btncolor;
+    }
+
+    public void setBtncolor(Color Btncolor) {
+        this.Btncolor = Btncolor;
+    }
+
+    public Color getBtnFcolor() {
+        return BtnFcolor;
+    }
+
+    public void setBtnFcolor(Color BtnFcolor) {
+        this.BtnFcolor = BtnFcolor;
+    }
+    
+    
+    
     public class Editor extends TextField implements ChangeListener {
 
         public Editor(JSpinner spinner) {
@@ -60,7 +103,11 @@ public class SpinnerUI extends BasicSpinnerUI {
             throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
         }
     }
-
+    
+    
+    
+    
+    
     private class ArrowButton extends JButton {
 
         private final boolean next;
@@ -70,8 +117,6 @@ public class SpinnerUI extends BasicSpinnerUI {
             setContentAreaFilled(false);
             setFocusable(false);
             setBorder(new EmptyBorder(5, 7, 5, 7));
-            setBackground(new Color(231, 231, 231));
-            setForeground(new Color(150, 150, 150));
             addMouseListener(new MouseAdapter() {
                 @Override
                 public void mousePressed(MouseEvent me) {
@@ -84,7 +129,9 @@ public class SpinnerUI extends BasicSpinnerUI {
                 }
             });
         }
-
+        
+        
+        
         @Override
         public void paint(Graphics grphcs) {
             super.paint(grphcs);
@@ -101,7 +148,7 @@ public class SpinnerUI extends BasicSpinnerUI {
                 int px[] = {x + size / 2, x + size, x};
                 int py[] = {y, y + size, y + size};
                 if (isSelected()) {
-                    g2.setColor(new Color(181, 181, 181));
+                    //g2.setColor(new Color(181, 181, 181));
                 } else {
                     g2.setColor(getForeground());
                 }
@@ -115,7 +162,7 @@ public class SpinnerUI extends BasicSpinnerUI {
                 int px[] = {x, x + size, x + size / 2};
                 int py[] = {y, y, y + size};
                 if (isSelected()) {
-                    g2.setColor(new Color(181, 181, 181));
+                    //g2.setColor(new Color(181, 181, 181));
                 } else {
                     g2.setColor(getForeground());
                 }
