@@ -26,22 +26,25 @@ public class SpinnerUI extends BasicSpinnerUI {
 
     @Override
     protected Component createNextButton() {
-        ArrowButton cmd = new ArrowButton(true);
-        cmd.setBackground(BGcolor);
-        cmd.setForeground(Fcolor);
-        installNextButtonListeners(cmd);
-        return cmd;
+        cmdn = new ArrowButton(true);
+        cmdn.setBackground(BGcolor);
+        cmdn.setForeground(Fcolor);
+        installNextButtonListeners(cmdn);
+        return cmdn;
     }
 
     @Override
     protected Component createPreviousButton() {
-        ArrowButton cmd = new ArrowButton(false);
-        cmd.setBackground(BGcolor);
-        cmd.setForeground(Fcolor);
-        installPreviousButtonListeners(cmd);
-        return cmd;
+        cmdp = new ArrowButton(false);
+        cmdp.setBackground(BGcolor);
+        cmdp.setForeground(Fcolor);
+        installPreviousButtonListeners(cmdp);
+        return cmdp;
     }
     
+    
+    ArrowButton cmdn;
+    ArrowButton cmdp;
     private Color BGcolor = new Color(255,255,255);
     private Color Fcolor =  new Color(255,255,0);
     private Color Btncolor = new Color(255,0,255);
@@ -69,6 +72,8 @@ public class SpinnerUI extends BasicSpinnerUI {
 
     public void setBtncolor(Color Btncolor) {
         this.Btncolor = Btncolor;
+//        this.cmdn.setBackground(Btncolor);
+//        this.cmdp.setBackground(Btncolor);
     }
 
     public Color getBtnFcolor() {
@@ -77,6 +82,8 @@ public class SpinnerUI extends BasicSpinnerUI {
 
     public void setBtnFcolor(Color BtnFcolor) {
         this.BtnFcolor = BtnFcolor;
+//        this.cmdn.setForeground(Btncolor);
+//        this.cmdp.setForeground(Btncolor);
     }
     
     

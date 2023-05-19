@@ -18,14 +18,15 @@ public class Spinner extends JSpinner {
     public Spinner() {
         setOpaque(false);
         
-        SpinnerUI juan = new SpinnerUI();
+        juan = new SpinnerUI();
         juan.setBGcolor(BGcolor);
         juan.setFcolor(Fcolor);
         juan.setBtnFcolor(BtnFcolor);
-        juan.setBtnFcolor(BtnFcolor);
+        juan.setBtncolor(Btncolor);
         setUI(juan);
     }
     
+    private SpinnerUI juan;
     private Color BGcolor = new Color(255,255,255);
     private Color Fcolor =  new Color(255,255,0);
     private Color Btncolor = new Color(255,0,255);
@@ -37,14 +38,17 @@ public class Spinner extends JSpinner {
 
     public void setBGcolor(Color BGcolor) {
         this.BGcolor = BGcolor;
+        juan.setBGcolor(BGcolor);
     }
 
     public Color getFcolor() {
         return Fcolor;
+        
     }
 
     public void setFcolor(Color Fcolor) {
         this.Fcolor = Fcolor;
+        juan.setFcolor(Fcolor);
     }
 
     public Color getBtncolor() {
@@ -53,6 +57,7 @@ public class Spinner extends JSpinner {
 
     public void setBtncolor(Color Btncolor) {
         this.Btncolor = Btncolor;
+        juan.setBtncolor(Btncolor);
     }
 
     public Color getBtnFcolor() {
@@ -61,6 +66,7 @@ public class Spinner extends JSpinner {
 
     public void setBtnFcolor(Color BtnFcolor) {
         this.BtnFcolor = BtnFcolor;
+        juan.setBtnFcolor(BtnFcolor);
     }
     
     

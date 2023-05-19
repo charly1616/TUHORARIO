@@ -93,7 +93,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         labelcursos = new javax.swing.JLabel();
         add2 = new javax.swing.JButton();
         brush = new javax.swing.JButton();
-        spinner2 = new custom.Spinner();
         opcionsed = new javax.swing.JPanel();
         brush2 = new javax.swing.JButton();
         key = new javax.swing.JButton();
@@ -307,8 +306,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         cursosed.add(brush);
         brush.setBounds(220, 14, 20, 20);
-        cursosed.add(spinner2);
-        spinner2.setBounds(100, 230, 100, 42);
 
         edit.add(cursosed);
         cursosed.setBounds(340, 10, 300, 680);
@@ -992,7 +989,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel opcionsed;
     private javax.swing.JLabel schetxt;
     private javax.swing.JLabel schetxt1;
-    private custom.Spinner spinner2;
     private javax.swing.JTabbedPane switchven;
     private javax.swing.JButton toCustom;
     private javax.swing.JButton toEDIT;
