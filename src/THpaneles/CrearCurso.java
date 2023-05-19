@@ -40,15 +40,19 @@ public class CrearCurso extends javax.swing.JPanel {
     private void initComponents() {
 
         jPopupMenu1 = new javax.swing.JPopupMenu();
+        ndias = new javax.swing.JSpinner();
         jPanel1 = new javax.swing.JPanel();
         creandog = new javax.swing.JLabel();
         Dia = new javax.swing.JLabel();
         Entrada = new javax.swing.JLabel();
-        ndias = new javax.swing.JSpinner();
         jSeparator1 = new javax.swing.JSeparator();
         jButton2 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
-        name = new javax.swing.JTextField();
+        semestre = new custom.Spinner();
+        name = new custom.TextField();
+
+        ndias.setModel(new javax.swing.SpinnerNumberModel(1, 1, 3, 1));
+        ndias.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jPanel1.setBackground(new java.awt.Color(176, 235, 176));
         jPanel1.setForeground(new java.awt.Color(0, 0, 0));
@@ -70,10 +74,6 @@ public class CrearCurso extends javax.swing.JPanel {
         Entrada.setText("Numero de dias:");
         jPanel1.add(Entrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 170, -1));
 
-        ndias.setModel(new javax.swing.SpinnerNumberModel(1, 1, 3, 1));
-        ndias.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(ndias, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 150, 70, 30));
-
         jSeparator1.setBackground(new java.awt.Color(0, 102, 0));
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
         jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 300, 10));
@@ -85,7 +85,7 @@ public class CrearCurso extends javax.swing.JPanel {
         jButton2.setText("Guardar");
         jButton2.setBorderPainted(false);
         jButton2.setContentAreaFilled(false);
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton2.setFocusPainted(false);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,7 +101,7 @@ public class CrearCurso extends javax.swing.JPanel {
         jButton1.setText("Cancelar");
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton1.setFocusPainted(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -110,9 +110,17 @@ public class CrearCurso extends javax.swing.JPanel {
         });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, -1, 30));
 
-        name.setBackground(new java.awt.Color(209, 243, 222));
-        name.setForeground(new java.awt.Color(102, 102, 102));
-        jPanel1.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 200, -1));
+        semestre.setBackground(new java.awt.Color(0, 102, 51));
+        semestre.setBorder(null);
+        semestre.setModel(new javax.swing.SpinnerNumberModel(1, 1, 6, 1));
+        jPanel1.add(semestre, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 150, 80, 40));
+
+        name.setBackground(new java.awt.Color(204, 255, 204));
+        name.setBorder(null);
+        name.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        name.setText("nombre");
+        name.setRound(25);
+        jPanel1.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 200, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -144,7 +152,8 @@ public class CrearCurso extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTextField name;
+    private custom.TextField name;
     private javax.swing.JSpinner ndias;
+    private custom.Spinner semestre;
     // End of variables declaration//GEN-END:variables
 }

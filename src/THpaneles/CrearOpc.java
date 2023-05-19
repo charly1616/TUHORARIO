@@ -35,14 +35,14 @@ public class CrearOpc extends javax.swing.JPanel {
         Dia = new javax.swing.JLabel();
         Salida = new javax.swing.JLabel();
         dias = new javax.swing.JComboBox<>();
-        nSalida = new javax.swing.JSpinner();
-        nEntrada = new javax.swing.JSpinner();
         jSeparator1 = new javax.swing.JSeparator();
         Cancelar = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         bttsalida = new custom.MyButton();
         bttentrada2 = new custom.MyButton();
+        ndias = new custom.Spinner();
+        nSalida = new custom.Spinner();
 
         jPanel1.setBackground(new java.awt.Color(176, 235, 176));
         jPanel1.setForeground(new java.awt.Color(0, 0, 0));
@@ -68,13 +68,8 @@ public class CrearOpc extends javax.swing.JPanel {
         dias.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
         dias.setForeground(new java.awt.Color(102, 102, 102));
         dias.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado" }));
+        dias.setBorder(null);
         jPanel1.add(dias, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 70, 160, 20));
-
-        nSalida.setModel(new javax.swing.SpinnerNumberModel(8, 1, 12, 1));
-        jPanel1.add(nSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 200, 70, 30));
-
-        nEntrada.setModel(new javax.swing.SpinnerNumberModel(6, 1, 12, 1));
-        jPanel1.add(nEntrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 140, 70, -1));
 
         jSeparator1.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
@@ -132,7 +127,7 @@ public class CrearOpc extends javax.swing.JPanel {
                 bttsalidaActionPerformed(evt);
             }
         });
-        jPanel1.add(bttsalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 200, 80, 30));
+        jPanel1.add(bttsalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, 80, 30));
 
         bttentrada2.setBackground(new java.awt.Color(112, 173, 71));
         bttentrada2.setBorder(null);
@@ -153,6 +148,16 @@ public class CrearOpc extends javax.swing.JPanel {
         });
         jPanel1.add(bttentrada2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 140, 80, 30));
 
+        ndias.setBackground(new java.awt.Color(0, 102, 51));
+        ndias.setBorder(null);
+        ndias.setModel(new javax.swing.SpinnerNumberModel(6, 1, 12, 1));
+        jPanel1.add(ndias, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 130, 80, 40));
+
+        nSalida.setBackground(new java.awt.Color(0, 102, 51));
+        nSalida.setBorder(null);
+        nSalida.setModel(new javax.swing.SpinnerNumberModel(1, 1, 12, 1));
+        jPanel1.add(nSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 200, 80, 40));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -166,7 +171,8 @@ public class CrearOpc extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        
+       variable.nuevaopcion(true);
+         
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -213,7 +219,7 @@ public class CrearOpc extends javax.swing.JPanel {
     private javax.swing.JButton jButton2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSpinner nEntrada;
-    private javax.swing.JSpinner nSalida;
+    private custom.Spinner nSalida;
+    private custom.Spinner ndias;
     // End of variables declaration//GEN-END:variables
 }
