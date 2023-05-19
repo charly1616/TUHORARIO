@@ -74,7 +74,7 @@ public class CrearCurso extends javax.swing.JPanel {
         Entrada.setText("Numero de dias:");
         jPanel1.add(Entrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 170, -1));
 
-        jSeparator1.setBackground(new java.awt.Color(0, 102, 0));
+        jSeparator1.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
         jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 300, 10));
 
@@ -135,7 +135,10 @@ public class CrearCurso extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       variable.nuevocurso(name.getText(),Integer.parseInt( ndias.toString()), list, "");
+       variable.nuevocurso(name.getText(),Integer.parseInt(semestre.toString()), list, "");
+       
+       padre.UpdateCursoCards();
+       GlassPanePopup.closePopupLast();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
