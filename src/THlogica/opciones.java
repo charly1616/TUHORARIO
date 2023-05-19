@@ -207,6 +207,9 @@ public class opciones {
     }
 
     public boolean deencript(String code) {  // SE DESENCRIPTA LAS OPCIONES
+        if (code == "") {
+            return false;
+        }
         String regex = "\\[(.)\\]";
         String[] subcadenas = code.split(regex);
         subcadenas[0] = subcadenas[0].substring(1, subcadenas[0].length() - 1);

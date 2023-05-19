@@ -17,6 +17,10 @@ public class CrearCurso extends javax.swing.JPanel {
        
     }
 
+    public void setPadre(VentanaPrincipal padre) {
+        this.padre = padre;
+    }
+    
     public Listacursos getList() {
         return list;
     }
@@ -135,7 +139,9 @@ public class CrearCurso extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       variable.nuevocurso(name.getText(),Integer.parseInt(semestre.toString()), list, "");
+       
+        System.out.println(Integer.parseInt(semestre.getValue().toString()));
+        variable.nuevocurso(name.getText(),Integer.parseInt(semestre.getValue().toString()), list, "");
        
        padre.UpdateCursoCards();
        GlassPanePopup.closePopupLast();

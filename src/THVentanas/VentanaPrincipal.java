@@ -875,6 +875,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         
         CrearCurso nuevo = new CrearCurso();
         nuevo.variable = this.groupChosen.getHora();
+        nuevo.setPadre(this);
         nuevo.setSize(400, 300);
 
         GlassPanePopup.showPopup(nuevo);
