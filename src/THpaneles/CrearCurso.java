@@ -1,14 +1,17 @@
 
 package THpaneles;
 
+import THVentanas.VentanaPrincipal;
 import THlogica.Listacursos;
 import THlogica.grupos;
 import THlogica.horario;
 import java.awt.geom.RoundRectangle2D;
+import raven.GlassPanePopup;
 
 public class CrearCurso extends javax.swing.JPanel {
     Listacursos list;
     public horario variable;
+    public VentanaPrincipal padre;
     public CrearCurso() {
         initComponents();
        
@@ -128,7 +131,7 @@ public class CrearCurso extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       
+       GlassPanePopup.closePopupLast();       
     }//GEN-LAST:event_jButton1ActionPerformed
 
 

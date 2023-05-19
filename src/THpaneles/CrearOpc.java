@@ -1,14 +1,17 @@
 
 package THpaneles;
 
+import THVentanas.VentanaPrincipal;
 import THlogica.opcion;
 import THlogica.opciones;
 import java.awt.Color;
 import java.awt.geom.RoundRectangle2D;
+import raven.GlassPanePopup;
 
 public class CrearOpc extends javax.swing.JPanel {
 
     public opciones variable;
+    public VentanaPrincipal padre;
     public CrearOpc() {
         initComponents();
         
@@ -167,7 +170,7 @@ public class CrearOpc extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        System.exit(0);
+          GlassPanePopup.closePopupLast();       
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void bttsalidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttsalidaActionPerformed
