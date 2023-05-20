@@ -17,6 +17,10 @@ public class CrearOpc extends javax.swing.JPanel {
         
     }
 
+    public void setPadre(VentanaPrincipal padre) {
+        this.padre = padre;
+    }
+
     public opciones getVariable() {
         return variable;
     }
@@ -41,7 +45,7 @@ public class CrearOpc extends javax.swing.JPanel {
         jButton2 = new javax.swing.JButton();
         bttsalida = new custom.MyButton();
         bttentrada2 = new custom.MyButton();
-        ndias = new custom.Spinner();
+        nEntrada = new custom.Spinner();
         nSalida = new custom.Spinner();
 
         jPanel1.setBackground(new java.awt.Color(176, 235, 176));
@@ -148,10 +152,10 @@ public class CrearOpc extends javax.swing.JPanel {
         });
         jPanel1.add(bttentrada2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 140, 80, 30));
 
-        ndias.setBackground(new java.awt.Color(0, 102, 51));
-        ndias.setBorder(null);
-        ndias.setModel(new javax.swing.SpinnerNumberModel(6, 1, 12, 1));
-        jPanel1.add(ndias, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 130, 80, 40));
+        nEntrada.setBackground(new java.awt.Color(0, 102, 51));
+        nEntrada.setBorder(null);
+        nEntrada.setModel(new javax.swing.SpinnerNumberModel(6, 1, 12, 1));
+        jPanel1.add(nEntrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 130, 80, 40));
 
         nSalida.setBackground(new java.awt.Color(0, 102, 51));
         nSalida.setBorder(null);
@@ -219,7 +223,7 @@ public class CrearOpc extends javax.swing.JPanel {
     private javax.swing.JButton jButton2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
+    private custom.Spinner nEntrada;
     private custom.Spinner nSalida;
-    private custom.Spinner ndias;
     // End of variables declaration//GEN-END:variables
 }
