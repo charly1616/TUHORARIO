@@ -119,10 +119,11 @@ public class MySpinner extends javax.swing.JPanel {
         }
     }
     
-    @Override
-    public void setSize(int w, int h){
-        resize(getWidth(), getHeight());
-    }
+//    @Override
+//    public void setSize(int w, int h){
+//        resize(WIDTH, HEIGHT);
+//        modifyInitedComponents();
+//    }
     
     
     @Override

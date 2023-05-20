@@ -540,7 +540,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         CODE.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         CODE.setText("codigo");
         CODE.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
-        CODE.setRound(20);
+        CODE.setRound(24);
         CODE.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 CODEFocusGained(evt);
