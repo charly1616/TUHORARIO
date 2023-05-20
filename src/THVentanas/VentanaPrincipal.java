@@ -84,11 +84,23 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         Gruposed = new javax.swing.JPanel();
         labelgrupos = new javax.swing.JLabel();
         add = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
         cursosed = new javax.swing.JPanel();
         back = new javax.swing.JButton();
         labelcursos = new javax.swing.JLabel();
         add2 = new javax.swing.JButton();
         brush = new javax.swing.JButton();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
         opcionsed = new javax.swing.JPanel();
         brush2 = new javax.swing.JButton();
         key = new javax.swing.JButton();
@@ -96,6 +108,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         back2 = new javax.swing.JButton();
         add3 = new javax.swing.JButton();
         CODE = new custom.TextFieldd();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
         See = new javax.swing.JPanel();
         filts = new javax.swing.JPanel();
         schetxt = new javax.swing.JLabel();
@@ -124,6 +143,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         Sab = new custom.MyButton();
         Mar1 = new custom.MyButton();
         Mie2 = new custom.MyButton();
+        jLabel7 = new javax.swing.JLabel();
         view = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -190,7 +210,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         toCustom.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/customWhite35.png"))); // NOI18N
         toCustom.setContentAreaFilled(false);
-        toCustom.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        toCustom.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         toCustom.setDefaultCapable(false);
         toCustom.setFocusPainted(false);
         toCustom.addActionListener(new java.awt.event.ActionListener() {
@@ -203,7 +223,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         toEDIT.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/editWhite35.png"))); // NOI18N
         toEDIT.setContentAreaFilled(false);
-        toEDIT.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        toEDIT.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         toEDIT.setDefaultCapable(false);
         toEDIT.setFocusPainted(false);
         toEDIT.addActionListener(new java.awt.event.ActionListener() {
@@ -217,7 +237,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         toGENER.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/menuWhite35.png"))); // NOI18N
         toGENER.setBorderPainted(false);
         toGENER.setContentAreaFilled(false);
-        toGENER.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        toGENER.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         toGENER.setDefaultCapable(false);
         toGENER.setFocusPainted(false);
         toGENER.setHideActionText(true);
@@ -284,6 +304,28 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         Gruposed.add(add);
         add.setBounds(288, 24, 20, 20);
 
+        jLabel8.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(97, 96, 96));
+        jLabel8.setText("Crea tu grupo y disfrútalo ");
+        Gruposed.add(jLabel8);
+        jLabel8.setBounds(70, 380, 230, 20);
+
+        jLabel9.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 19)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel9.setText("Ningún grupo ");
+        Gruposed.add(jLabel9);
+        jLabel9.setBounds(90, 320, 170, 20);
+
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/icons8_nothing_found_100px.png"))); // NOI18N
+        Gruposed.add(jLabel12);
+        jLabel12.setBounds(110, 180, 110, 90);
+
+        jLabel18.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 19)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel18.setText("encontrado");
+        Gruposed.add(jLabel18);
+        jLabel18.setBounds(100, 350, 120, 20);
+
         edit.add(Gruposed);
         Gruposed.setBounds(0, 0, 340, 690);
 
@@ -339,6 +381,50 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         cursosed.add(brush);
         brush.setBounds(220, 14, 20, 20);
 
+        jLabel14.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 12)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel14.setText("Crea un curso para poder editar ");
+        cursosed.add(jLabel14);
+        jLabel14.setBounds(40, 510, 230, 20);
+
+        jLabel17.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 19)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel17.setText("Ningún curso");
+        cursosed.add(jLabel17);
+        jLabel17.setBounds(80, 470, 170, 20);
+
+        jLabel10.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 19)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel10.setText("encontrado");
+        cursosed.add(jLabel10);
+        jLabel10.setBounds(90, 490, 120, 20);
+
+        jLabel19.setFont(new java.awt.Font("Arial Rounded MT Bold", 3, 12)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel19.setText("poder editarlo");
+        cursosed.add(jLabel19);
+        jLabel19.setBounds(90, 280, 120, 20);
+
+        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/icons8_lost_and_found_100px_1.png"))); // NOI18N
+        cursosed.add(jLabel20);
+        jLabel20.setBounds(90, 130, 120, 100);
+
+        jLabel22.setFont(new java.awt.Font("Arial Rounded MT Bold", 3, 12)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel22.setText("Selecciona el grupo para");
+        cursosed.add(jLabel22);
+        jLabel22.setBounds(60, 260, 180, 20);
+
+        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/icons8_nothing_found_100px.png"))); // NOI18N
+        cursosed.add(jLabel23);
+        jLabel23.setBounds(90, 360, 110, 90);
+
+        jLabel24.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 19)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel24.setText("Ningún grupo escogido");
+        cursosed.add(jLabel24);
+        jLabel24.setBounds(30, 240, 240, 20);
+
         edit.add(cursosed);
         cursosed.setBounds(340, 10, 300, 680);
 
@@ -372,7 +458,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
         opcionsed.add(key);
-        key.setBounds(440, 60, 26, 20);
+        key.setBounds(440, 60, 28, 20);
 
         labelop.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         labelop.setForeground(new java.awt.Color(127, 127, 127));
@@ -431,6 +517,44 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         opcionsed.add(CODE);
         CODE.setBounds(110, 60, 300, 25);
 
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/icons8_lost_and_found_100px_1.png"))); // NOI18N
+        opcionsed.add(jLabel13);
+        jLabel13.setBounds(210, 130, 120, 100);
+
+        jLabel11.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 19)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel11.setText("Ningún curso escogido");
+        opcionsed.add(jLabel11);
+        jLabel11.setBounds(150, 250, 240, 20);
+
+        jLabel15.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel15.setText("generar los horarios");
+        opcionsed.add(jLabel15);
+        jLabel15.setBounds(190, 520, 150, 20);
+
+        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/icons8_nothing_found_100px.png"))); // NOI18N
+        opcionsed.add(jLabel16);
+        jLabel16.setBounds(210, 370, 110, 90);
+
+        jLabel21.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 19)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel21.setText("Ninguna opción encontrada ");
+        opcionsed.add(jLabel21);
+        jLabel21.setBounds(120, 470, 290, 20);
+
+        jLabel25.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
+        jLabel25.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel25.setText("Selecciona el curso para poder editar sus opciones ");
+        opcionsed.add(jLabel25);
+        jLabel25.setBounds(90, 270, 360, 20);
+
+        jLabel26.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
+        jLabel26.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel26.setText("Ingresa las opciones del curso para ");
+        opcionsed.add(jLabel26);
+        jLabel26.setBounds(140, 500, 260, 20);
+
         edit.add(opcionsed);
         opcionsed.setBounds(640, 10, 540, 680);
 
@@ -448,7 +572,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         schetxt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         schetxt.setText("Filtros");
         filts.add(schetxt);
-        schetxt.setBounds(70, 290, 120, 30);
+        schetxt.setBounds(80, 300, 120, 30);
 
         jLabel2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(105, 167, 133));
@@ -493,7 +617,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
         filts.add(back3);
-        back3.setBounds(40, 290, 26, 27);
+        back3.setBounds(40, 290, 28, 28);
 
         Horas.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
         Horas.setForeground(new java.awt.Color(102, 102, 102));
@@ -705,6 +829,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         filts.add(Mie2);
         Mie2.setBounds(170, 590, 60, 20);
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/icons8_schedule_20px.png"))); // NOI18N
+        filts.add(jLabel7);
+        jLabel7.setBounds(210, 300, 30, 20);
 
         See.add(filts, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 680));
 
@@ -1315,11 +1443,31 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel filts;
     private javax.swing.JPanel header;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSpinner jSpinner1;

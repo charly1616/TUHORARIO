@@ -47,6 +47,7 @@ public class CrearOpc extends javax.swing.JPanel {
         bttentrada2 = new custom.MyButton();
         nEntrada = new custom.Spinner();
         nSalida = new custom.Spinner();
+        comboEstudio2 = new javax.swing.JComboBox<>();
 
         jPanel1.setBackground(new java.awt.Color(176, 235, 176));
         jPanel1.setForeground(new java.awt.Color(0, 0, 0));
@@ -72,7 +73,13 @@ public class CrearOpc extends javax.swing.JPanel {
         dias.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
         dias.setForeground(new java.awt.Color(102, 102, 102));
         dias.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado" }));
+        dias.setSelectedItem(dias);
         dias.setBorder(null);
+        dias.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                diasActionPerformed(evt);
+            }
+        });
         jPanel1.add(dias, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 70, 160, 20));
 
         jSeparator1.setBackground(new java.awt.Color(255, 255, 255));
@@ -162,6 +169,10 @@ public class CrearOpc extends javax.swing.JPanel {
         nSalida.setModel(new javax.swing.SpinnerNumberModel(1, 1, 12, 1));
         jPanel1.add(nSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 200, 80, 40));
 
+        comboEstudio2.setFont(new java.awt.Font("Arial Rounded MT Bold", 2, 18)); // NOI18N
+        comboEstudio2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ninguno", "Primaria", "Bachiller", "Técnico", "Pregrado", "Especialista", "Magister", "Doctorado" }));
+        jPanel1.add(comboEstudio2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 310, 180, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -191,6 +202,10 @@ public class CrearOpc extends javax.swing.JPanel {
         cmbiarM(this.bttentrada2);
         
     }//GEN-LAST:event_bttentrada2ActionPerformed
+
+    private void diasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_diasActionPerformed
+      
+    }//GEN-LAST:event_diasActionPerformed
     
     
     public void cmbiarM(custom.MyButton boton){
@@ -217,6 +232,9 @@ public class CrearOpc extends javax.swing.JPanel {
     private javax.swing.JLabel Salida;
     private custom.MyButton bttentrada2;
     private custom.MyButton bttsalida;
+    private javax.swing.JComboBox<String> comboEstudio;
+    private javax.swing.JComboBox<String> comboEstudio1;
+    private javax.swing.JComboBox<String> comboEstudio2;
     private javax.swing.JLabel creandog;
     private javax.swing.JComboBox<String> dias;
     private javax.swing.JButton jButton1;
