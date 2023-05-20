@@ -585,7 +585,7 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="custom.TextField" name="CODE">
+                <Component class="custom.TextFieldd" name="CODE">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="8e" green="d1" red="a9" type="rgb"/>

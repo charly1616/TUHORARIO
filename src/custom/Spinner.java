@@ -17,7 +17,7 @@ public class Spinner extends JSpinner {
 
     public Spinner() {
         setOpaque(false);
-        
+        this.setBorder(null);
         juan = new SpinnerUI();
         juan.setBGcolor(BGcolor);
         juan.setFcolor(Fcolor);

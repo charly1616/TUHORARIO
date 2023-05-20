@@ -99,7 +99,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         labelop = new javax.swing.JLabel();
         back2 = new javax.swing.JButton();
         add3 = new javax.swing.JButton();
-        CODE = new custom.TextField();
+        CODE = new custom.TextFieldd();
         See = new javax.swing.JPanel();
         filts = new javax.swing.JPanel();
         schetxt = new javax.swing.JLabel();
@@ -959,7 +959,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private custom.TextField CODE;
+    private custom.TextFieldd CODE;
     private javax.swing.JPanel Gruposed;
     private javax.swing.JPanel See;
     private javax.swing.JButton add;

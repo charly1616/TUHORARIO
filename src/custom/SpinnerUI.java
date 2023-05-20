@@ -21,14 +21,15 @@ public class SpinnerUI extends BasicSpinnerUI {
     @Override
     public void installUI(JComponent jc) {
         super.installUI(jc);
-        spinner.setEditor(new Editor(spinner));
+        editor = new Editor(spinner);
+        spinner.setEditor(editor);
     }
 
     @Override
     protected Component createNextButton() {
         cmdn = new ArrowButton(true);
-        cmdn.setBackground(BGcolor);
-        cmdn.setForeground(Fcolor);
+        cmdn.setBackground(Btncolor);
+        cmdn.setForeground(BtnFcolor);
         installNextButtonListeners(cmdn);
         return cmdn;
     }
@@ -42,7 +43,7 @@ public class SpinnerUI extends BasicSpinnerUI {
         return cmdp;
     }
     
-    
+    Editor editor;
     ArrowButton cmdn;
     ArrowButton cmdp;
     private Color BGcolor = new Color(255,255,255);
@@ -56,6 +57,10 @@ public class SpinnerUI extends BasicSpinnerUI {
 
     public void setBGcolor(Color BGcolor) {
         this.BGcolor = BGcolor;
+        if (editor != null) {
+            editor.setBackground(BGcolor);
+        }
+
     }
 
     public Color getFcolor() {
@@ -64,6 +69,11 @@ public class SpinnerUI extends BasicSpinnerUI {
 
     public void setFcolor(Color Fcolor) {
         this.Fcolor = Fcolor;
+        if (editor != null) {
+            editor.setForeground(Fcolor);
+            editor.repaint();
+        }
+        
     }
 
     public Color getBtncolor() {
@@ -72,8 +82,13 @@ public class SpinnerUI extends BasicSpinnerUI {
 
     public void setBtncolor(Color Btncolor) {
         this.Btncolor = Btncolor;
-//        this.cmdn.setBackground(Btncolor);
-//        this.cmdp.setBackground(Btncolor);
+        if (this.cmdn != null) {
+            this.cmdn.setBackground(Btncolor);
+            this.cmdp.setBackground(Btncolor);
+            this.cmdn.repaint();
+            this.cmdp.repaint();
+        }
+        
     }
 
     public Color getBtnFcolor() {
@@ -82,18 +97,25 @@ public class SpinnerUI extends BasicSpinnerUI {
 
     public void setBtnFcolor(Color BtnFcolor) {
         this.BtnFcolor = BtnFcolor;
-//        this.cmdn.setForeground(Btncolor);
-//        this.cmdp.setForeground(Btncolor);
+        if (this.cmdn != null) {
+            this.cmdn.setForeground(BtnFcolor);
+            this.cmdp.setForeground(BtnFcolor);
+            this.cmdn.repaint();
+            this.cmdp.repaint();
+        }
+
     }
     
     
     
-    public class Editor extends TextField implements ChangeListener {
+    public class Editor extends TextFieldd implements ChangeListener {
 
         public Editor(JSpinner spinner) {
+            this.setRound(getHeight()/2);
             spinner.addChangeListener(this);
+            this.setSize(80,60);
             setEditable(false);
-            setText("0");
+            setText("1");
         }
 
         @Override
@@ -101,7 +123,7 @@ public class SpinnerUI extends BasicSpinnerUI {
             JSpinner spinner = (JSpinner) ce.getSource();
             setText(spinner.getValue().toString());
         }
-
+        
         void setLabelText(String text) {
             throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
         }
@@ -109,6 +131,8 @@ public class SpinnerUI extends BasicSpinnerUI {
         String getLabelText() {
             throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
         }
+        
+        
     }
     
     
@@ -141,6 +165,7 @@ public class SpinnerUI extends BasicSpinnerUI {
         
         @Override
         public void paint(Graphics grphcs) {
+            setContentAreaFilled(false);
             super.paint(grphcs);
             Graphics2D g2 = (Graphics2D) grphcs;
             g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);

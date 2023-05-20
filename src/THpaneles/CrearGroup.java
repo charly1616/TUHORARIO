@@ -41,7 +41,7 @@ public class CrearGroup extends javax.swing.JPanel {
         jSeparator1 = new javax.swing.JSeparator();
         jButton2 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
-        name = new custom.TextField();
+        name = new custom.TextFieldd();
 
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -151,7 +151,7 @@ public class CrearGroup extends javax.swing.JPanel {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JSeparator jSeparator1;
-    private custom.TextField name;
+    private custom.TextFieldd name;
     private javax.swing.JSpinner semestre;
     // End of variables declaration//GEN-END:variables
 }

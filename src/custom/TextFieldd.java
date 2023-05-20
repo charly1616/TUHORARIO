@@ -17,7 +17,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.plaf.basic.BasicTextFieldUI;
 //import swing.shadow.ShadowRenderer;
 
-public class TextField extends JTextField {
+public class TextFieldd extends JTextField {
     
     
     public int getRound() {
@@ -45,7 +45,7 @@ public class TextField extends JTextField {
     private BufferedImage imageShadow;
     private final Insets shadowSize = new Insets(2, 2, 2, 2);
 
-    public TextField() {
+    public TextFieldd() {
         setUI(new TextUI());
         setOpaque(false);
         setForeground(new Color(80, 80, 80));

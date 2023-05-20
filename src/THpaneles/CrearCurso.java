@@ -53,7 +53,7 @@ public class CrearCurso extends javax.swing.JPanel {
         jButton2 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         semestre = new custom.Spinner();
-        name = new custom.TextField();
+        name = new custom.TextFieldd();
 
         ndias.setModel(new javax.swing.SpinnerNumberModel(1, 1, 3, 1));
         ndias.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -161,7 +161,7 @@ public class CrearCurso extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JSeparator jSeparator1;
-    private custom.TextField name;
+    private custom.TextFieldd name;
     private javax.swing.JSpinner ndias;
     private custom.Spinner semestre;
     // End of variables declaration//GEN-END:variables
