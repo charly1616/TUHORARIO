@@ -706,7 +706,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         filts.add(Mie2);
         Mie2.setBounds(170, 590, 60, 20);
 
-        See.add(filts, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 670));
+        See.add(filts, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 680));
 
         view.setBackground(new java.awt.Color(237, 253, 246));
         view.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -721,7 +721,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jLabel5.setText("Horarios generados y sus características ");
         view.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, -1, -1));
 
-        See.add(view, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 10, 920, 660));
+        See.add(view, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 10, 920, 670));
 
         switchven.addTab("tab2", See);
 
