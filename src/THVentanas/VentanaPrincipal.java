@@ -347,10 +347,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(34, Short.MAX_VALUE)
                 .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
-                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(38, 38, 38)
+                .addComponent(jLabel9)
                 .addGap(10, 10, 10)
                 .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
@@ -427,7 +427,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel17.setText("Ningún curso");
         cursosed.add(jLabel17);
-        jLabel17.setBounds(30, 470, 220, 20);
+        jLabel17.setBounds(30, 460, 220, 30);
 
         jLabel10.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 19)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(105, 167, 133));
@@ -463,7 +463,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel24.setText("Ningún grupo escogido");
         cursosed.add(jLabel24);
-        jLabel24.setBounds(30, 240, 240, 20);
+        jLabel24.setBounds(30, 230, 240, 30);
 
         edit.add(cursosed);
         cursosed.setBounds(340, 10, 300, 680);
@@ -565,7 +565,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jLabel11.setForeground(new java.awt.Color(105, 167, 133));
         jLabel11.setText("Ningún curso escogido");
         opcionsed.add(jLabel11);
-        jLabel11.setBounds(150, 250, 240, 20);
+        jLabel11.setBounds(150, 240, 240, 30);
 
         jLabel15.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(105, 167, 133));
@@ -583,7 +583,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel21.setText("Ninguna opción encontrada ");
         opcionsed.add(jLabel21);
-        jLabel21.setBounds(110, 470, 290, 20);
+        jLabel21.setBounds(110, 470, 290, 30);
 
         jLabel25.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         jLabel25.setForeground(new java.awt.Color(105, 167, 133));
