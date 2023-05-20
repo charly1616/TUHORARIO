@@ -1190,10 +1190,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_back3ActionPerformed
 
     private void JueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JueActionPerformed
-        if (Jue.isSelected()) {
-            Jue.setBackground(new Color(255,255,255));
-            Jue.setColor(new Color(255,255,255));
-        }
+          cambiarD(Jue);
 
     }//GEN-LAST:event_JueActionPerformed
 
@@ -1206,7 +1203,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_bttentrada3ActionPerformed
 
     private void VieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VieActionPerformed
-       
+        cambiarD(Vie);       
     }//GEN-LAST:event_VieActionPerformed
 
     private void LunActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LunActionPerformed
@@ -1215,15 +1212,15 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_LunActionPerformed
 
     private void SabActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SabActionPerformed
-        // TODO add your handling code here:
+        cambiarD(Sab);
     }//GEN-LAST:event_SabActionPerformed
 
     private void Mar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Mar1ActionPerformed
-        // TODO add your handling code here:
+       cambiarD(Mar1);
     }//GEN-LAST:event_Mar1ActionPerformed
 
     private void Mie2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Mie2ActionPerformed
-        // TODO add your handling code here:
+       cambiarD(Mie2);
     }//GEN-LAST:event_Mie2ActionPerformed
     
     public void cambiarD(custom.MyButton butn){
