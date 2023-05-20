@@ -1210,7 +1210,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_VieActionPerformed
 
     private void LunActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LunActionPerformed
-        Lun.setSelected(!Lun.isSelected());
+
         cambiarD(Lun);
     }//GEN-LAST:event_LunActionPerformed
 
