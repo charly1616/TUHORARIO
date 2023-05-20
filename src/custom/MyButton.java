@@ -2,6 +2,7 @@ package custom;
 
 
 import java.awt.Color;
+import java.awt.Cursor;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
@@ -10,7 +11,9 @@ import java.awt.event.MouseEvent;
 import javax.swing.JButton;
 
 public class MyButton extends JButton {
+    
 
+    
     public boolean isOver() {
         return over;
     }
@@ -74,12 +77,14 @@ public class MyButton extends JButton {
             @Override
             public void mouseEntered(MouseEvent me) {
                 setBackground(colorOver);
+                setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
                 over = true;
             }
 
             @Override
             public void mouseExited(MouseEvent me) {
                 setBackground(color);
+                setCursor(Cursor.getDefaultCursor());
                 over = false;
 
             }
@@ -99,7 +104,7 @@ public class MyButton extends JButton {
             }
         });
     }
-
+    
     private boolean over;
     private Color color;
     private Color colorOver;

@@ -131,6 +131,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         view = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        myButton1 = new custom.MyButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -194,7 +195,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         toCustom.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/customWhite35.png"))); // NOI18N
         toCustom.setContentAreaFilled(false);
-        toCustom.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        toCustom.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         toCustom.setDefaultCapable(false);
         toCustom.setFocusPainted(false);
         toCustom.addActionListener(new java.awt.event.ActionListener() {
@@ -207,7 +208,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         toEDIT.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/editWhite35.png"))); // NOI18N
         toEDIT.setContentAreaFilled(false);
-        toEDIT.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        toEDIT.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         toEDIT.setDefaultCapable(false);
         toEDIT.setFocusPainted(false);
         toEDIT.addActionListener(new java.awt.event.ActionListener() {
@@ -221,7 +222,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         toGENER.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/menuWhite35.png"))); // NOI18N
         toGENER.setBorderPainted(false);
         toGENER.setContentAreaFilled(false);
-        toGENER.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        toGENER.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         toGENER.setDefaultCapable(false);
         toGENER.setFocusPainted(false);
         toGENER.setHideActionText(true);
@@ -725,6 +726,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jLabel5.setText("Horarios generados y sus características ");
         view.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, -1, -1));
 
+        myButton1.setText("myButton1");
+        myButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        view.add(myButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 380, -1, -1));
+
         See.add(view, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 10, 920, 660));
 
         switchven.addTab("tab2", See);
@@ -1217,7 +1222,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_VieActionPerformed
 
     private void LunActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LunActionPerformed
-        // TODO add your handling code here:
+        cambiarD(Lun);
     }//GEN-LAST:event_LunActionPerformed
 
     private void SabActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SabActionPerformed
@@ -1231,6 +1236,17 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private void Mie2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Mie2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Mie2ActionPerformed
+    
+    public void cambiarD(custom.MyButton butn){
+        if (butn.isSelected()) {
+            butn.setForeground(Color.white);
+            butn.setBackground(new Color(153,195,172));
+        } else{
+            butn.setForeground(new Color(153,153,153));
+            butn.setBackground(Color.white);
+        }
+    }
+    
     
     public void cmbiarM(custom.MyButton boton){
         if (boton.getText().equals("AM")){
@@ -1332,6 +1348,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel labelop;
     private javax.swing.JLabel min;
     private javax.swing.JLabel move;
+    private custom.MyButton myButton1;
     private javax.swing.JLabel name;
     private javax.swing.JPanel opcionsed;
     private javax.swing.JLabel schetxt;
