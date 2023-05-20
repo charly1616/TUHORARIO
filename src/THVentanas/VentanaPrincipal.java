@@ -84,10 +84,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         Gruposed = new javax.swing.JPanel();
         labelgrupos = new javax.swing.JLabel();
         add = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
         cursosed = new javax.swing.JPanel();
         back = new javax.swing.JButton();
         labelcursos = new javax.swing.JLabel();
@@ -304,28 +305,61 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         Gruposed.add(add);
         add.setBounds(288, 24, 20, 20);
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setOpaque(false);
+
         jLabel8.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(105, 167, 133));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Crea tu grupo y disfrútalo ");
-        Gruposed.add(jLabel8);
-        jLabel8.setBounds(40, 380, 230, 20);
-
-        jLabel9.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 19)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(105, 167, 133));
-        jLabel9.setText("Ningún grupo ");
-        Gruposed.add(jLabel9);
-        jLabel9.setBounds(90, 320, 170, 20);
-
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/icons8_nothing_found_100px.png"))); // NOI18N
-        Gruposed.add(jLabel12);
-        jLabel12.setBounds(110, 180, 110, 90);
 
         jLabel18.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 19)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel18.setText("encontrado");
-        Gruposed.add(jLabel18);
-        jLabel18.setBounds(100, 350, 120, 20);
+
+        jLabel9.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 19)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel9.setText("Ningún grupo ");
+
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/icons8_nothing_found_100px.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
+                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        Gruposed.add(jPanel1);
+        jPanel1.setBounds(40, 190, 250, 250);
 
         edit.add(Gruposed);
         Gruposed.setBounds(0, 0, 340, 690);
@@ -404,6 +438,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jLabel19.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel19.setText("poder editarlo");
         cursosed.add(jLabel19);
         jLabel19.setBounds(90, 280, 120, 20);
@@ -414,6 +449,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jLabel22.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel22.setText("Selecciona el grupo para");
         cursosed.add(jLabel22);
         jLabel22.setBounds(60, 260, 180, 20);
@@ -424,9 +460,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jLabel24.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 19)); // NOI18N
         jLabel24.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel24.setText("Ningún grupo escogido");
         cursosed.add(jLabel24);
-        jLabel24.setBounds(40, 240, 240, 20);
+        jLabel24.setBounds(30, 240, 240, 20);
 
         edit.add(cursosed);
         cursosed.setBounds(340, 10, 300, 680);
@@ -550,9 +587,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jLabel25.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         jLabel25.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel25.setText("Selecciona el curso para poder editar sus opciones ");
         opcionsed.add(jLabel25);
-        jLabel25.setBounds(90, 270, 360, 20);
+        jLabel25.setBounds(70, 270, 360, 20);
 
         jLabel26.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         jLabel26.setForeground(new java.awt.Color(105, 167, 133));
@@ -1474,6 +1512,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSpinner jSpinner1;
