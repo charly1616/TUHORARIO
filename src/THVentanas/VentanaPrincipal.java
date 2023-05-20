@@ -145,7 +145,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         header.setBackground(new java.awt.Color(169, 209, 142));
         header.setPreferredSize(new java.awt.Dimension(1180, 95));
-        header.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        header.setLayout(null);
 
         move.setFont(new java.awt.Font("Segoe UI", 0, 80)); // NOI18N
         move.setForeground(new java.awt.Color(102, 204, 255));
@@ -157,7 +157,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 moveMouseDragged(evt);
             }
         });
-        header.add(move, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, -10, -1, 50));
+        header.add(move);
+        move.setBounds(1080, -10, 33, 50);
 
         min.setFont(new java.awt.Font("Segoe UI", 0, 80)); // NOI18N
         min.setForeground(new java.awt.Color(255, 255, 102));
@@ -169,7 +170,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 minMouseClicked(evt);
             }
         });
-        header.add(min, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, -10, -1, 50));
+        header.add(min);
+        min.setBounds(1110, -10, 33, 50);
 
         exit.setFont(new java.awt.Font("Segoe UI", 0, 80)); // NOI18N
         exit.setForeground(new java.awt.Color(255, 102, 102));
@@ -181,12 +183,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 exitMouseClicked(evt);
             }
         });
-        header.add(exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, -10, -1, 50));
+        header.add(exit);
+        exit.setBounds(1140, -10, 33, 50);
 
         name.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         name.setForeground(new java.awt.Color(255, 255, 255));
         name.setText("#TUHORARIO");
-        header.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, 220, 20));
+        header.add(name);
+        name.setBounds(60, 20, 220, 20);
 
         toCustom.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/customWhite35.png"))); // NOI18N
         toCustom.setContentAreaFilled(false);
@@ -198,7 +202,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 toCustomActionPerformed(evt);
             }
         });
-        header.add(toCustom, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 20, 30, 30));
+        header.add(toCustom);
+        toCustom.setBounds(520, 20, 30, 30);
 
         toEDIT.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/editWhite35.png"))); // NOI18N
         toEDIT.setContentAreaFilled(false);
@@ -210,7 +215,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 toEDITActionPerformed(evt);
             }
         });
-        header.add(toEDIT, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 10, 30, 30));
+        header.add(toEDIT);
+        toEDIT.setBounds(590, 10, 30, 30);
 
         toGENER.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/menuWhite35.png"))); // NOI18N
         toGENER.setBorderPainted(false);
@@ -224,7 +230,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 toGENERActionPerformed(evt);
             }
         });
-        header.add(toGENER, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 20, 30, 30));
+        header.add(toGENER);
+        toGENER.setBounds(660, 20, 30, 30);
 
         downthing.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -239,10 +246,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             .addGap(0, 6, Short.MAX_VALUE)
         );
 
-        header.add(downthing, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 45, 30, 6));
+        header.add(downthing);
+        downthing.setBounds(590, 45, 30, 6);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/icono.png"))); // NOI18N
-        header.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 40, 40));
+        header.add(jLabel1);
+        jLabel1.setBounds(10, 10, 40, 40);
 
         getContentPane().add(header, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1180, 60));
 
@@ -367,7 +376,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
         opcionsed.add(key);
-        key.setBounds(440, 60, 28, 20);
+        key.setBounds(440, 60, 26, 20);
 
         labelop.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         labelop.setForeground(new java.awt.Color(127, 127, 127));
@@ -488,7 +497,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
         filts.add(back3);
-        back3.setBounds(40, 290, 28, 28);
+        back3.setBounds(40, 290, 26, 27);
 
         Horas.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
         Horas.setForeground(new java.awt.Color(102, 102, 102));
@@ -521,7 +530,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         Jue.setColorOver(new java.awt.Color(153, 195, 172));
         Jue.setFocusPainted(false);
         Jue.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
-        Jue.setRadius(35);
+        Jue.setRadius(20);
         Jue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JueActionPerformed(evt);
@@ -541,7 +550,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         bttsalida.setColorOver(new java.awt.Color(84, 130, 53));
         bttsalida.setFocusPainted(false);
         bttsalida.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
-        bttsalida.setRadius(35);
+        bttsalida.setRadius(20);
         bttsalida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bttsalidaActionPerformed(evt);
@@ -600,7 +609,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         bttentrada3.setColorOver(new java.awt.Color(112, 173, 71));
         bttentrada3.setFocusPainted(false);
         bttentrada3.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
-        bttentrada3.setRadius(35);
+        bttentrada3.setRadius(20);
         bttentrada3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bttentrada3ActionPerformed(evt);
@@ -618,7 +627,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         Vie.setColorOver(new java.awt.Color(255, 255, 255));
         Vie.setFocusPainted(false);
         Vie.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
-        Vie.setRadius(35);
+        Vie.setRadius(20);
         Vie.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 VieActionPerformed(evt);
@@ -636,7 +645,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         Lun.setColorOver(new java.awt.Color(255, 255, 255));
         Lun.setFocusPainted(false);
         Lun.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
-        Lun.setRadius(35);
+        Lun.setRadius(20);
         Lun.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LunActionPerformed(evt);
@@ -654,7 +663,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         Sab.setColorOver(new java.awt.Color(255, 255, 255));
         Sab.setFocusPainted(false);
         Sab.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
-        Sab.setRadius(35);
+        Sab.setRadius(20);
         Sab.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SabActionPerformed(evt);
@@ -674,7 +683,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         Mar1.setColorOver(new java.awt.Color(153, 195, 172));
         Mar1.setFocusPainted(false);
         Mar1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
-        Mar1.setRadius(35);
+        Mar1.setRadius(20);
         Mar1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Mar1ActionPerformed(evt);
@@ -692,7 +701,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         Mie2.setColorOver(new java.awt.Color(255, 255, 255));
         Mie2.setFocusPainted(false);
         Mie2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
-        Mie2.setRadius(35);
+        Mie2.setRadius(20);
         Mie2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Mie2ActionPerformed(evt);
