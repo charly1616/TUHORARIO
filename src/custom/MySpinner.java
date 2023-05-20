@@ -1,21 +1,138 @@
 
 package custom;
 
+import java.awt.Color;
 import java.awt.Graphics;
 
 
 public class MySpinner extends javax.swing.JPanel {
     
-    private int MaxVal = 10;
-    private int MinVal = 0;
-    private int Value = 0;
-    private int Step = 1;
+    private int MaxVal;
+    private int MinVal;
+    private int Value;
+    private int Step;
+    
+    private Color TxtFore;
+    private Color TxtBack;
+    private Color BtnFore;
+    private Color BtnBack;
+    
+    boolean redi = false;
+    
     public MySpinner() {
+        MaxVal = 10;
+        MinVal = 0;
+        Value = 0;
+        Step = 1;
+        
+        BtnBack = new Color(169,209,142);
+        BtnFore = Color.white;
+        TxtBack = Color.white;
+        TxtFore = new Color(80,80,80);
+        
+        
         
         initComponents();
+        
+        setBtnFore(BtnFore);
+        setBtnBack(BtnBack);
+        setTxtBack(TxtBack);
+        setTxtFore(TxtFore);
+        
+        redi = true;
         modifyInitedComponents();
     }
 
+    public int getMaxVal() {
+        return MaxVal;
+    }
+
+    public void setMaxVal(int MaxVal) {
+        this.MaxVal = MaxVal;
+    }
+
+    public int getMinVal() {
+        return MinVal;
+    }
+
+    public void setMinVal(int MinVal) {
+        this.MinVal = MinVal;
+    }
+
+    public int getValue() {
+        return Value;
+    }
+
+    public void setValue(int Value) {
+        this.Value = Value;
+    }
+
+    public int getStep() {
+        return Step;
+    }
+
+    public void setStep(int Step) {
+        this.Step = Step;
+    }
+
+    public Color getTxtFore() {
+        return TxtFore;
+    }
+
+    public void setTxtFore(Color TxtFore) {
+        this.TxtFore = TxtFore;
+        this.editor.setForeground(TxtFore);
+        modifyInitedComponents();
+    }
+
+    public Color getTxtBack() {
+        return TxtBack;
+    }
+
+    public void setTxtBack(Color TxtBack) {
+        this.TxtBack = TxtBack;
+        this.editor.setBackground(TxtBack);
+        modifyInitedComponents();
+    }
+
+    public Color getBtnFore() {
+        return BtnFore;
+    }
+
+    public void setBtnFore(Color BtnFore) {
+        this.BtnFore = BtnFore;
+        left.setForeground(BtnFore);
+        right.setForeground(BtnFore);
+        modifyInitedComponents();
+    }
+
+    public Color getBtnBack() {
+        return BtnBack;
+    }
+
+    public void setBtnBack(Color BtnBack) {
+        this.BtnBack = BtnBack;
+        if (redi) {
+            left.setColor(BtnBack);
+            right.setColor(BtnBack);
+            modifyInitedComponents();
+        }
+    }
+    
+    @Override
+    public void setSize(int w, int h){
+        resize(getWidth(), getHeight());
+    }
+    
+    
+    @Override
+    public void setLocation(int x, int y){
+        move(x, y);
+        if (redi) {
+            modifyInitedComponents();
+        }
+    }
+    
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
