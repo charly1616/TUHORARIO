@@ -305,10 +305,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         add.setBounds(288, 24, 20, 20);
 
         jLabel8.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(97, 96, 96));
+        jLabel8.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Crea tu grupo y disfrútalo ");
         Gruposed.add(jLabel8);
-        jLabel8.setBounds(70, 380, 230, 20);
+        jLabel8.setBounds(40, 380, 230, 20);
 
         jLabel9.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 19)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(105, 167, 133));
@@ -381,25 +382,27 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         cursosed.add(brush);
         brush.setBounds(220, 14, 20, 20);
 
-        jLabel14.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 12)); // NOI18N
+        jLabel14.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(105, 167, 133));
         jLabel14.setText("Crea un curso para poder editar ");
         cursosed.add(jLabel14);
-        jLabel14.setBounds(40, 510, 230, 20);
+        jLabel14.setBounds(30, 510, 230, 20);
 
         jLabel17.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 19)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel17.setText("Ningún curso");
         cursosed.add(jLabel17);
-        jLabel17.setBounds(80, 470, 170, 20);
+        jLabel17.setBounds(30, 470, 220, 20);
 
         jLabel10.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 19)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setText("encontrado");
         cursosed.add(jLabel10);
-        jLabel10.setBounds(90, 490, 120, 20);
+        jLabel10.setBounds(70, 490, 140, 20);
 
-        jLabel19.setFont(new java.awt.Font("Arial Rounded MT Bold", 3, 12)); // NOI18N
+        jLabel19.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(105, 167, 133));
         jLabel19.setText("poder editarlo");
         cursosed.add(jLabel19);
@@ -407,9 +410,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/icons8_lost_and_found_100px_1.png"))); // NOI18N
         cursosed.add(jLabel20);
-        jLabel20.setBounds(90, 130, 120, 100);
+        jLabel20.setBounds(100, 130, 120, 100);
 
-        jLabel22.setFont(new java.awt.Font("Arial Rounded MT Bold", 3, 12)); // NOI18N
+        jLabel22.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(105, 167, 133));
         jLabel22.setText("Selecciona el grupo para");
         cursosed.add(jLabel22);
@@ -423,7 +426,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jLabel24.setForeground(new java.awt.Color(105, 167, 133));
         jLabel24.setText("Ningún grupo escogido");
         cursosed.add(jLabel24);
-        jLabel24.setBounds(30, 240, 240, 20);
+        jLabel24.setBounds(40, 240, 240, 20);
 
         edit.add(cursosed);
         cursosed.setBounds(340, 10, 300, 680);
@@ -458,7 +461,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
         opcionsed.add(key);
-        key.setBounds(440, 60, 28, 20);
+        key.setBounds(440, 60, 26, 20);
 
         labelop.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         labelop.setForeground(new java.awt.Color(127, 127, 127));
@@ -519,7 +522,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/icons8_lost_and_found_100px_1.png"))); // NOI18N
         opcionsed.add(jLabel13);
-        jLabel13.setBounds(210, 130, 120, 100);
+        jLabel13.setBounds(210, 140, 120, 100);
 
         jLabel11.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 19)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(105, 167, 133));
@@ -529,19 +532,21 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jLabel15.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel15.setText("generar los horarios");
         opcionsed.add(jLabel15);
-        jLabel15.setBounds(190, 520, 150, 20);
+        jLabel15.setBounds(150, 520, 200, 20);
 
         jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/icons8_nothing_found_100px.png"))); // NOI18N
         opcionsed.add(jLabel16);
-        jLabel16.setBounds(210, 370, 110, 90);
+        jLabel16.setBounds(190, 370, 110, 90);
 
         jLabel21.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 19)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel21.setText("Ninguna opción encontrada ");
         opcionsed.add(jLabel21);
-        jLabel21.setBounds(120, 470, 290, 20);
+        jLabel21.setBounds(110, 470, 290, 20);
 
         jLabel25.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         jLabel25.setForeground(new java.awt.Color(105, 167, 133));
@@ -551,9 +556,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jLabel26.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         jLabel26.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel26.setText("Ingresa las opciones del curso para ");
         opcionsed.add(jLabel26);
-        jLabel26.setBounds(140, 500, 260, 20);
+        jLabel26.setBounds(100, 500, 300, 20);
 
         edit.add(opcionsed);
         opcionsed.setBounds(640, 10, 540, 680);
@@ -617,7 +623,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
         filts.add(back3);
-        back3.setBounds(40, 290, 28, 28);
+        back3.setBounds(40, 290, 26, 27);
 
         Horas.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
         Horas.setForeground(new java.awt.Color(102, 102, 102));

@@ -43,7 +43,7 @@ public class TextFieldd extends JTextField {
     private int round = 10;
     private Color shadowColor = new Color(170, 170, 170);
     private BufferedImage imageShadow;
-    private final Insets shadowSize = new Insets(2, 2, 2, 2);
+    private final Insets shadowSize = new Insets(0, 0, 0, 0);
 
     public TextFieldd() {
         setUI(new TextUI());
