@@ -1574,6 +1574,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         u.chose();
         this.cursochoosen = u;
         this.cursoChosen = u.getThisCurso();
+        
+        
+         Ncursoesc.setVisible(true);
+       Nopcenc.setVisible(true);
+        
     }//GEN-LAST:event_brush2ActionPerformed
 
     private void brushActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_brushActionPerformed
@@ -1581,6 +1586,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         this.UpdateCursoCards();
         this.UpdateGroupCards();
         this.UpdateOpcionCards();
+        
+       Ncursoenc.setVisible(true);
+       Ngrupesc.setVisible(true);
+        
     }//GEN-LAST:event_brushActionPerformed
 
     private void add2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add2ActionPerformed
