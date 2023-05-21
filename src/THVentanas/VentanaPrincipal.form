@@ -63,7 +63,7 @@
             <Property name="text" type="java.lang.String" value="&#x2022;"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Cursor Por defecto"/>
+              <Color id="Default Cursor"/>
             </Property>
           </Properties>
           <Events>
@@ -86,7 +86,7 @@
             <Property name="text" type="java.lang.String" value="&#x2022;"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Cursor Por defecto"/>
+              <Color id="Default Cursor"/>
             </Property>
           </Properties>
           <Events>
@@ -109,7 +109,7 @@
             <Property name="text" type="java.lang.String" value="&#x2022;"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Cursor Por defecto"/>
+              <Color id="Default Cursor"/>
             </Property>
           </Properties>
           <Events>
@@ -144,7 +144,7 @@
             </Property>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Cursor Por defecto"/>
+              <Color id="Default Cursor"/>
             </Property>
             <Property name="defaultCapable" type="boolean" value="false"/>
             <Property name="focusPainted" type="boolean" value="false"/>
@@ -165,7 +165,7 @@
             </Property>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Cursor Por defecto"/>
+              <Color id="Default Cursor"/>
             </Property>
             <Property name="defaultCapable" type="boolean" value="false"/>
             <Property name="focusPainted" type="boolean" value="false"/>
@@ -187,7 +187,7 @@
             <Property name="borderPainted" type="boolean" value="false"/>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Cursor Por defecto"/>
+              <Color id="Default Cursor"/>
             </Property>
             <Property name="defaultCapable" type="boolean" value="false"/>
             <Property name="focusPainted" type="boolean" value="false"/>
@@ -323,7 +323,7 @@
                     </Property>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                      <Color id="Cursor Por defecto"/>
+                      <Color id="Default Cursor"/>
                     </Property>
                     <Property name="focusPainted" type="boolean" value="false"/>
                   </Properties>
@@ -467,7 +467,7 @@
                     </Property>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                      <Color id="Cursor Por defecto"/>
+                      <Color id="Default Cursor"/>
                     </Property>
                     <Property name="focusPainted" type="boolean" value="false"/>
                   </Properties>
@@ -509,7 +509,7 @@
                     </Property>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                      <Color id="Cursor Por defecto"/>
+                      <Color id="Default Cursor"/>
                     </Property>
                     <Property name="focusPainted" type="boolean" value="false"/>
                   </Properties>
@@ -535,7 +535,7 @@
                     </Property>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                      <Color id="Cursor Por defecto"/>
+                      <Color id="Default Cursor"/>
                     </Property>
                     <Property name="focusPainted" type="boolean" value="false"/>
                   </Properties>
@@ -587,8 +587,11 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                               <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                               <Component id="jLabel24" min="-2" pref="30" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                               <Component id="jLabel22" min="-2" pref="20" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                               <Component id="jLabel19" min="-2" pref="20" max="-2" attributes="0"/>
                               <EmptySpace pref="35" max="32767" attributes="0"/>
                           </Group>
@@ -679,7 +682,9 @@
                               <Component id="jLabel23" min="-2" pref="90" max="-2" attributes="0"/>
                               <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
                               <Component id="jLabel17" min="-2" pref="30" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                               <Component id="jLabel10" min="-2" pref="20" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                               <Component id="jLabel14" min="-2" pref="20" max="-2" attributes="0"/>
                               <EmptySpace pref="25" max="32767" attributes="0"/>
                           </Group>
@@ -763,7 +768,7 @@
                     </Property>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                      <Color id="Cursor Por defecto"/>
+                      <Color id="Default Cursor"/>
                     </Property>
                     <Property name="focusPainted" type="boolean" value="false"/>
                   </Properties>
@@ -789,7 +794,7 @@
                     </Property>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                      <Color id="Cursor Por defecto"/>
+                      <Color id="Default Cursor"/>
                     </Property>
                     <Property name="focusPainted" type="boolean" value="false"/>
                   </Properties>
@@ -831,7 +836,7 @@
                     </Property>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                      <Color id="Cursor Por defecto"/>
+                      <Color id="Default Cursor"/>
                     </Property>
                     <Property name="focusPainted" type="boolean" value="false"/>
                   </Properties>
@@ -857,7 +862,7 @@
                     </Property>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                      <Color id="Cursor Por defecto"/>
+                      <Color id="Default Cursor"/>
                     </Property>
                     <Property name="focusPainted" type="boolean" value="false"/>
                   </Properties>
@@ -934,7 +939,9 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                               <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                               <Component id="jLabel11" min="-2" pref="30" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                               <Component id="jLabel25" min="-2" pref="20" max="-2" attributes="0"/>
                               <EmptySpace pref="32" max="32767" attributes="0"/>
                           </Group>
@@ -1015,7 +1022,9 @@
                               <Component id="jLabel16" min="-2" pref="90" max="-2" attributes="0"/>
                               <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
                               <Component id="jLabel21" min="-2" pref="30" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                               <Component id="jLabel26" min="-2" pref="20" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                               <Component id="jLabel15" min="-2" pref="20" max="-2" attributes="0"/>
                               <EmptySpace pref="24" max="32767" attributes="0"/>
                           </Group>
@@ -1218,7 +1227,7 @@
                     </Property>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                      <Color id="Cursor Por defecto"/>
+                      <Color id="Default Cursor"/>
                     </Property>
                     <Property name="focusPainted" type="boolean" value="false"/>
                   </Properties>

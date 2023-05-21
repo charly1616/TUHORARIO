@@ -467,8 +467,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             .addGroup(NgrupescLayout.createSequentialGroup()
                 .addGap(35, 35, 35)
                 .addComponent(jLabel20)
+                .addGap(0, 0, 0)
                 .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
                 .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
                 .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(35, Short.MAX_VALUE))
         );
@@ -518,7 +521,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
                 .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
                 .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(25, Short.MAX_VALUE))
         );
@@ -559,7 +564,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
         opcionsed.add(key);
-        key.setBounds(440, 60, 28, 20);
+        key.setBounds(440, 60, 26, 20);
 
         labelop.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         labelop.setForeground(new java.awt.Color(127, 127, 127));
@@ -652,7 +657,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             .addGroup(NcursoescLayout.createSequentialGroup()
                 .addGap(28, 28, 28)
                 .addComponent(jLabel13)
+                .addGap(0, 0, 0)
                 .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
                 .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(32, Short.MAX_VALUE))
         );
@@ -705,7 +712,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
                 .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
                 .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
                 .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(24, Short.MAX_VALUE))
         );
@@ -775,7 +784,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
         filts.add(back3);
-        back3.setBounds(40, 290, 28, 28);
+        back3.setBounds(40, 290, 26, 27);
 
         Horas.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
         Horas.setForeground(new java.awt.Color(102, 102, 102));

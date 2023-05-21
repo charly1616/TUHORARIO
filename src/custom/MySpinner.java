@@ -49,6 +49,9 @@ public class MySpinner extends javax.swing.JPanel {
 
     public void setMaxVal(int MaxVal) {
         this.MaxVal = MaxVal;
+        if (Value < MaxVal) {
+            Value = MaxVal;
+        }
     }
 
     public int getMinVal() {
@@ -57,6 +60,9 @@ public class MySpinner extends javax.swing.JPanel {
 
     public void setMinVal(int MinVal) {
         this.MinVal = MinVal;
+        if (Value > MinVal) {
+            Value = MinVal;
+        }
     }
 
     public int getValue() {
