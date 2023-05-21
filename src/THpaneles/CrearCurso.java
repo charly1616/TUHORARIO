@@ -53,7 +53,7 @@ public class CrearCurso extends javax.swing.JPanel {
         jButton2 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         name = new custom.TextFieldd();
-        semestre = new custom.MySpinner();
+        nddias = new custom.MySpinner();
 
         ndias.setModel(new javax.swing.SpinnerNumberModel(1, 1, 3, 1));
         ndias.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -120,7 +120,10 @@ public class CrearCurso extends javax.swing.JPanel {
         name.setText("nombre");
         name.setRound(25);
         jPanel1.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 200, 30));
-        jPanel1.add(semestre, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 160, -1, -1));
+
+        nddias.setMaxVal(6);
+        nddias.setMinVal(1);
+        jPanel1.add(nddias, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 160, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -136,8 +139,8 @@ public class CrearCurso extends javax.swing.JPanel {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
        
-        System.out.println(semestre.getValue());
-        variable.nuevocurso(name.getText(),semestre.getValue(), list, "");
+        System.out.println(nddias.getValue());
+        variable.nuevocurso(name.getText(),nddias.getValue(), list, "");
        
        padre.UpdateCursoCards();
        GlassPanePopup.closePopupLast();
@@ -158,7 +161,7 @@ public class CrearCurso extends javax.swing.JPanel {
     private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JSeparator jSeparator1;
     private custom.TextFieldd name;
+    private custom.MySpinner nddias;
     private javax.swing.JSpinner ndias;
-    private custom.MySpinner semestre;
     // End of variables declaration//GEN-END:variables
 }

@@ -206,7 +206,11 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="custom.MySpinner" name="semestre">
+        <Component class="custom.MySpinner" name="nddias">
+          <Properties>
+            <Property name="maxVal" type="int" value="6"/>
+            <Property name="minVal" type="int" value="1"/>
+          </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="230" y="160" width="-1" height="-1"/>

@@ -49,6 +49,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     
     public VentanaPrincipal() {
         
+       
         initComponents();
         
         GlassPanePopup.install(this);
@@ -61,7 +62,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         
         
         this.GroupCards();
-        
+       Ngrupenc.setVisible(false);
+       Ncursoenc.setVisible(true);
+       Ngrupesc.setVisible(true);
+       Ncursoesc.setVisible(true);
+       Nopcenc.setVisible(true);
     }
 
     
@@ -145,10 +150,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         Mar1 = new custom.MyButton();
         Mie2 = new custom.MyButton();
         jLabel7 = new javax.swing.JLabel();
-        mySpinner1 = new custom.MySpinner();
-        mySpinner2 = new custom.MySpinner();
-        mySpinner3 = new custom.MySpinner();
-        mySpinner4 = new custom.MySpinner();
+        hormax = new custom.MySpinner();
+        hormin = new custom.MySpinner();
+        espmax = new custom.MySpinner();
+        diasmax = new custom.MySpinner();
         view = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -564,7 +569,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
         opcionsed.add(key);
-        key.setBounds(440, 60, 26, 20);
+        key.setBounds(440, 60, 28, 20);
 
         labelop.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         labelop.setForeground(new java.awt.Color(127, 127, 127));
@@ -784,7 +789,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
         filts.add(back3);
-        back3.setBounds(40, 290, 26, 27);
+        back3.setBounds(40, 290, 28, 28);
 
         Horas.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
         Horas.setForeground(new java.awt.Color(102, 102, 102));
@@ -984,14 +989,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/icons8_schedule_20px.png"))); // NOI18N
         filts.add(jLabel7);
         jLabel7.setBounds(210, 300, 30, 20);
-        filts.add(mySpinner1);
-        mySpinner1.setBounds(110, 360, 80, 20);
-        filts.add(mySpinner2);
-        mySpinner2.setBounds(110, 400, 80, 20);
-        filts.add(mySpinner3);
-        mySpinner3.setBounds(110, 470, 80, 20);
-        filts.add(mySpinner4);
-        mySpinner4.setBounds(110, 520, 80, 20);
+        filts.add(hormax);
+        hormax.setBounds(110, 360, 80, 20);
+        filts.add(hormin);
+        hormin.setBounds(110, 400, 80, 20);
+        filts.add(espmax);
+        espmax.setBounds(110, 470, 80, 20);
+        filts.add(diasmax);
+        diasmax.setBounds(110, 520, 80, 20);
 
         See.add(filts, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 680));
 
@@ -1103,6 +1108,21 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             
             
         }
+        if (grupo.isEmpty()) {
+       Ngrupenc.setVisible(true);
+       Ncursoenc.setVisible(true);
+       Ngrupesc.setVisible(true);
+       Ncursoesc.setVisible(true);
+       Nopcenc.setVisible(true);
+       Nhorarios.setVisible(true);
+        }else{
+             Ngrupenc.setVisible(false);
+       Ncursoenc.setVisible(false);
+       Ngrupesc.setVisible(false);
+       Ncursoesc.setVisible(false);
+       Nopcenc.setVisible(false);
+       Nhorarios.setVisible(false);
+        }
     }
     
     public void unchoseChosen(){
@@ -1178,7 +1198,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         
             
         }
-        
+        if (!grupo.isEmpty()) {
+        Ncursoenc.setVisible(false);
+        Ngrupesc.setVisible(false);
+        }else{
+             Ncursoenc.setVisible(true);
+             Ngrupesc.setVisible(true);
+        }
     }
     
     public void unchoseChosencurso(){
@@ -1262,6 +1288,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             comp++;
         
             
+        }
+        if (grupo.isEmpty()) {
+             Ncursoesc.setVisible(true);
+              Nopcenc.setVisible(true);
+        }else{
+            Ncursoesc.setVisible(false);
+       Nopcenc.setVisible(false);
         }
         
     }
@@ -1646,11 +1679,15 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private custom.MyButton bttentrada3;
     private custom.MyButton bttsalida;
     private javax.swing.JPanel cursosed;
+    private custom.MySpinner diasmax;
     private javax.swing.JPanel downthing;
     private javax.swing.JPanel edit;
+    private custom.MySpinner espmax;
     private javax.swing.JLabel exit;
     private javax.swing.JPanel filts;
     private javax.swing.JPanel header;
+    private custom.MySpinner hormax;
+    private custom.MySpinner hormin;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1688,10 +1725,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel labelop;
     private javax.swing.JLabel min;
     private javax.swing.JLabel move;
-    private custom.MySpinner mySpinner1;
-    private custom.MySpinner mySpinner2;
-    private custom.MySpinner mySpinner3;
-    private custom.MySpinner mySpinner4;
     private javax.swing.JLabel name;
     private javax.swing.JPanel opcionsed;
     private javax.swing.JLabel schetxt;

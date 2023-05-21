@@ -20,9 +20,9 @@ public class MySpinner extends javax.swing.JPanel {
     boolean redi = false;
     
     public MySpinner() {
-        MaxVal = 10;
-        MinVal = 0;
-        Value = 0;
+        MaxVal = 12;
+        MinVal = 1;
+        Value = 1;
         Step = 1;
         
         BtnBack = new Color(169,209,142);
