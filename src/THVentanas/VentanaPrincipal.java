@@ -152,6 +152,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         view = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        Nhorarios = new javax.swing.JPanel();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -995,6 +999,50 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jLabel5.setText("Horarios generados y sus características ");
         view.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, -1, -1));
 
+        Nhorarios.setOpaque(false);
+
+        jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/icons8_nothing_found_100px.png"))); // NOI18N
+
+        jLabel28.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 19)); // NOI18N
+        jLabel28.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel28.setText("No hay ningún horario encontrado ");
+
+        jLabel29.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
+        jLabel29.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel29.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel29.setText("No hay horarios generados ");
+
+        javax.swing.GroupLayout NhorariosLayout = new javax.swing.GroupLayout(Nhorarios);
+        Nhorarios.setLayout(NhorariosLayout);
+        NhorariosLayout.setHorizontalGroup(
+            NhorariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(NhorariosLayout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addGroup(NhorariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(NhorariosLayout.createSequentialGroup()
+                        .addGap(120, 120, 120)
+                        .addComponent(jLabel27))
+                    .addComponent(jLabel28)
+                    .addGroup(NhorariosLayout.createSequentialGroup()
+                        .addGap(70, 70, 70)
+                        .addComponent(jLabel29)))
+                .addContainerGap(23, Short.MAX_VALUE))
+        );
+        NhorariosLayout.setVerticalGroup(
+            NhorariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(NhorariosLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabel27)
+                .addGap(20, 20, 20)
+                .addComponent(jLabel28)
+                .addGap(8, 8, 8)
+                .addComponent(jLabel29)
+                .addContainerGap(53, Short.MAX_VALUE))
+        );
+
+        view.add(Nhorarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 200, 390, 240));
+
         See.add(view, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 10, 920, 670));
 
         switchven.addTab("tab2", See);
@@ -1573,6 +1621,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel Ncursoesc;
     private javax.swing.JPanel Ngrupenc;
     private javax.swing.JPanel Ngrupesc;
+    private javax.swing.JPanel Nhorarios;
     private javax.swing.JPanel Nopcenc;
     private custom.MyButton Sab;
     private javax.swing.JPanel See;
@@ -1612,6 +1661,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

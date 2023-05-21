@@ -45,9 +45,9 @@ public class CrearOpc extends javax.swing.JPanel {
         jButton2 = new javax.swing.JButton();
         bttsalida = new custom.MyButton();
         bttentrada2 = new custom.MyButton();
-        nEntrada = new custom.Spinner();
-        nSalida = new custom.Spinner();
         comboEstudio2 = new javax.swing.JComboBox<>();
+        nEntrada = new custom.MySpinner();
+        nSalida = new custom.MySpinner();
 
         jPanel1.setBackground(new java.awt.Color(176, 235, 176));
         jPanel1.setForeground(new java.awt.Color(0, 0, 0));
@@ -159,19 +159,11 @@ public class CrearOpc extends javax.swing.JPanel {
         });
         jPanel1.add(bttentrada2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 140, 80, 30));
 
-        nEntrada.setBackground(new java.awt.Color(0, 102, 51));
-        nEntrada.setBorder(null);
-        nEntrada.setModel(new javax.swing.SpinnerNumberModel(6, 1, 12, 1));
-        jPanel1.add(nEntrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 130, 80, 40));
-
-        nSalida.setBackground(new java.awt.Color(0, 102, 51));
-        nSalida.setBorder(null);
-        nSalida.setModel(new javax.swing.SpinnerNumberModel(1, 1, 12, 1));
-        jPanel1.add(nSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 200, 80, 40));
-
         comboEstudio2.setFont(new java.awt.Font("Arial Rounded MT Bold", 2, 18)); // NOI18N
         comboEstudio2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ninguno", "Primaria", "Bachiller", "Técnico", "Pregrado", "Especialista", "Magister", "Doctorado" }));
         jPanel1.add(comboEstudio2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 310, 180, -1));
+        jPanel1.add(nEntrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, -1, -1));
+        jPanel1.add(nSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -232,8 +224,6 @@ public class CrearOpc extends javax.swing.JPanel {
     private javax.swing.JLabel Salida;
     private custom.MyButton bttentrada2;
     private custom.MyButton bttsalida;
-    private javax.swing.JComboBox<String> comboEstudio;
-    private javax.swing.JComboBox<String> comboEstudio1;
     private javax.swing.JComboBox<String> comboEstudio2;
     private javax.swing.JLabel creandog;
     private javax.swing.JComboBox<String> dias;
@@ -241,7 +231,7 @@ public class CrearOpc extends javax.swing.JPanel {
     private javax.swing.JButton jButton2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
-    private custom.Spinner nEntrada;
-    private custom.Spinner nSalida;
+    private custom.MySpinner nEntrada;
+    private custom.MySpinner nSalida;
     // End of variables declaration//GEN-END:variables
 }

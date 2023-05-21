@@ -37,11 +37,11 @@ public class CrearGroup extends javax.swing.JPanel {
         creandog = new javax.swing.JLabel();
         Dia = new javax.swing.JLabel();
         Entrada = new javax.swing.JLabel();
-        semestre = new javax.swing.JSpinner();
         jSeparator1 = new javax.swing.JSeparator();
         jButton2 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         name = new custom.TextFieldd();
+        semestre = new custom.MySpinner();
 
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -74,10 +74,6 @@ public class CrearGroup extends javax.swing.JPanel {
         Entrada.setText("Semestre:");
         fond.add(Entrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 190, 100, -1));
 
-        semestre.setModel(new javax.swing.SpinnerNumberModel(1, 1, 10, 1));
-        semestre.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        fond.add(semestre, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 190, 100, -1));
-
         jSeparator1.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
         fond.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 300, 10));
@@ -90,7 +86,7 @@ public class CrearGroup extends javax.swing.JPanel {
         jButton2.setBorder(null);
         jButton2.setBorderPainted(false);
         jButton2.setContentAreaFilled(false);
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton2.setFocusPainted(false);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -107,7 +103,7 @@ public class CrearGroup extends javax.swing.JPanel {
         jButton1.setBorder(null);
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton1.setFocusPainted(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -122,13 +118,14 @@ public class CrearGroup extends javax.swing.JPanel {
         name.setText("nombre");
         name.setRound(25);
         fond.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 120, 150, 30));
+        fond.add(semestre, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 190, -1, -1));
 
         add(fond, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 300));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
        variable.newgrupo(name.getText());
-       variable.getAct().setSemestre(this.semestre.getValue().toString());
+       variable.getAct().setSemestre(this.semestre.getValue()+"");
        
        padre.UpdateGroupCards();
        GlassPanePopup.closePopupLast();
@@ -152,6 +149,6 @@ public class CrearGroup extends javax.swing.JPanel {
     private javax.swing.JButton jButton2;
     private javax.swing.JSeparator jSeparator1;
     private custom.TextFieldd name;
-    private javax.swing.JSpinner semestre;
+    private custom.MySpinner semestre;
     // End of variables declaration//GEN-END:variables
 }
