@@ -5,6 +5,12 @@ import THVentanas.VentanaPrincipal;
 import THlogica.Listacursos;
 import THlogica.grupos;
 import THlogica.horario;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.RenderingHints;
+import java.awt.Shape;
+import java.awt.geom.Area;
+import java.awt.geom.Rectangle2D;
 import java.awt.geom.RoundRectangle2D;
 import raven.GlassPanePopup;
 
@@ -12,6 +18,8 @@ public class CrearCurso extends javax.swing.JPanel {
     Listacursos list;
     public horario variable;
     public VentanaPrincipal padre;
+    
+    private int round = 25;
     public CrearCurso() {
         initComponents();
        
@@ -45,7 +53,7 @@ public class CrearCurso extends javax.swing.JPanel {
 
         jPopupMenu1 = new javax.swing.JPopupMenu();
         ndias = new javax.swing.JSpinner();
-        jPanel1 = new javax.swing.JPanel();
+        bg = new javax.swing.JPanel();
         creandog = new javax.swing.JLabel();
         Dia = new javax.swing.JLabel();
         Entrada = new javax.swing.JLabel();
@@ -58,29 +66,32 @@ public class CrearCurso extends javax.swing.JPanel {
         ndias.setModel(new javax.swing.SpinnerNumberModel(1, 1, 3, 1));
         ndias.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jPanel1.setBackground(new java.awt.Color(176, 235, 176));
-        jPanel1.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setBackground(new java.awt.Color(176, 235, 176));
+
+        bg.setBackground(new java.awt.Color(176, 235, 176));
+        bg.setForeground(new java.awt.Color(0, 0, 0));
+        bg.setOpaque(false);
+        bg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         creandog.setBackground(new java.awt.Color(169, 209, 142));
         creandog.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 17)); // NOI18N
         creandog.setForeground(new java.awt.Color(255, 255, 255));
         creandog.setText("CREANDO CURSO");
-        jPanel1.add(creandog, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, 190, -1));
+        bg.add(creandog, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, 190, -1));
 
         Dia.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 16)); // NOI18N
         Dia.setForeground(new java.awt.Color(255, 255, 255));
         Dia.setText("Nombre del curso:");
-        jPanel1.add(Dia, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 160, -1));
+        bg.add(Dia, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, 160, -1));
 
         Entrada.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 16)); // NOI18N
         Entrada.setForeground(new java.awt.Color(255, 255, 255));
         Entrada.setText("Numero de dias:");
-        jPanel1.add(Entrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 170, -1));
+        bg.add(Entrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, 170, -1));
 
         jSeparator1.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 300, 10));
+        bg.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 300, 10));
 
         jButton2.setBackground(new java.awt.Color(141, 196, 162));
         jButton2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
@@ -96,7 +107,7 @@ public class CrearCurso extends javax.swing.JPanel {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 260, -1, -1));
+        bg.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 260, -1, -1));
 
         jButton1.setBackground(new java.awt.Color(141, 196, 162));
         jButton1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
@@ -112,28 +123,27 @@ public class CrearCurso extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, -1, 30));
+        bg.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, -1, 30));
 
         name.setBackground(new java.awt.Color(204, 255, 204));
         name.setBorder(null);
         name.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         name.setText("nombre");
         name.setRound(25);
-        jPanel1.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 200, 30));
+        bg.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 80, 150, 20));
 
         nddias.setMaxVal(6);
-        nddias.setMinVal(1);
-        jPanel1.add(nddias, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 160, -1, -1));
+        bg.add(nddias, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 160, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(bg, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(bg, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -149,15 +159,86 @@ public class CrearCurso extends javax.swing.JPanel {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
        GlassPanePopup.closePopupLast();       
     }//GEN-LAST:event_jButton1ActionPerformed
+    
+    
+    
+    
+    // <editor-fold defaultstate="collapsed" desc="REDONDEADO UWU">      
+    @Override
+    protected void paintComponent(Graphics grphcs) {
+        this.setOpaque(false);
+        Graphics2D g2 = (Graphics2D) grphcs.create();
+        g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+        g2.setColor(bg.getBackground());
+        Area area = new Area(createRoundTopLeft());
+        if (round > 0) {
+            area.intersect(new Area(createRoundTopRight()));
+        }
+        if (round > 0) {
+            area.intersect(new Area(createRoundBottomLeft()));
+        }
+        if (round > 0) {
+            area.intersect(new Area(createRoundBottomRight()));
+        }
+        g2.fill(area);
+        g2.dispose();
+        super.paintComponent(grphcs);
+    }
 
+    private Shape createRoundTopLeft() {
+        int width = getWidth();
+        int height = getHeight();
+        int roundX = Math.min(width, round);
+        int roundY = Math.min(height, round);
+        Area area = new Area(new RoundRectangle2D.Double(0, 0, width, height, roundX, roundY));
+        area.add(new Area(new Rectangle2D.Double(roundX / 2, 0, width - roundX / 2, height)));
+        area.add(new Area(new Rectangle2D.Double(0, roundY / 2, width, height - roundY / 2)));
+        return area;
+    }
+
+    private Shape createRoundTopRight() {
+        int width = getWidth();
+        int height = getHeight();
+        int roundX = Math.min(width, round);
+        int roundY = Math.min(height, round);
+        Area area = new Area(new RoundRectangle2D.Double(0, 0, width, height, roundX, roundY));
+        area.add(new Area(new Rectangle2D.Double(0, 0, width - roundX / 2, height)));
+        area.add(new Area(new Rectangle2D.Double(0, roundY / 2, width, height - roundY / 2)));
+        return area;
+    }
+
+    private Shape createRoundBottomLeft() {
+        int width = getWidth();
+        int height = getHeight();
+        int roundX = Math.min(width, round);
+        int roundY = Math.min(height, round);
+        Area area = new Area(new RoundRectangle2D.Double(0, 0, width, height, roundX, roundY));
+        area.add(new Area(new Rectangle2D.Double(roundX / 2, 0, width - roundX / 2, height)));
+        area.add(new Area(new Rectangle2D.Double(0, 0, width, height - roundY / 2)));
+        return area;
+    }
+
+    private Shape createRoundBottomRight() {
+        int width = getWidth();
+        int height = getHeight();
+        int roundX = Math.min(width, round);
+        int roundY = Math.min(height, round);
+        Area area = new Area(new RoundRectangle2D.Double(0, 0, width, height, roundX, roundY));
+        area.add(new Area(new Rectangle2D.Double(0, 0, width - roundX / 2, height)));
+        area.add(new Area(new Rectangle2D.Double(0, 0, width, height - roundY / 2)));
+        return area;
+    }// </editor-fold> 
+    
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Dia;
     private javax.swing.JLabel Entrada;
+    private javax.swing.JPanel bg;
     private javax.swing.JLabel creandog;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JSeparator jSeparator1;
     private custom.TextFieldd name;

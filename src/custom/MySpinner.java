@@ -52,6 +52,8 @@ public class MySpinner extends javax.swing.JPanel {
         if (Value < MaxVal) {
             Value = MaxVal;
         }
+        this.editor.setText(Value+"");
+        modifyInitedComponents();
     }
 
     public int getMinVal() {
@@ -63,6 +65,8 @@ public class MySpinner extends javax.swing.JPanel {
         if (Value > MinVal) {
             Value = MinVal;
         }
+        this.editor.setText(Value+"");
+        modifyInitedComponents();
     }
 
     public int getValue() {
@@ -70,7 +74,18 @@ public class MySpinner extends javax.swing.JPanel {
     }
 
     public void setValue(int Value) {
-        this.Value = Value;
+        if (Value > MaxVal) {
+            this.Value = MaxVal;
+        } else if (Value < MinVal) {
+            this.Value = MinVal;
+        } else{
+            this.Value = Value;
+        }
+        
+        this.editor.setText(Value+"");
+        modifyInitedComponents();
+
+        
     }
 
     public int getStep() {
@@ -79,6 +94,7 @@ public class MySpinner extends javax.swing.JPanel {
 
     public void setStep(int Step) {
         this.Step = Step;
+        modifyInitedComponents();
     }
 
     public Color getTxtFore() {
@@ -219,6 +235,7 @@ public class MySpinner extends javax.swing.JPanel {
 
     
     private void modifyInitedComponents(){
+        
         //tamaño minimo
         if (getHeight() < 20) setSize(getWidth(), 20);
         if (getWidth() < 80) setSize(80, getHeight());

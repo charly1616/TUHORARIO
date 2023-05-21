@@ -50,7 +50,7 @@ public class dia {
                 nombre = "Mar ";
                 break;
             case 2:
-                nombre = "Mié ";
+                nombre = "Mie ";
                 break;
             case 3:
                 nombre = "Jue ";

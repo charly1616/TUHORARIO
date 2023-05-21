@@ -272,7 +272,8 @@ public class GroupCard extends javax.swing.JPanel {
         this.semester = this.thisGrupo.getSemestre();
         
         this.name.setText(namee);
-        this.data.setText("Semestre " + this.semester + " | " + this.curses + " cursos");
+        String cursu = (this.curses > 1) ? " cursos" : " curso";
+        this.data.setText("Semestre " + this.semester + " | " + this.curses + cursu);
         this.convertTextToColor(namee);
     }
 

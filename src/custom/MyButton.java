@@ -92,7 +92,6 @@ public class MyButton extends JButton {
             @Override
             public void mousePressed(MouseEvent me) {
                 setBackground(colorClick);
-                setSelected(!isSelected());
             }
 
             @Override

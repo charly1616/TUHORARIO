@@ -4,6 +4,7 @@
  */
 package THVentanas;
 
+import THlogica.Hopcion;
 import THlogica.curso;
 import THlogica.grupo;
 import THlogica.grupos;
@@ -47,6 +48,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private ArrayList <OptionCard>opcion = new ArrayList <OptionCard>();
     
     
+    
+    private ArrayList <HorarioCard>Hopcions = new ArrayList <HorarioCard>();
+    private int Page = 1;
+    
     public VentanaPrincipal() {
         
        
@@ -67,6 +72,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
        Ngrupesc.setVisible(true);
        Ncursoesc.setVisible(true);
        Nopcenc.setVisible(true);
+       
     }
 
     
@@ -137,23 +143,24 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         Horas = new javax.swing.JLabel();
         Horamax = new javax.swing.JLabel();
         Jue = new custom.MyButton();
-        bttsalida = new custom.MyButton();
+        Hmin = new custom.MyButton();
         Horamin = new javax.swing.JLabel();
         Espacio1 = new javax.swing.JLabel();
         Espacio2 = new javax.swing.JLabel();
         Horas1 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        bttentrada3 = new custom.MyButton();
+        Hmax = new custom.MyButton();
         Vie = new custom.MyButton();
         Lun = new custom.MyButton();
         Sab = new custom.MyButton();
-        Mar1 = new custom.MyButton();
-        Mie2 = new custom.MyButton();
-        jLabel7 = new javax.swing.JLabel();
+        Mar = new custom.MyButton();
+        Mie = new custom.MyButton();
+        Filt = new javax.swing.JLabel();
         hormax = new custom.MySpinner();
         hormin = new custom.MySpinner();
         espmax = new custom.MySpinner();
         diasmax = new custom.MySpinner();
+        horarioCard5 = new THpaneles.HorarioCard();
         view = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -161,6 +168,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jLabel27 = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
         jLabel29 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -181,7 +190,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         move.setForeground(new java.awt.Color(102, 204, 255));
         move.setText("•");
         move.setToolTipText("");
-        move.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        move.setCursor(new java.awt.Cursor(java.awt.Cursor.MOVE_CURSOR));
         move.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 moveMouseDragged(evt);
@@ -207,7 +216,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         exit.setForeground(new java.awt.Color(255, 102, 102));
         exit.setText("•");
         exit.setToolTipText("");
-        exit.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        exit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         exit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 exitMouseClicked(evt);
@@ -569,7 +578,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
         opcionsed.add(key);
-        key.setBounds(440, 60, 28, 20);
+        key.setBounds(440, 60, 26, 20);
 
         labelop.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         labelop.setForeground(new java.awt.Color(127, 127, 127));
@@ -744,9 +753,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         schetxt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         schetxt.setText("Filtros");
         filts.add(schetxt);
-        schetxt.setBounds(80, 300, 120, 30);
+        schetxt.setBounds(60, 290, 140, 30);
 
-        jLabel2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 15)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(105, 167, 133));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Dias restringidos");
@@ -761,7 +770,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jLabel3.setBounds(50, 90, 160, 17);
 
         schetxt1.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 56)); // NOI18N
-        schetxt1.setForeground(new java.awt.Color(102, 102, 102));
+        schetxt1.setForeground(new java.awt.Color(90, 90, 90));
         schetxt1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         schetxt1.setText("319");
         filts.add(schetxt1);
@@ -789,13 +798,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
         filts.add(back3);
-        back3.setBounds(40, 290, 28, 28);
+        back3.setBounds(30, 290, 26, 27);
 
         Horas.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
         Horas.setForeground(new java.awt.Color(102, 102, 102));
         Horas.setText("Dias");
         filts.add(Horas);
-        Horas.setBounds(210, 520, 50, 19);
+        Horas.setBounds(200, 500, 50, 19);
 
         Horamax.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
         Horamax.setForeground(new java.awt.Color(102, 102, 102));
@@ -815,6 +824,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         Jue.setFocusPainted(false);
         Jue.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
         Jue.setRadius(20);
+        Jue.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                JueMouseClicked(evt);
+            }
+        });
         Jue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JueActionPerformed(evt);
@@ -823,49 +837,49 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         filts.add(Jue);
         Jue.setBounds(30, 630, 60, 20);
 
-        bttsalida.setBackground(new java.awt.Color(84, 130, 53));
-        bttsalida.setBorder(null);
-        bttsalida.setForeground(new java.awt.Color(255, 255, 255));
-        bttsalida.setText("PM");
-        bttsalida.setBorderColor(new java.awt.Color(84, 130, 53));
-        bttsalida.setBorderPainted(false);
-        bttsalida.setColor(new java.awt.Color(84, 130, 53));
-        bttsalida.setColorClick(new java.awt.Color(84, 130, 53));
-        bttsalida.setColorOver(new java.awt.Color(84, 130, 53));
-        bttsalida.setFocusPainted(false);
-        bttsalida.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
-        bttsalida.setRadius(20);
-        bttsalida.addActionListener(new java.awt.event.ActionListener() {
+        Hmin.setBackground(new java.awt.Color(84, 130, 53));
+        Hmin.setBorder(null);
+        Hmin.setForeground(new java.awt.Color(255, 255, 255));
+        Hmin.setText("AM");
+        Hmin.setBorderColor(new java.awt.Color(84, 130, 53));
+        Hmin.setBorderPainted(false);
+        Hmin.setColor(new java.awt.Color(84, 130, 53));
+        Hmin.setColorClick(new java.awt.Color(84, 130, 53));
+        Hmin.setColorOver(new java.awt.Color(84, 130, 53));
+        Hmin.setFocusPainted(false);
+        Hmin.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
+        Hmin.setRadius(20);
+        Hmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bttsalidaActionPerformed(evt);
+                HminActionPerformed(evt);
             }
         });
-        filts.add(bttsalida);
-        bttsalida.setBounds(200, 400, 40, 17);
+        filts.add(Hmin);
+        Hmin.setBounds(200, 390, 40, 17);
 
         Horamin.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
         Horamin.setForeground(new java.awt.Color(102, 102, 102));
         Horamin.setText("Hora Min.");
         filts.add(Horamin);
-        Horamin.setBounds(20, 400, 80, 19);
+        Horamin.setBounds(20, 390, 80, 19);
 
         Espacio1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
         Espacio1.setForeground(new java.awt.Color(102, 102, 102));
         Espacio1.setText("Dias Máx.");
         filts.add(Espacio1);
-        Espacio1.setBounds(20, 520, 80, 19);
+        Espacio1.setBounds(20, 500, 80, 19);
 
         Espacio2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
         Espacio2.setForeground(new java.awt.Color(102, 102, 102));
         Espacio2.setText("Espa. Máx.");
         filts.add(Espacio2);
-        Espacio2.setBounds(20, 470, 80, 19);
+        Espacio2.setBounds(20, 450, 80, 19);
 
         Horas1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
         Horas1.setForeground(new java.awt.Color(102, 102, 102));
         Horas1.setText("Horas");
         filts.add(Horas1);
-        Horas1.setBounds(200, 470, 50, 19);
+        Horas1.setBounds(200, 450, 50, 19);
 
         jLabel6.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(127, 127, 127));
@@ -874,25 +888,25 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         filts.add(jLabel6);
         jLabel6.setBounds(50, 250, 160, 17);
 
-        bttentrada3.setBackground(new java.awt.Color(112, 173, 71));
-        bttentrada3.setBorder(null);
-        bttentrada3.setForeground(new java.awt.Color(255, 255, 255));
-        bttentrada3.setText("AM");
-        bttentrada3.setBorderColor(new java.awt.Color(112, 173, 71));
-        bttentrada3.setBorderPainted(false);
-        bttentrada3.setColor(new java.awt.Color(112, 173, 71));
-        bttentrada3.setColorClick(new java.awt.Color(112, 173, 71));
-        bttentrada3.setColorOver(new java.awt.Color(112, 173, 71));
-        bttentrada3.setFocusPainted(false);
-        bttentrada3.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
-        bttentrada3.setRadius(20);
-        bttentrada3.addActionListener(new java.awt.event.ActionListener() {
+        Hmax.setBackground(new java.awt.Color(112, 173, 71));
+        Hmax.setBorder(null);
+        Hmax.setForeground(new java.awt.Color(255, 255, 255));
+        Hmax.setText("PM");
+        Hmax.setBorderColor(new java.awt.Color(112, 173, 71));
+        Hmax.setBorderPainted(false);
+        Hmax.setColor(new java.awt.Color(112, 173, 71));
+        Hmax.setColorClick(new java.awt.Color(112, 173, 71));
+        Hmax.setColorOver(new java.awt.Color(112, 173, 71));
+        Hmax.setFocusPainted(false);
+        Hmax.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
+        Hmax.setRadius(20);
+        Hmax.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bttentrada3ActionPerformed(evt);
+                HmaxActionPerformed(evt);
             }
         });
-        filts.add(bttentrada3);
-        bttentrada3.setBounds(200, 360, 40, 17);
+        filts.add(Hmax);
+        Hmax.setBounds(200, 360, 40, 17);
 
         Vie.setBorder(null);
         Vie.setForeground(new java.awt.Color(153, 153, 153));
@@ -904,6 +918,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         Vie.setFocusPainted(false);
         Vie.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
         Vie.setRadius(20);
+        Vie.setSelected(true);
+        Vie.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                VieMouseClicked(evt);
+            }
+        });
         Vie.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 VieActionPerformed(evt);
@@ -922,13 +942,19 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         Lun.setFocusPainted(false);
         Lun.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
         Lun.setRadius(20);
+        Lun.setSelected(true);
+        Lun.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LunMouseClicked(evt);
+            }
+        });
         Lun.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LunActionPerformed(evt);
             }
         });
         filts.add(Lun);
-        Lun.setBounds(30, 590, 60, 20);
+        Lun.setBounds(30, 600, 60, 20);
 
         Sab.setBorder(null);
         Sab.setForeground(new java.awt.Color(153, 153, 153));
@@ -940,6 +966,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         Sab.setFocusPainted(false);
         Sab.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
         Sab.setRadius(20);
+        Sab.setSelected(true);
+        Sab.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                SabMouseClicked(evt);
+            }
+        });
         Sab.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SabActionPerformed(evt);
@@ -948,114 +980,151 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         filts.add(Sab);
         Sab.setBounds(170, 630, 60, 20);
 
-        Mar1.setBackground(new java.awt.Color(153, 195, 172));
-        Mar1.setBorder(null);
-        Mar1.setForeground(new java.awt.Color(255, 255, 255));
-        Mar1.setText("Mar");
-        Mar1.setBorderColor(new java.awt.Color(153, 195, 172));
-        Mar1.setBorderPainted(false);
-        Mar1.setColor(new java.awt.Color(153, 195, 172));
-        Mar1.setColorClick(new java.awt.Color(153, 195, 172));
-        Mar1.setColorOver(new java.awt.Color(153, 195, 172));
-        Mar1.setFocusPainted(false);
-        Mar1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
-        Mar1.setRadius(20);
-        Mar1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Mar1ActionPerformed(evt);
+        Mar.setBackground(new java.awt.Color(153, 195, 172));
+        Mar.setBorder(null);
+        Mar.setForeground(new java.awt.Color(255, 255, 255));
+        Mar.setText("Mar");
+        Mar.setBorderColor(new java.awt.Color(153, 195, 172));
+        Mar.setBorderPainted(false);
+        Mar.setColor(new java.awt.Color(153, 195, 172));
+        Mar.setColorClick(new java.awt.Color(153, 195, 172));
+        Mar.setColorOver(new java.awt.Color(153, 195, 172));
+        Mar.setFocusPainted(false);
+        Mar.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
+        Mar.setRadius(20);
+        Mar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                MarMouseClicked(evt);
             }
         });
-        filts.add(Mar1);
-        Mar1.setBounds(100, 590, 60, 20);
-
-        Mie2.setBorder(null);
-        Mie2.setForeground(new java.awt.Color(153, 153, 153));
-        Mie2.setText("Mié");
-        Mie2.setBorderColor(new java.awt.Color(255, 255, 255));
-        Mie2.setBorderPainted(false);
-        Mie2.setColorClick(new java.awt.Color(255, 255, 255));
-        Mie2.setColorOver(new java.awt.Color(255, 255, 255));
-        Mie2.setFocusPainted(false);
-        Mie2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
-        Mie2.setRadius(20);
-        Mie2.addActionListener(new java.awt.event.ActionListener() {
+        Mar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Mie2ActionPerformed(evt);
+                MarActionPerformed(evt);
             }
         });
-        filts.add(Mie2);
-        Mie2.setBounds(170, 590, 60, 20);
+        filts.add(Mar);
+        Mar.setBounds(100, 600, 60, 20);
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/icons8_schedule_20px.png"))); // NOI18N
-        filts.add(jLabel7);
-        jLabel7.setBounds(210, 300, 30, 20);
+        Mie.setBorder(null);
+        Mie.setForeground(new java.awt.Color(153, 153, 153));
+        Mie.setText("Mié");
+        Mie.setBorderColor(new java.awt.Color(255, 255, 255));
+        Mie.setBorderPainted(false);
+        Mie.setColorClick(new java.awt.Color(255, 255, 255));
+        Mie.setColorOver(new java.awt.Color(255, 255, 255));
+        Mie.setFocusPainted(false);
+        Mie.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
+        Mie.setRadius(20);
+        Mie.setSelected(true);
+        Mie.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                MieMouseClicked(evt);
+            }
+        });
+        Mie.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MieActionPerformed(evt);
+            }
+        });
+        filts.add(Mie);
+        Mie.setBounds(170, 600, 60, 20);
+
+        Filt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Filt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/icons8_schedule_20px.png"))); // NOI18N
+        Filt.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Filt.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                FiltMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                FiltMouseEntered(evt);
+            }
+        });
+        filts.add(Filt);
+        Filt.setBounds(200, 290, 30, 30);
+
+        hormax.setBtnBack(new java.awt.Color(153, 195, 172));
+        hormax.setMaxVal(9);
+        hormax.setMinVal(1);
         filts.add(hormax);
         hormax.setBounds(110, 360, 80, 20);
+
+        hormin.setBtnBack(new java.awt.Color(153, 195, 172));
+        hormin.setMaxVal(12);
+        hormin.setMinVal(1);
         filts.add(hormin);
-        hormin.setBounds(110, 400, 80, 20);
+        hormin.setBounds(110, 390, 80, 20);
+
+        espmax.setBtnBack(new java.awt.Color(153, 195, 172));
         filts.add(espmax);
-        espmax.setBounds(110, 470, 80, 20);
+        espmax.setBounds(110, 450, 80, 20);
+
+        diasmax.setBtnBack(new java.awt.Color(153, 195, 172));
+        diasmax.setMaxVal(6);
+        diasmax.setMinVal(1);
         filts.add(diasmax);
-        diasmax.setBounds(110, 520, 80, 20);
+        diasmax.setBounds(110, 500, 80, 20);
+        filts.add(horarioCard5);
+        horarioCard5.setBounds(30, 130, 210, 100);
 
         See.add(filts, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 680));
 
         view.setBackground(new java.awt.Color(237, 253, 246));
-        view.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        view.setLayout(null);
 
         jLabel4.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 36)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(90, 90, 90));
         jLabel4.setText("Posibles Horarios");
-        view.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(71, 35, -1, -1));
+        view.add(jLabel4);
+        jLabel4.setBounds(70, 20, 313, 43);
 
-        jLabel5.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(127, 127, 127));
         jLabel5.setText("Horarios generados y sus características ");
-        view.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, -1, -1));
+        view.add(jLabel5);
+        jLabel5.setBounds(80, 60, 285, 20);
 
         Nhorarios.setOpaque(false);
+        Nhorarios.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/icons8_nothing_found_100px.png"))); // NOI18N
+        Nhorarios.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, -1, -1));
 
         jLabel28.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 19)); // NOI18N
         jLabel28.setForeground(new java.awt.Color(105, 167, 133));
         jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel28.setText("No hay ningún horario encontrado ");
+        Nhorarios.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 140, -1, -1));
 
         jLabel29.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         jLabel29.setForeground(new java.awt.Color(105, 167, 133));
         jLabel29.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel29.setText("No hay horarios generados ");
+        Nhorarios.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 170, -1, -1));
 
-        javax.swing.GroupLayout NhorariosLayout = new javax.swing.GroupLayout(Nhorarios);
-        Nhorarios.setLayout(NhorariosLayout);
-        NhorariosLayout.setHorizontalGroup(
-            NhorariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(NhorariosLayout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addGroup(NhorariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(NhorariosLayout.createSequentialGroup()
-                        .addGap(120, 120, 120)
-                        .addComponent(jLabel27))
-                    .addComponent(jLabel28)
-                    .addGroup(NhorariosLayout.createSequentialGroup()
-                        .addGap(70, 70, 70)
-                        .addComponent(jLabel29)))
-                .addContainerGap(23, Short.MAX_VALUE))
-        );
-        NhorariosLayout.setVerticalGroup(
-            NhorariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(NhorariosLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jLabel27)
-                .addGap(20, 20, 20)
-                .addComponent(jLabel28)
-                .addGap(8, 8, 8)
-                .addComponent(jLabel29)
-                .addContainerGap(53, Short.MAX_VALUE))
-        );
+        view.add(Nhorarios);
+        Nhorarios.setBounds(230, 600, 390, 240);
 
-        view.add(Nhorarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 200, 390, 240));
+        jButton1.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 48)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(151, 215, 194));
+        jButton1.setText(">");
+        jButton1.setBorder(null);
+        jButton1.setBorderPainted(false);
+        jButton1.setContentAreaFilled(false);
+        jButton1.setFocusPainted(false);
+        view.add(jButton1);
+        jButton1.setBounds(590, 600, 50, 50);
+
+        jButton2.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 48)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(151, 215, 194));
+        jButton2.setMnemonic(' ');
+        jButton2.setText("<");
+        jButton2.setBorder(null);
+        jButton2.setBorderPainted(false);
+        jButton2.setContentAreaFilled(false);
+        jButton2.setFocusPainted(false);
+        view.add(jButton2);
+        jButton2.setBounds(210, 600, 50, 50);
 
         See.add(view, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 10, 920, 670));
 
@@ -1231,7 +1300,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     
     private void RemoveCursocards(){
         
-        System.out.println("CARDS: " + cursosed.getComponentCount());
+        //System.out.println("CARDS: " + cursosed.getComponentCount());
         for (int i = 0; i < curso.size(); i++) {
             
             
@@ -1338,9 +1407,35 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }
     //</editor-fold>
     
-    
-    
-    
+    //<editor-fold defaultstate="collapsed" desc="HORARIOOOOOOOOOO CAAAAAAAAAAAAAAAARDS">
+    private void HorarioCards(){
+        if (groupChosen == null) return;
+        horario hor = this.groupChosen.getHor();
+        
+        
+        int step = 0;
+        Hopcion actual = hor.getHhead();
+        System.out.println(actual);
+        while (actual != null){
+            HorarioCard nuevo = new HorarioCard();
+            nuevo.setHorario(actual);
+            nuevo.setVentana(this);
+            nuevo.setSize(210, 102);
+            int uwu = 30*(((int)((step/2)))%2);
+            System.out.println(70 + (230*(step%3)) + uwu);
+            nuevo.setLocation(70 + (int)(920*Math.floor(step/12)) + (230*(step%3)) + uwu, 110 + (122 *(step%4) ));
+            
+            
+            Hopcions.add(nuevo);
+            this.view.add(nuevo);
+            
+            step++;
+            actual = actual.sig;
+        }
+        view.revalidate();
+        view.repaint();
+    }
+    //</editor-fold>
     
     //<editor-fold defaultstate="collapsed" desc=" setters y getters">
 
@@ -1372,7 +1467,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         this.unchoseChosencurso();
         this.unchoseChosenopcion();
         this.UpdateCursoCards();
-        
+        GetandSetFiltros(groupChosen.getHor());
     }
 
     public curso getCursoChosen() {
@@ -1514,7 +1609,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         CrearGroup nuevo = new CrearGroup();
         nuevo.padre = this;
         nuevo.variable = grupos;
-        nuevo.setSize(400, 300);
+        nuevo.setSize(400, 222);
 
         GlassPanePopup.showPopup(nuevo);
         
@@ -1550,50 +1645,170 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_toCustomActionPerformed
 
     private void back3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back3ActionPerformed
-        // TODO add your handling code here:
+        this.limpiarFilts();
     }//GEN-LAST:event_back3ActionPerformed
 
     private void JueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JueActionPerformed
-          cambiarD(Jue);
 
     }//GEN-LAST:event_JueActionPerformed
 
-    private void bttsalidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttsalidaActionPerformed
-        cmbiarM(this.bttsalida);
-    }//GEN-LAST:event_bttsalidaActionPerformed
+    private void HminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HminActionPerformed
+        cmbiarM(Hmin);
+        if (Hmin.isSelected()) {
+            hormin.setMaxVal(9);
+            hormin.setMinVal(1);
+        }else {
+            hormin.setMaxVal(12);
+            hormin.setMinVal(6);
+        }
+        
+        
+        
+    }//GEN-LAST:event_HminActionPerformed
 
-    private void bttentrada3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttentrada3ActionPerformed
-      cmbiarM(this.bttentrada3);
-    }//GEN-LAST:event_bttentrada3ActionPerformed
+    private void HmaxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HmaxActionPerformed
+        cmbiarM(Hmax);
+        if (Hmax.isSelected()) {
+            hormax.setMaxVal(9);
+            hormax.setMinVal(1);
+        }else {
+            hormax.setMaxVal(12);
+            hormax.setMinVal(6);
+        }
+    }//GEN-LAST:event_HmaxActionPerformed
 
     private void VieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VieActionPerformed
-        cambiarD(Vie);       
+    
     }//GEN-LAST:event_VieActionPerformed
 
     private void LunActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LunActionPerformed
 
-        cambiarD(Lun);
     }//GEN-LAST:event_LunActionPerformed
 
     private void SabActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SabActionPerformed
-        cambiarD(Sab);
+
     }//GEN-LAST:event_SabActionPerformed
 
-    private void Mar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Mar1ActionPerformed
-       cambiarD(Mar1);
-    }//GEN-LAST:event_Mar1ActionPerformed
+    private void MarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MarActionPerformed
 
-    private void Mie2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Mie2ActionPerformed
-       cambiarD(Mie2);
-    }//GEN-LAST:event_Mie2ActionPerformed
+    }//GEN-LAST:event_MarActionPerformed
+
+    private void MieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MieActionPerformed
+
+    }//GEN-LAST:event_MieActionPerformed
+
+    private void FiltMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FiltMouseClicked
+        if (groupChosen == null)return;
+        this.setFiltros();
+        groupChosen.getHora().generarH();
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                HorarioCards();
+            }
+        });
+        
+    }//GEN-LAST:event_FiltMouseClicked
+
+    private void FiltMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FiltMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_FiltMouseEntered
+
+    private void LunMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LunMouseClicked
+        cambiarD(Lun);
+    }//GEN-LAST:event_LunMouseClicked
+
+    private void MarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MarMouseClicked
+        cambiarD(Mar);
+    }//GEN-LAST:event_MarMouseClicked
+
+    private void MieMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MieMouseClicked
+        cambiarD(Mie);
+    }//GEN-LAST:event_MieMouseClicked
+
+    private void JueMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JueMouseClicked
+        cambiarD(Jue);
+    }//GEN-LAST:event_JueMouseClicked
+
+    private void VieMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_VieMouseClicked
+        cambiarD(Vie);
+    }//GEN-LAST:event_VieMouseClicked
+
+    private void SabMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SabMouseClicked
+        cambiarD(Sab);
+    }//GEN-LAST:event_SabMouseClicked
+    
+    
+    public void setFiltros(){
+        horario  ho = groupChosen.getHora();
+        
+        ho.setDiasmax(diasmax.getValue());
+        ho.setHuecomax(espmax.getValue());
+        
+        int maxplus = (Hmax.isSelected()) ? 12:0;
+        int minplus = (Hmin.isSelected()) ? 12:0;
+        
+        ho.setHoramaxm(this.hormax.getValue()+maxplus);
+        ho.setHoraminm(this.hormin.getValue()+minplus);
+        
+        boolean [] restin = {!Lun.isSelected(),!Mar.isSelected(), !Mie.isSelected(),!Jue.isSelected(),!Vie.isSelected(),!Sab.isSelected()};
+        ho.setDiasrestrin(restin);
+        
+        System.out.println(diasmax.getValue() + " | " + espmax.getValue() + " | " + diasmax.getValue() + " | " + ho.getHoramaxm() + " : " + ho.getHoraminm() +" :::" +  restin[0] + " " + restin[1] + " " + restin[2]+ " " + restin[3] + " " + restin[4] + " " + restin[5]);
+
+    }
+    
+    public void limpiarFilts(){
+        horario  ho = groupChosen.getHora();
+        
+        ho.Limpiarfilt();
+        
+        GetandSetFiltros(ho);
+    }
+    
+    
+    public void GetandSetFiltros(horario  ho){
+        diasmax.setValue(ho.getDiasmax());
+        espmax.setValue(ho.getHuecomax());
+        
+        if (ho.getHoramaxm() > 12 && !Hmax.isSelected()){
+            Hmax.doClick();
+            hormax.setValue(ho.getHoramaxm()-12);
+        }
+        if (!(ho.getHoramaxm() > 12) && Hmax.isSelected()){
+            Hmax.doClick();
+            hormax.setValue(ho.getHoramaxm());
+        }
+        
+        
+        if (ho.getHoraminm() > 12 && !Hmin.isSelected()){
+            Hmin.doClick();
+            hormin.setValue(ho.getHoraminm()-12);
+        }
+        if (!(ho.getHoraminm() > 12) && Hmin.isSelected()){
+            Hmin.doClick();
+            hormin.setValue(ho.getHoraminm());
+        }
+        
+        boolean [] restin = ho.getDiasrestrin();
+        System.out.println(diasmax.getValue() + " | " + espmax.getValue() + " | " + diasmax.getValue() + " | " + ho.getHoramaxm() + " : " + ho.getHoraminm() +" :::" +  restin[0] + " " + restin[1] + " " + restin[2]+ " " + restin[3] + " " + restin[4] + " " + restin[5]);
+        
+        if (restin[0] == Lun.isSelected()) { cambiarD(Lun); }
+        if (restin[1] == Mar.isSelected()) { cambiarD(Mar); }
+        if (restin[2] == Mie.isSelected()) { cambiarD(Mie); }
+        if (restin[3] == Jue.isSelected()) { cambiarD(Jue); }
+        if (restin[4] == Vie.isSelected()) { cambiarD(Vie); }
+        if (restin[5] == Sab.isSelected()) { cambiarD(Sab); }
+    }
     
     public void cambiarD(custom.MyButton butn){
         if (butn.isSelected()) {
+            butn.setSelected(false);
             butn.setForeground(Color.white);
             butn.setColor(new Color(153,195,172));
             butn.revalidate();
             butn.repaint();
         } else{
+            butn.setSelected(true);
             butn.setForeground(new Color(153,153,153));
             butn.setColor(Color.white);
             butn.revalidate();
@@ -1604,11 +1819,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     
     public void cmbiarM(custom.MyButton boton){
         if (boton.getText().equals("AM")){
+            boton.setSelected(true);
             boton.setText("PM");
             boton.setBackground(new Color(84,130,53));
             boton.setColor(new Color(84,130,53));
         } else{
             boton.setText("AM");
+            boton.setSelected(false);
             boton.setBackground(new Color(112,173,71));
             boton.setColor(new Color(112,173,71));
         }
@@ -1650,15 +1867,18 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private custom.TextFieldd CODE;
     private javax.swing.JLabel Espacio1;
     private javax.swing.JLabel Espacio2;
+    private javax.swing.JLabel Filt;
     private javax.swing.JPanel Gruposed;
+    private custom.MyButton Hmax;
+    private custom.MyButton Hmin;
     private javax.swing.JLabel Horamax;
     private javax.swing.JLabel Horamin;
     private javax.swing.JLabel Horas;
     private javax.swing.JLabel Horas1;
     private custom.MyButton Jue;
     private custom.MyButton Lun;
-    private custom.MyButton Mar1;
-    private custom.MyButton Mie2;
+    private custom.MyButton Mar;
+    private custom.MyButton Mie;
     private javax.swing.JPanel Ncursoenc;
     private javax.swing.JPanel Ncursoesc;
     private javax.swing.JPanel Ngrupenc;
@@ -1676,8 +1896,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton back3;
     private javax.swing.JButton brush;
     private javax.swing.JButton brush2;
-    private custom.MyButton bttentrada3;
-    private custom.MyButton bttsalida;
     private javax.swing.JPanel cursosed;
     private custom.MySpinner diasmax;
     private javax.swing.JPanel downthing;
@@ -1686,8 +1904,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel exit;
     private javax.swing.JPanel filts;
     private javax.swing.JPanel header;
+    private THpaneles.HorarioCard horarioCard5;
     private custom.MySpinner hormax;
     private custom.MySpinner hormin;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1714,7 +1935,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JSeparator jSeparator1;

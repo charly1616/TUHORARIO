@@ -9,8 +9,8 @@ public class horario extends Listacursos {
     
     Listacursos loscursos;
     
-    Hopcion hhead;
-    Hopcion hact;
+    public Hopcion hhead;
+    public Hopcion hact;
 
     public int cont = 0;
     public int diasmax = 6;
@@ -124,7 +124,7 @@ public class horario extends Listacursos {
             code += (char) (actual.chosenonenum() + 97);
             actual = actual.sig;
         }
-
+        
         if (checkhDUP(code)) {
             return;
         }
@@ -138,12 +138,31 @@ public class horario extends Listacursos {
             hact.sig = nuevo;
             hact = nuevo;
         }
+        
     }
 
+    public Hopcion getHhead() {
+        return hhead;
+    }
+
+    public void setHhead(Hopcion hhead) {
+        this.hhead = hhead;
+    }
+
+    public Hopcion getHact() {
+        return hact;
+    }
+
+    public void setHact(Hopcion hact) {
+        this.hact = hact;
+    }
+    
+    
+    
     private boolean checkhDUP(String code) {
         Hopcion actual = hhead;
         while (actual != null) {
-            if (actual.horario.equals(code)) {
+            if (actual.getHorario().equals(code)) {
                 return true;
             }
             actual = actual.sig;
@@ -235,7 +254,7 @@ public class horario extends Listacursos {
 
     private String mostrarHopc(Hopcion Hori) { //Mostrar opcion escogida
         String show = "";
-        show += Hori.diastogo + " Dias  |                               " + Hori.huecos + " horas con hueco |\n   | Entrada MIN: " + dia.convertirHora(Hori.HMIN) + "               Salida MAX: " + dia.convertirHora(Hori.HMAX);
+        show += Hori.getDiastogo() + " Dias  |                               " + Hori.getHuecos() + " horas con hueco |\n   | Entrada MIN: " + dia.convertirHora(Hori.getHMIN()) + "               Salida MAX: " + dia.convertirHora(Hori.getHMAX());
         show += " |\n   |---------------------------------------------------------------|";
         return show;
     }
@@ -244,7 +263,7 @@ public class horario extends Listacursos {
         cont = 0;
         eraseallh();
         permutate(null);
-        mostrarallh();
+        //mostrarallh();
     }
 
     public void ehoramax() {
@@ -283,6 +302,16 @@ public class horario extends Listacursos {
         setDiasmax(edit);
     }
 
+    public boolean[] getDiasrestrin() {
+        return diasrestrin;
+    }
+
+    public void setDiasrestrin(boolean[] diasrestrin) {
+        this.diasrestrin = diasrestrin;
+    }
+    
+    
+    
     public void setDiasmax(int diasmax) {
         this.diasmax = diasmax;
     }
@@ -305,7 +334,7 @@ public class horario extends Listacursos {
     
     public void Limpiarfilt(){
          this.diasmax=6;
-         this.horamaxm=22;
+         this.horamaxm=21;
          this.horaminm=6;
          this.huecomax=12;
          this.diasrestrin=new boolean[6];
@@ -350,6 +379,7 @@ public class horario extends Listacursos {
     
     
     private void permutate(curso cursoact) {
+        
         if (cursoact == null) {
             cursoact = cabeza;
         } else if (cursoact.sig == null) {
@@ -359,7 +389,11 @@ public class horario extends Listacursos {
             int horasmin = loscursos.minhour();
             int huecosd = huecosdelhorario();
             if (diastogo <= diasmax) //System.out.println((loscursos.maxhour()<= horamaxm) +""+ (loscursos.minhour() >= horaminm) + "  -  "+loscursos.maxhour()+"    "+loscursos.minhour());
-            {
+            {   
+                //System.out.println(horamaxm);
+                //System.out.println((diastogo <= diasmax) +" " + (horasmax <= horamaxm) + " "  + (horasmin >= horaminm) + " " + ( huecosd <= huecomax) + " " + (checkdias()));
+                
+
                 if (diastogo <= diasmax && horasmax <= horamaxm && horasmin >= horaminm && huecosd <= huecomax && checkdias()) {
                     nuevoHorario(diastogo, horasmax, horasmin, huecosd);
                     cont++;
@@ -406,13 +440,13 @@ public class horario extends Listacursos {
             curso nuevo2 = new curso(datos[i]);
             String [] partes = datos[i].split("\\<");
             if (partes.length != 3){
-                System.out.println(partes.length);
+                //System.out.println(partes.length);
                 continue;
             }
             String nombre = partes[0];
             int ndias = Integer.parseInt(partes[1]);
             String code = (partes[2]);
-            System.out.println(nombre + " " + ndias + " "+code);
+            //System.out.println(nombre + " " + ndias + " "+code);
             nuevocurso(nombre, ndias, list, code);
         }
     }

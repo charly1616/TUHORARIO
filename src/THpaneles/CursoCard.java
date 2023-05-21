@@ -119,7 +119,9 @@ public class CursoCard extends javax.swing.JPanel {
         this.opciones = thisCurso.getListaopc().nopciones;
         
         this.name.setText(namee);
-        this.data.setText(this.dias + "Día | " + this.opciones + " Opciones");
+        String diu = (Integer.parseInt(this.dias) > 1) ? " Días | " : " Día | ";
+        String optu = (this.opciones > 1) ? " Opciones" : " Opcion";
+        this.data.setText(this.dias + diu + this.opciones + optu);
         this.convertTextToColor(namee);
     }
 
