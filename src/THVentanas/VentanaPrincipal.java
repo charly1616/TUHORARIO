@@ -219,7 +219,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         exit.setForeground(new java.awt.Color(255, 102, 102));
         exit.setText("•");
         exit.setToolTipText("");
-        exit.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        exit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         exit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 exitMouseClicked(evt);
@@ -581,7 +581,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
         opcionsed.add(key);
-        key.setBounds(440, 60, 28, 20);
+        key.setBounds(440, 60, 26, 20);
 
         labelop.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         labelop.setForeground(new java.awt.Color(127, 127, 127));
@@ -801,7 +801,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
         filts.add(back3);
-        back3.setBounds(30, 290, 28, 28);
+        back3.setBounds(30, 290, 26, 27);
 
         Horas.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
         Horas.setForeground(new java.awt.Color(102, 102, 102));
@@ -903,6 +903,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         Hmax.setFocusPainted(false);
         Hmax.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
         Hmax.setRadius(20);
+        Hmax.setSelected(true);
         Hmax.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 HmaxActionPerformed(evt);
@@ -1048,11 +1049,32 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         hormax.setBtnBack(new java.awt.Color(153, 195, 172));
         hormax.setMaxVal(9);
+        hormax.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                hormaxMouseMoved(evt);
+            }
+        });
+        hormax.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                hormaxMouseClicked(evt);
+            }
+        });
+        hormax.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                hormaxPropertyChange(evt);
+            }
+        });
         filts.add(hormax);
         hormax.setBounds(110, 360, 80, 20);
 
         hormin.setBtnBack(new java.awt.Color(153, 195, 172));
+        hormin.setMinVal(6);
         hormin.setValue(6);
+        hormin.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                horminPropertyChange(evt);
+            }
+        });
         filts.add(hormin);
         hormin.setBounds(110, 390, 80, 20);
 
@@ -1783,7 +1805,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             hormin.setMinVal(6);
         }
         
-        
+        if (Hmin.getText().equals(Hmax.getText()) && hormax.getValue() < hormin.getValue()) {
+            hormin.setValue(hormax.getValue());
+        }
         
     }//GEN-LAST:event_HminActionPerformed
 
@@ -1796,6 +1820,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             hormax.setMaxVal(12);
             hormax.setMinVal(6);
         }
+        
+        if (Hmin.getText().equals("PM") && Hmax.getText().equals("AM")) {
+            Hmin.doClick();
+        }
+        if (Hmin.getText().equals(Hmax.getText()) && hormax.getValue() < hormin.getValue()) {
+            hormin.setValue(hormax.getValue());
+        }
+        
     }//GEN-LAST:event_HmaxActionPerformed
 
     private void VieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VieActionPerformed
@@ -1819,6 +1851,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_MieActionPerformed
 
     private void FiltMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FiltMouseClicked
+        if (Hmin.getText().equals(Hmax.getText()) && hormax.getValue() < hormin.getValue()) {
+            hormin.setValue(hormax.getValue());
+        }
+        
         if (groupChosen == null)return;
         this.setFiltros();
         groupChosen.getHora().generarH();
@@ -1873,6 +1909,25 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             System.out.println("yolo");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void hormaxPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_hormaxPropertyChange
+        
+    }//GEN-LAST:event_hormaxPropertyChange
+
+    private void horminPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_horminPropertyChange
+        
+    }//GEN-LAST:event_horminPropertyChange
+
+    private void hormaxMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hormaxMouseMoved
+
+    }//GEN-LAST:event_hormaxMouseMoved
+
+    private void hormaxMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hormaxMouseClicked
+        if (Hmin.getText().equals(Hmax.getText()) && hormax.getValue() < hormin.getValue()) {
+            
+            hormin.setValue(hormax.getValue());
+        }
+    }//GEN-LAST:event_hormaxMouseClicked
     
     
     
