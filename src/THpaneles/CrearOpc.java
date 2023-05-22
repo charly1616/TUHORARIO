@@ -46,7 +46,6 @@ public class CrearOpc extends javax.swing.JPanel {
         creandog = new javax.swing.JLabel();
         Dia = new javax.swing.JLabel();
         Salida = new javax.swing.JLabel();
-        dias = new javax.swing.JComboBox<>();
         jSeparator1 = new javax.swing.JSeparator();
         Cancelar = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
@@ -56,6 +55,7 @@ public class CrearOpc extends javax.swing.JPanel {
         comboEstudio2 = new javax.swing.JComboBox<>();
         nEntrada = new custom.MySpinner();
         nSalida = new custom.MySpinner();
+        mySpinnerDia2 = new custom.MySpinnerDia();
 
         setBackground(new java.awt.Color(176, 235, 176));
 
@@ -79,19 +79,6 @@ public class CrearOpc extends javax.swing.JPanel {
         Salida.setForeground(new java.awt.Color(255, 255, 255));
         Salida.setText("Salida");
         bg.add(Salida, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 70, -1));
-
-        dias.setBackground(new java.awt.Color(209, 243, 222));
-        dias.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
-        dias.setForeground(new java.awt.Color(80, 80, 80));
-        dias.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado" }));
-        dias.setSelectedItem(dias);
-        dias.setBorder(null);
-        dias.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                diasActionPerformed(evt);
-            }
-        });
-        bg.add(dias, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 70, 160, 20));
 
         jSeparator1.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
@@ -180,6 +167,9 @@ public class CrearOpc extends javax.swing.JPanel {
         nSalida.setBtnBack(new java.awt.Color(153, 195, 172));
         bg.add(nSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, -1, -1));
 
+        mySpinnerDia2.setBtnBack(new java.awt.Color(153, 195, 172));
+        bg.add(mySpinnerDia2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 70, -1, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -209,10 +199,6 @@ public class CrearOpc extends javax.swing.JPanel {
         cmbiarM(this.bttentrada2);
         
     }//GEN-LAST:event_bttentrada2ActionPerformed
-
-    private void diasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_diasActionPerformed
-      
-    }//GEN-LAST:event_diasActionPerformed
     
     
     public void cmbiarM(custom.MyButton boton){
@@ -313,10 +299,10 @@ public class CrearOpc extends javax.swing.JPanel {
     private custom.MyButton bttsalida;
     private javax.swing.JComboBox<String> comboEstudio2;
     private javax.swing.JLabel creandog;
-    private javax.swing.JComboBox<String> dias;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JSeparator jSeparator1;
+    private custom.MySpinnerDia mySpinnerDia2;
     private custom.MySpinner nEntrada;
     private custom.MySpinner nSalida;
     // End of variables declaration//GEN-END:variables
