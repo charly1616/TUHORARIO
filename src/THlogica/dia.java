@@ -65,6 +65,33 @@ public class dia {
         }
         return nombre;
     }
+    
+    public static String nombreDiacomp(int dia) {
+        String nombre = "";
+        switch (dia) {
+            case 0:
+                nombre = "Lunes";
+                break;
+            case 1:
+                nombre = "Martes";
+                break;
+            case 2:
+                nombre = "Miercoles";
+                break;
+            case 3:
+                nombre = "Jueves";
+                break;
+            case 4:
+                nombre = "Viernes";
+                break;
+            case 5:
+                nombre = "Sábado";
+                break;
+
+        }
+        return nombre;
+    }
+    
 
     public static String convertirHora(int horaM) {
         int h = horaM;
