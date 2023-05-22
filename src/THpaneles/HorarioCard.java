@@ -22,6 +22,9 @@ import java.awt.geom.RoundRectangle2D;
 public class HorarioCard extends javax.swing.JPanel {
     
     private VentanaPrincipal ventana;
+    private int Line = 0;
+    private int Page = 0;
+    
     private int round;
     private Hopcion horario;
     
@@ -41,8 +44,8 @@ public class HorarioCard extends javax.swing.JPanel {
         this.Hmin.setText(dia.convertirHora(horario.getHMIN()));
         this.VoidHours.setText(horario.getHuecos()+"");
         
-        this.sun1.setForeground(OptionCard.Hourcolor(horario.getHMIN()));
-        this.sun2.setForeground(OptionCard.Hourcolor(horario.getHMAX()));
+        this.sun2.setForeground(OptionCard.Hourcolor(horario.getHMIN()));
+        this.sun1.setForeground(OptionCard.Hourcolor(horario.getHMAX()));
     }
 
     public VentanaPrincipal getVentana() {
@@ -51,6 +54,14 @@ public class HorarioCard extends javax.swing.JPanel {
 
     public void setVentana(VentanaPrincipal ventana) {
         this.ventana = ventana;
+    }
+
+    public int getPage() {
+        return Page;
+    }
+
+    public void setPage(int Page) {
+        this.Page = Page;
     }
     
     
@@ -61,6 +72,14 @@ public class HorarioCard extends javax.swing.JPanel {
 
     public void setRound(int round) {
         this.round = round;
+    }
+
+    public int getLine() {
+        return Line;
+    }
+
+    public void setLine(int Line) {
+        this.Line = Line;
     }
     
     
@@ -194,7 +213,7 @@ public class HorarioCard extends javax.swing.JPanel {
     }//GEN-LAST:event_sun2ComponentMoved
 
     private void bgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bgMouseClicked
-        System.out.println(getLocation());
+        System.out.println(this.Page);
     }//GEN-LAST:event_bgMouseClicked
     
     

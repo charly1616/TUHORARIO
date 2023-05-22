@@ -24,6 +24,8 @@ import java.awt.geom.RoundRectangle2D;
 
 
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import javax.swing.*;
 import raven.GlassPanePopup;
@@ -50,6 +52,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     
     
     private ArrayList <HorarioCard>Hopcions = new ArrayList <HorarioCard>();
+    private int totalpages = 0;
     private int Page = 1;
     
     public VentanaPrincipal() {
@@ -579,7 +582,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
         opcionsed.add(key);
-        key.setBounds(440, 60, 28, 20);
+        key.setBounds(440, 60, 26, 20);
 
         labelop.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         labelop.setForeground(new java.awt.Color(127, 127, 127));
@@ -773,7 +776,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         schetxt1.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 56)); // NOI18N
         schetxt1.setForeground(new java.awt.Color(90, 90, 90));
         schetxt1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        schetxt1.setText("319");
+        schetxt1.setText("0");
         filts.add(schetxt1);
         schetxt1.setBounds(50, 20, 160, 60);
 
@@ -799,7 +802,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
         filts.add(back3);
-        back3.setBounds(30, 290, 28, 28);
+        back3.setBounds(30, 290, 26, 27);
 
         Horas.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
         Horas.setForeground(new java.awt.Color(102, 102, 102));
@@ -838,13 +841,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         filts.add(Jue);
         Jue.setBounds(30, 630, 60, 20);
 
-        Hmin.setBackground(new java.awt.Color(84, 130, 53));
+        Hmin.setBackground(new java.awt.Color(112, 173, 71));
         Hmin.setBorder(null);
         Hmin.setForeground(new java.awt.Color(255, 255, 255));
         Hmin.setText("AM");
         Hmin.setBorderColor(new java.awt.Color(84, 130, 53));
         Hmin.setBorderPainted(false);
-        Hmin.setColor(new java.awt.Color(84, 130, 53));
+        Hmin.setColor(new java.awt.Color(112, 173, 71));
         Hmin.setColorClick(new java.awt.Color(84, 130, 53));
         Hmin.setColorOver(new java.awt.Color(84, 130, 53));
         Hmin.setFocusPainted(false);
@@ -889,13 +892,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         filts.add(jLabel6);
         jLabel6.setBounds(50, 250, 160, 17);
 
-        Hmax.setBackground(new java.awt.Color(112, 173, 71));
+        Hmax.setBackground(new java.awt.Color(84, 130, 53));
         Hmax.setBorder(null);
         Hmax.setForeground(new java.awt.Color(255, 255, 255));
         Hmax.setText("PM");
         Hmax.setBorderColor(new java.awt.Color(112, 173, 71));
         Hmax.setBorderPainted(false);
-        Hmax.setColor(new java.awt.Color(112, 173, 71));
+        Hmax.setColor(new java.awt.Color(84, 130, 53));
         Hmax.setColorClick(new java.awt.Color(112, 173, 71));
         Hmax.setColorOver(new java.awt.Color(112, 173, 71));
         Hmax.setFocusPainted(false);
@@ -1050,6 +1053,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         hormax.setBounds(110, 360, 80, 20);
 
         hormin.setBtnBack(new java.awt.Color(153, 195, 172));
+        hormin.setValue(6);
         filts.add(hormin);
         hormin.setBounds(110, 390, 80, 20);
 
@@ -1109,6 +1113,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
         jButton1.setFocusPainted(false);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         view.add(jButton1);
         jButton1.setBounds(590, 600, 50, 50);
 
@@ -1120,10 +1129,15 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jButton2.setBorderPainted(false);
         jButton2.setContentAreaFilled(false);
         jButton2.setFocusPainted(false);
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         view.add(jButton2);
         jButton2.setBounds(210, 600, 50, 50);
 
-        See.add(view, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 10, 920, 670));
+        See.add(view, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, 900, 670));
 
         switchven.addTab("tab2", See);
 
@@ -1236,6 +1250,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     //</editor-fold>
     
     
+    
+    
+    
+    
     //<editor-fold defaultstate="collapsed" desc=" CURSOCARDS METODOS">
     private void CursoCards(){
         if (groupChosen == null) return; 
@@ -1318,6 +1336,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         this.repaint();
     }
     //</editor-fold>
+    
+    
+    
+    
     
     
     
@@ -1404,12 +1426,19 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }
     //</editor-fold>
     
+    
+    
+    
+    
+    
+    
+    
     //<editor-fold defaultstate="collapsed" desc="HORARIOOOOOOOOOO CAAAAAAAAAAAAAAAARDS">
     private void HorarioCards(){
         if (groupChosen == null) return;
         horario hor = this.groupChosen.getHor();
         
-        
+        totalpages = 1;
         int step = 0;
         Hopcion actual = hor.getHhead();
         System.out.println(actual);
@@ -1418,9 +1447,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             nuevo.setHorario(actual);
             nuevo.setVentana(this);
             nuevo.setSize(210, 102);
-            int uwu = 30*(((int)((step/2)))%2);
-            System.out.println(70 + (230*(step%3)) + uwu);
-            nuevo.setLocation(70 + (int)(920*Math.floor(step/12)) + (230*(step%3)) + uwu, 110 + (122 *(step%4) ));
+            int uwu = 50*(step%2);
+//            System.out.println(70 + (230*(step%3)) + uwu);
+            nuevo.setLocation(60 + (int)(900*Math.floor(step/12)) + (260*(step%3)) + uwu, 110 + (122 *(step%4) ));
+            nuevo.setPage((int)(Math.floor(step/12)));
+            nuevo.setLine((step%4));
+            //if (step > 24) nuevo.setVisible(false);
+            
+            if (step%12 == 0) totalpages++;
             
             
             Hopcions.add(nuevo);
@@ -1438,6 +1472,79 @@ public class VentanaPrincipal extends javax.swing.JFrame {
        Nhorarios.setVisible(false);
         }
     }
+    
+    
+    private void RemoveHorariocards(){
+        
+        for (int i = 0; i < Hopcions.size(); i++) {
+            Component op = Hopcions.get(i);
+            SwingUtilities.invokeLater(new Runnable() {
+                public void run() {
+                    view.remove(op);
+                    view.revalidate();
+                    view.repaint();
+                }
+            });
+        }
+        this.Hopcions.clear();
+        this.repaint();
+    }
+    
+    
+    
+    
+    private void moveAllHorarios(int dir){
+        System.out.println(Hopcions.size());
+        for (int i = 0; i < Hopcions.size(); i++) {
+            HorarioCard here = Hopcions.get(i);
+            if (here.getPage() == Page || here.getPage() == Page - dir) {
+                here.setVisible(true);
+            } else{
+                //here.setVisible(false);
+                //here.setLocation(here.getX()-920*dir, here.getY());
+            }
+        }
+
+        Timer timer = new Timer(2, new ActionListener() {
+            private int counter = 0;
+            private final int totalFrames = 20;
+            private final int totalDistance = 1400;
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                counter++;
+                float t = (float) counter%totalFrames / totalFrames; // Tiempo normalizado (0.0 a 1.0)
+
+                for (int i = 0; i < Hopcions.size(); i++) {
+                    HorarioCard here = Hopcions.get(i);
+                    int distance = (int) (totalDistance/totalFrames * easeOut(t)); // Interpolación ease out
+                    
+                    if (here.getPage() == Page || here.getPage() == Page - dir || true) {
+                        
+                        if (here.getLine() == Math.floor(counter/totalFrames)) {
+                            here.setLocation(here.getX() + distance * dir, here.getY());
+                        }
+                    }
+                }
+
+                if (counter >= totalFrames*4) {
+                    ((Timer) e.getSource()).stop();
+                }
+            }
+        });
+
+        timer.start();
+
+
+        SwingUtilities.invokeLater(() -> {
+            Page-=dir;
+        });
+    }
+    
+    private float easeOut(float t) {
+        return 1 - (1 - t) * (1 - t);
+    }
+    
     //</editor-fold>
     
     //<editor-fold defaultstate="collapsed" desc=" setters y getters">
@@ -1657,6 +1764,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_toCustomActionPerformed
 
     private void back3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back3ActionPerformed
+        if (this.groupChosen == null) return;
         this.limpiarFilts();
     }//GEN-LAST:event_back3ActionPerformed
 
@@ -1713,12 +1821,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         if (groupChosen == null)return;
         this.setFiltros();
         groupChosen.getHora().generarH();
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                HorarioCards();
-            }
-        });
+        RemoveHorariocards();
+        HorarioCards();
         
+        this.schetxt1.setText(Hopcions.size()+"");
     }//GEN-LAST:event_FiltMouseClicked
 
     private void FiltMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FiltMouseEntered
@@ -1748,6 +1854,22 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private void SabMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SabMouseClicked
         cambiarD(Sab);
     }//GEN-LAST:event_SabMouseClicked
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        if (Page <= totalpages) {
+            moveAllHorarios(-1);
+            System.out.println("yolo");
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        if (Page >= 0) {
+            moveAllHorarios(1);
+            System.out.println("yolo");
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+    
+    
     
     
     public void setFiltros(){
