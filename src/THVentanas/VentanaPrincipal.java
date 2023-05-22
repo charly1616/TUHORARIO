@@ -76,7 +76,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
        Ncursoesc.setVisible(true);
        Nopcenc.setVisible(true);
        Nhorarios.setVisible(true);
-       
     }
 
     
@@ -582,7 +581,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
         opcionsed.add(key);
-        key.setBounds(440, 60, 26, 20);
+        key.setBounds(440, 60, 28, 20);
 
         labelop.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         labelop.setForeground(new java.awt.Color(127, 127, 127));
@@ -794,7 +793,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         back3.setForeground(new java.awt.Color(127, 127, 127));
         back3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/editfuntions/backGray20.png"))); // NOI18N
         back3.setContentAreaFilled(false);
-        back3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        back3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         back3.setFocusPainted(false);
         back3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -802,7 +801,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
         filts.add(back3);
-        back3.setBounds(30, 290, 26, 27);
+        back3.setBounds(30, 290, 28, 28);
 
         Horas.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
         Horas.setForeground(new java.awt.Color(102, 102, 102));
@@ -1035,7 +1034,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         Filt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Filt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/icons8_schedule_20px.png"))); // NOI18N
-        Filt.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Filt.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Filt.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 FiltMouseClicked(evt);
@@ -1104,7 +1103,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         Nhorarios.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 170, -1, -1));
 
         view.add(Nhorarios);
-        Nhorarios.setBounds(230, 200, 390, 240);
+        Nhorarios.setBounds(230, 180, 390, 240);
 
         jButton1.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 48)); // NOI18N
         jButton1.setForeground(new java.awt.Color(151, 215, 194));
@@ -1112,7 +1111,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jButton1.setBorder(null);
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton1.setFocusPainted(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1129,7 +1128,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jButton2.setBorder(null);
         jButton2.setBorderPainted(false);
         jButton2.setContentAreaFilled(false);
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton2.setFocusPainted(false);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1827,6 +1826,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         HorarioCards();
         
         this.schetxt1.setText(Hopcions.size()+"");
+        if (schetxt1.getText().equals("0")) {
+            Nhorarios.setVisible(true);
+        }
     }//GEN-LAST:event_FiltMouseClicked
 
     private void FiltMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FiltMouseEntered
