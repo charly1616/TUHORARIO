@@ -14,6 +14,7 @@ import java.awt.Shape;
 import java.awt.geom.Area;
 import java.awt.geom.Rectangle2D;
 import java.awt.geom.RoundRectangle2D;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -43,11 +44,21 @@ public class HorarioCard extends javax.swing.JPanel {
         this.Hmax.setText(dia.convertirHora(horario.getHMAX()));
         this.Hmin.setText(dia.convertirHora(horario.getHMIN()));
         this.VoidHours.setText(horario.getHuecos()+"");
+        setDiasIcon(horario.getDiastogo());
+        
         
         this.sun2.setForeground(OptionCard.Hourcolor(horario.getHMIN()));
         this.sun1.setForeground(OptionCard.Hourcolor(horario.getHMAX()));
     }
-
+    
+    
+    private void setDiasIcon(int dias){
+        String ruta = "/THImages/CirclesFilled/Circle"+ dias + ".png";
+        
+        this.Days.setIcon(new ImageIcon(getClass().getResource(ruta)));
+    }
+    
+    
     public VentanaPrincipal getVentana() {
         return ventana;
     }

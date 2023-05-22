@@ -53,7 +53,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     
     private ArrayList <HorarioCard>Hopcions = new ArrayList <HorarioCard>();
     private int totalpages = 0;
-    private int Page = 1;
+    private int Page = 0;
     
     public VentanaPrincipal() {
         
@@ -794,7 +794,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         back3.setForeground(new java.awt.Color(127, 127, 127));
         back3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/editfuntions/backGray20.png"))); // NOI18N
         back3.setContentAreaFilled(false);
-        back3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        back3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         back3.setFocusPainted(false);
         back3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1035,7 +1035,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         Filt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Filt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/icons8_schedule_20px.png"))); // NOI18N
-        Filt.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Filt.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Filt.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 FiltMouseClicked(evt);
@@ -1112,6 +1112,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jButton1.setBorder(null);
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.setFocusPainted(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1128,6 +1129,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jButton2.setBorder(null);
         jButton2.setBorderPainted(false);
         jButton2.setContentAreaFilled(false);
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton2.setFocusPainted(false);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1513,11 +1515,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 counter++;
-                float t = (float) counter%totalFrames / totalFrames; // Tiempo normalizado (0.0 a 1.0)
+                float t = (float) counter%totalFrames / totalFrames;
 
                 for (int i = 0; i < Hopcions.size(); i++) {
                     HorarioCard here = Hopcions.get(i);
-                    int distance = (int) (totalDistance/totalFrames * easeOut(t)); // Interpolación ease out
+                    int distance = (int) (totalDistance/totalFrames * easeOut(t));
                     
                     if (here.getPage() == Page || here.getPage() == Page - dir || true) {
                         
@@ -1856,15 +1858,16 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_SabMouseClicked
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        if (Page <= totalpages) {
-            moveAllHorarios(-1);
-            System.out.println("yolo");
+        if (Page > 0) {
+            moveAllHorarios(1);
+            System.out.println("Pagina   "+Page);
         }
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if (Page >= 0) {
-            moveAllHorarios(1);
+        if (Page <= totalpages) {
+            moveAllHorarios(-1);
             System.out.println("yolo");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
