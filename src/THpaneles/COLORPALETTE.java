@@ -15,7 +15,9 @@ public class COLORPALETTE {
     
     public static Color DarkText  = new Color(127,127,127);
     public static Color DarkerText  = new Color(102,102,102);
+    public static Color DarkestText = new Color(90,90,90);
     public static Color LDarkText  = new Color(204,204,204);
+    public static Color LigthestText = new Color(255,255,255);
     
     
     public static Color WeirdDGreen = new Color(101,163,130);

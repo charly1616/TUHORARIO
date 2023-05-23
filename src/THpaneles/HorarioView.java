@@ -149,42 +149,42 @@ public class HorarioView extends javax.swing.JPanel {
         dias.setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel1.setForeground(new java.awt.Color(101, 163, 130));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Martes");
         dias.add(jLabel1);
         jLabel1.setBounds(240, 0, 120, 30);
 
         jLabel2.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel2.setForeground(new java.awt.Color(101, 163, 130));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Lunes");
         dias.add(jLabel2);
         jLabel2.setBounds(120, 0, 120, 30);
 
         jLabel3.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel3.setForeground(new java.awt.Color(101, 163, 130));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Jueves");
         dias.add(jLabel3);
         jLabel3.setBounds(480, 0, 120, 30);
 
         jLabel4.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel4.setForeground(new java.awt.Color(101, 163, 130));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Miercoles");
         dias.add(jLabel4);
         jLabel4.setBounds(360, 0, 120, 30);
 
         jLabel5.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel5.setForeground(new java.awt.Color(101, 163, 130));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Viernes");
         dias.add(jLabel5);
         jLabel5.setBounds(600, 0, 120, 30);
 
         jLabel6.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel6.setForeground(new java.awt.Color(101, 163, 130));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Sabado");
         dias.add(jLabel6);
