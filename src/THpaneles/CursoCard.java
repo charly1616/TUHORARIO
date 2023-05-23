@@ -47,6 +47,7 @@ public class CursoCard extends javax.swing.JPanel {
             this.delete.setLocation(200,0);
             this.delete.setEnabled(true);
             
+            this.bg.setBackground(Color.white);
             this.jPanel1.setSize(18,60);
             
             this.bg.repaint();
@@ -60,6 +61,7 @@ public class CursoCard extends javax.swing.JPanel {
             this.delete.setLocation(270,0);
             this.delete.setEnabled(false);
             
+            this.bg.setBackground(new Color(245,245,245));
             this.jPanel1.setSize(6,60);
             
             this.bg.repaint();
@@ -162,7 +164,7 @@ public class CursoCard extends javax.swing.JPanel {
         data = new javax.swing.JLabel();
         delete = new javax.swing.JButton();
 
-        bg.setBackground(new java.awt.Color(255, 255, 255));
+        bg.setBackground(new java.awt.Color(245, 245, 245));
         bg.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 bgMouseClicked(evt);

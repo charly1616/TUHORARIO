@@ -56,7 +56,7 @@ public class GroupCard extends javax.swing.JPanel {
         setRequestFocusEnabled(false);
         setVerifyInputWhenFocusTarget(false);
 
-        bg.setBackground(new java.awt.Color(255, 255, 255));
+        bg.setBackground(new java.awt.Color(245, 245, 245));
         bg.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         bg.setDoubleBuffered(false);
         bg.setRequestFocusEnabled(false);
@@ -193,6 +193,7 @@ public class GroupCard extends javax.swing.JPanel {
             this.delete.setLocation(230,0);
             this.delete.setEnabled(true);
             
+            this.bg.setBackground(Color.white);
             this.jPanel1.setSize(18,60);
             
             this.bg.repaint();
@@ -206,6 +207,7 @@ public class GroupCard extends javax.swing.JPanel {
             this.delete.setLocation(270,0);
             this.delete.setEnabled(false);
             
+            this.bg.setBackground(new Color(245,245,245));
             this.jPanel1.setSize(6,60);
             
             this.bg.repaint();

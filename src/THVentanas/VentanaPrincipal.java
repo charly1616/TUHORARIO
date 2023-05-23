@@ -1071,7 +1071,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         hormin.setBtnBack(new java.awt.Color(153, 195, 172));
         hormin.setMinVal(6);
-        hormin.setValue(6);
         hormin.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
                 horminPropertyChange(evt);
