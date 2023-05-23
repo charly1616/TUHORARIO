@@ -1727,8 +1727,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         this.cursoChosen = u.getThisCurso();
         
         
-         Ncursoesc.setVisible(true);
-       Nopcenc.setVisible(true);
         
     }//GEN-LAST:event_brush2ActionPerformed
 
