@@ -106,6 +106,14 @@ public class curso {
     public String getNombre() {
         return nombre;
     }
+
+    public opcion getChosenone() {
+        return chosenone;
+    }
+
+    public void setChosenone(opcion chosenone) {
+        this.chosenone = chosenone;
+    }
     
      
      

@@ -111,5 +111,9 @@ public class dia {
     public String encript() {
         return (char) (dia + 97) + "" + (char) (hd + 97) + "" + (char) (hds + 97) + "";
     }
-
+    
+    public int Hcant(){
+        return hds- hd;
+    }
+    
 }

@@ -144,7 +144,7 @@
             </Property>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Default Cursor"/>
+              <Color id="Hand Cursor"/>
             </Property>
             <Property name="defaultCapable" type="boolean" value="false"/>
             <Property name="focusPainted" type="boolean" value="false"/>
@@ -165,7 +165,7 @@
             </Property>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Default Cursor"/>
+              <Color id="Hand Cursor"/>
             </Property>
             <Property name="defaultCapable" type="boolean" value="false"/>
             <Property name="focusPainted" type="boolean" value="false"/>
@@ -187,7 +187,7 @@
             <Property name="borderPainted" type="boolean" value="false"/>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Default Cursor"/>
+              <Color id="Hand Cursor"/>
             </Property>
             <Property name="defaultCapable" type="boolean" value="false"/>
             <Property name="focusPainted" type="boolean" value="false"/>
@@ -323,7 +323,7 @@
                     </Property>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                      <Color id="Default Cursor"/>
+                      <Color id="Hand Cursor"/>
                     </Property>
                     <Property name="focusPainted" type="boolean" value="false"/>
                   </Properties>
@@ -467,7 +467,7 @@
                     </Property>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                      <Color id="Default Cursor"/>
+                      <Color id="Hand Cursor"/>
                     </Property>
                     <Property name="focusPainted" type="boolean" value="false"/>
                   </Properties>
@@ -509,7 +509,7 @@
                     </Property>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                      <Color id="Default Cursor"/>
+                      <Color id="Hand Cursor"/>
                     </Property>
                     <Property name="focusPainted" type="boolean" value="false"/>
                   </Properties>
@@ -535,7 +535,7 @@
                     </Property>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                      <Color id="Default Cursor"/>
+                      <Color id="Hand Cursor"/>
                     </Property>
                     <Property name="focusPainted" type="boolean" value="false"/>
                   </Properties>
@@ -768,7 +768,7 @@
                     </Property>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                      <Color id="Default Cursor"/>
+                      <Color id="Hand Cursor"/>
                     </Property>
                     <Property name="focusPainted" type="boolean" value="false"/>
                   </Properties>
@@ -836,7 +836,7 @@
                     </Property>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                      <Color id="Default Cursor"/>
+                      <Color id="Hand Cursor"/>
                     </Property>
                     <Property name="focusPainted" type="boolean" value="false"/>
                   </Properties>
@@ -862,7 +862,7 @@
                     </Property>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                      <Color id="Default Cursor"/>
+                      <Color id="Hand Cursor"/>
                     </Property>
                     <Property name="focusPainted" type="boolean" value="false"/>
                   </Properties>
@@ -1704,7 +1704,6 @@
                       <Color blue="ac" green="c3" red="99" type="rgb"/>
                     </Property>
                     <Property name="minVal" type="int" value="6"/>
-                    <Property name="value" type="int" value="6"/>
                   </Properties>
                   <Events>
                     <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="horminPropertyChange"/>
@@ -1874,7 +1873,7 @@
                     <Property name="borderPainted" type="boolean" value="false"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                      <Color id="Default Cursor"/>
+                      <Color id="Hand Cursor"/>
                     </Property>
                     <Property name="focusPainted" type="boolean" value="false"/>
                   </Properties>
@@ -1903,7 +1902,7 @@
                     <Property name="borderPainted" type="boolean" value="false"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                      <Color id="Default Cursor"/>
+                      <Color id="Hand Cursor"/>
                     </Property>
                     <Property name="focusPainted" type="boolean" value="false"/>
                   </Properties>

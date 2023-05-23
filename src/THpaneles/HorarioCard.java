@@ -145,7 +145,7 @@ public class HorarioCard extends javax.swing.JPanel {
         sun1.setBounds(130, 60, 30, 40);
 
         Days.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
-        Days.setForeground(new java.awt.Color(102, 102, 102));
+        Days.setForeground(new java.awt.Color(255, 255, 255));
         Days.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Days.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/CirclesFilled/Circle1.png"))); // NOI18N
         Days.setText("1");
@@ -225,6 +225,8 @@ public class HorarioCard extends javax.swing.JPanel {
 
     private void bgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bgMouseClicked
         System.out.println(this.Page);
+        ventana.getGroupChosen().getHor().ChooseElH(horario);
+        ventana.HORARIO();
     }//GEN-LAST:event_bgMouseClicked
     
     

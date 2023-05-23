@@ -216,7 +216,21 @@ public class horario extends Listacursos {
             cursoac = cursoac.sig;
         }
     }
-
+    
+    public void ChooseElH(Hopcion actual) {
+        int[] vect = actual.tovector();
+        curso cursoac = cabeza;
+        for (int i = 0; i <= vect.length; i++) {
+            if (cursoac != null) {
+                cursoac.choose(vect[i]);
+                System.out.println(cursoac.getChosenone());
+                cursoac = cursoac.sig;
+            }
+        }
+    }
+    
+    
+    
     public curso getcurso(String name) {
         curso actual = cabeza;
         while (actual != null) {

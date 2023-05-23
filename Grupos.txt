@@ -1,3 +1,3 @@
-ING SISTEMAS:2:`PROCESOS II<1<[dhk,.ckn,.chk,.]`ALGORITMIA<2<[dhk,chk,.dkn,chk,.bor,aor,.dsv,csv,.]`CALCULO<2<[coq,aoq,.dqs,boq,.dik,bik,.ckm,aik,.ekm,bkm,.dkm,bkm,.ekm,akm,.eik,akm,.]`ALGEBRA<1<[akm,.bkm,.ckm,.bkm,.boq,.ajl,.ekm,.bln,.djl,.]`DESAROLLO II<2<[dln,bkm,.dkm,bkm,.ckm,akm,.doq,aoq,.]
-ING CIVIL:2:`PROCESOS II<1<[dhk,.ckn,.chk,.]`CALCULO<2<[coq,aoq,.dqs,boq,.dik,bik,.ckm,aik,.ekm,bkm,.dkm,bkm,.ekm,akm,.eik,akm,.]`DESAROLLO II<2<[dln,bkm,.dkm,bkm,.ckm,akm,.doq,aoq,.]`ALGEBRA<1<[akm,.bkm,.ckm,.bkm,.boq,.ajl,.ekm,.bln,.djl,.]
-ING BIOMEDICA:2:`PROCESOS<1<[dhk,.ckn,.chk,.]
+ING SISTEMAS:2:`PROCESOS II<1<[fhk,.chk,.ckn,.dhk,.dps,.]`ALGORITMIA<2<[csv,dsv,.aor,bor,.chk,dkn,.chk,dhk,.ejm,cjm,.]`CALCULO<2<[akm,eik,.akm,ekm,.bkm,dkm,.bkm,ekm,.aik,ckm,.bik,dik,.boq,dqs,.aoq,coq,.]`DESARROLLO II<1<[djl,.bln,.ekm,.ajl,.boq,.bkm,.ckm,.bkm,.akm,.]`ALGEBRA<2<[aoq,doq,.akm,ckm,.bkm,dkm,.bkm,dln,.]
+ING CIVIL:2:`PROCESOS II<1<[chk,.ckn,.dhk,.]`CALCULO<2<[akm,eik,.akm,ekm,.bkm,dkm,.bkm,ekm,.aik,ckm,.bik,dik,.boq,dqs,.aoq,coq,.]`ALGEBRA<2<[aoq,doq,.akm,ckm,.bkm,dkm,.bkm,dln,.]`DESARROLLO<1<[djl,.bln,.ekm,.ajl,.boq,.bkm,.ckm,.bkm,.akm,.]
+ING BIOMEDICA:2:`PROCESOS<1<[chk,.ckn,.dhk,.]

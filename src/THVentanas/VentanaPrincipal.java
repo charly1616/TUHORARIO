@@ -238,7 +238,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         toCustom.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/customWhite35.png"))); // NOI18N
         toCustom.setContentAreaFilled(false);
-        toCustom.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        toCustom.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         toCustom.setDefaultCapable(false);
         toCustom.setFocusPainted(false);
         toCustom.addActionListener(new java.awt.event.ActionListener() {
@@ -251,7 +251,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         toEDIT.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/editWhite35.png"))); // NOI18N
         toEDIT.setContentAreaFilled(false);
-        toEDIT.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        toEDIT.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         toEDIT.setDefaultCapable(false);
         toEDIT.setFocusPainted(false);
         toEDIT.addActionListener(new java.awt.event.ActionListener() {
@@ -265,7 +265,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         toGENER.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/menuWhite35.png"))); // NOI18N
         toGENER.setBorderPainted(false);
         toGENER.setContentAreaFilled(false);
-        toGENER.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        toGENER.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         toGENER.setDefaultCapable(false);
         toGENER.setFocusPainted(false);
         toGENER.setHideActionText(true);
@@ -322,7 +322,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         add.setForeground(new java.awt.Color(127, 127, 127));
         add.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/editfuntions/addGray20.png"))); // NOI18N
         add.setContentAreaFilled(false);
-        add.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        add.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         add.setFocusPainted(false);
         add.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -399,7 +399,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         back.setForeground(new java.awt.Color(127, 127, 127));
         back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/editfuntions/backGray20.png"))); // NOI18N
         back.setContentAreaFilled(false);
-        back.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        back.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         back.setFocusPainted(false);
         back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -419,7 +419,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         add2.setForeground(new java.awt.Color(127, 127, 127));
         add2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/editfuntions/addGray20.png"))); // NOI18N
         add2.setContentAreaFilled(false);
-        add2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        add2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         add2.setFocusPainted(false);
         add2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -433,7 +433,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         brush.setForeground(new java.awt.Color(127, 127, 127));
         brush.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/editfuntions/clearGray20.png"))); // NOI18N
         brush.setContentAreaFilled(false);
-        brush.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        brush.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         brush.setFocusPainted(false);
         brush.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -561,7 +561,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         brush2.setForeground(new java.awt.Color(127, 127, 127));
         brush2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/editfuntions/clearGray20.png"))); // NOI18N
         brush2.setContentAreaFilled(false);
-        brush2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        brush2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         brush2.setFocusPainted(false);
         brush2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -595,7 +595,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         back2.setForeground(new java.awt.Color(127, 127, 127));
         back2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/editfuntions/backGray20.png"))); // NOI18N
         back2.setContentAreaFilled(false);
-        back2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        back2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         back2.setFocusPainted(false);
         back2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -609,7 +609,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         add3.setForeground(new java.awt.Color(127, 127, 127));
         add3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/editfuntions/addGray20.png"))); // NOI18N
         add3.setContentAreaFilled(false);
-        add3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        add3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         add3.setFocusPainted(false);
         add3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1135,7 +1135,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jButton1.setBorder(null);
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.setFocusPainted(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1152,7 +1152,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jButton2.setBorder(null);
         jButton2.setBorderPainted(false);
         jButton2.setContentAreaFilled(false);
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton2.setFocusPainted(false);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1472,11 +1472,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             nuevo.setHorario(actual);
             nuevo.setVentana(this);
             nuevo.setSize(210, 102);
-            int uwu = 50*(step%2);
+            int uwu = 50*((int)(Math.floor(step/3))%2);
 //            System.out.println(70 + (230*(step%3)) + uwu);
-            nuevo.setLocation(60 + (int)(900*Math.floor(step/12)) + (260*(step%3)) + uwu, 110 + (122 *(step%4) ));
+            nuevo.setLocation(60 + (int)(900*Math.floor(step/12)) + (260*(step%3)) + uwu, 110 + (122 *((int)(Math.floor(step/3))%4) ));
             nuevo.setPage((int)(Math.floor(step/12)));
-            nuevo.setLine((step%4));
+            nuevo.setLine(((int)(Math.floor(step/3))%4));
             //if (step > 24) nuevo.setVisible(false);
             
             if (step%12 == 0) totalpages++;
@@ -1533,7 +1533,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         Timer timer = new Timer(2, new ActionListener() {
             private int counter = 0;
             private final int totalFrames = 20;
-            private final int totalDistance = 1400;
+            private final int totalDistance = 1420;
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -1766,7 +1766,20 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         repaint();
 
     }//GEN-LAST:event_addActionPerformed
-
+    
+    public void HORARIO(){
+        HorarioView nuevo = new HorarioView();
+        nuevo.setSize(880, 510);
+        
+        GlassPanePopup.showPopup(nuevo);
+        
+        nuevo.setHora(this.groupChosen.getHor());
+        nuevo.repaint();
+        repaint();
+    }
+    
+    
+    
     private void formMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseMoved
 
     }//GEN-LAST:event_formMouseMoved
@@ -1790,7 +1803,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_CODEFocusGained
 
     private void toCustomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toCustomActionPerformed
-        // TODO add your handling code here:
+        this.grupos.SaveGrupos();
     }//GEN-LAST:event_toCustomActionPerformed
 
     private void back3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back3ActionPerformed
@@ -1858,6 +1871,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_MieActionPerformed
 
     private void FiltMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FiltMouseClicked
+        Page = 0;
         if (Hmin.getText().equals(Hmax.getText()) && hormax.getValue() < hormin.getValue()) {
             hormin.setValue(hormax.getValue());
         }
@@ -1911,7 +1925,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if (Page <= totalpages) {
+        if (Page < totalpages) {
             moveAllHorarios(-1);
             System.out.println("yolo");
         }
@@ -1971,22 +1985,22 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         diasmax.setValue(ho.getDiasmax());
         espmax.setValue(ho.getHuecomax());
         
-        if (ho.getHoramaxm() > 12 && !Hmax.isSelected()){
-            Hmax.doClick();
+        if (ho.getHoramaxm() > 12){
+            if (!Hmax.isSelected()) Hmax.doClick(); 
             hormax.setValue(ho.getHoramaxm()-12);
-        }
-        if (!(ho.getHoramaxm() > 12) && Hmax.isSelected()){
-            Hmax.doClick();
+        }else {
+            if (Hmax.isSelected()) Hmax.doClick();
+
             hormax.setValue(ho.getHoramaxm());
         }
         
         
-        if (ho.getHoraminm() > 12 && !Hmin.isSelected()){
-            Hmin.doClick();
+        if (ho.getHoraminm() > 12){
+            if (!Hmin.isSelected()) Hmin.doClick();
+
             hormin.setValue(ho.getHoraminm()-12);
-        }
-        if (!(ho.getHoraminm() > 12) && Hmin.isSelected()){
-            Hmin.doClick();
+        }else{
+            if (Hmin.isSelected()) Hmin.doClick();
             hormin.setValue(ho.getHoraminm());
         }
         
@@ -2016,6 +2030,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             butn.repaint();
         }
     }
+    
     
     
     public void cmbiarM(custom.MyButton boton){

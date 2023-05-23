@@ -163,6 +163,14 @@ public class opcion {
     public opcion getSig() {
         return sig;
     }
+
+    public dia getAct() {
+        return act;
+    }
+
+    public void setAct(dia act) {
+        this.act = act;
+    }
     
     
     
