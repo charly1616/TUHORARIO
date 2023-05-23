@@ -1376,6 +1376,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         }
         
         this.repaint();
+        revisarEmpties();
     }
     //</editor-fold>
     
@@ -1416,9 +1417,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             
             actual = actual.getSig();
             comp++;
-        
-            
         }
+        
+        revisarEmpties();
     }
     
     public void unchoseChosenopcion(){
