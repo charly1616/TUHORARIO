@@ -74,11 +74,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         
         this.GroupCards();
        Ngrupenc.setVisible(false);
-       Ncursoenc.setVisible(true);
-       Ngrupesc.setVisible(true);
-       Ncursoesc.setVisible(true);
-       Nopcenc.setVisible(true);
-       Nhorarios.setVisible(true);
+       Ncursoenc.setVisible(false);
+       Ngrupesc.setVisible(false);
+       Ncursoesc.setVisible(false);
+       Nopcenc.setVisible(false);
+       Nhorarios.setVisible(false);
+       revisarEmpties();
     }
 
     
@@ -386,7 +387,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         );
 
         Gruposed.add(Ngrupenc);
-        Ngrupenc.setBounds(40, 190, 250, 250);
+        Ngrupenc.setBounds(40, 170, 250, 250);
 
         edit.add(Gruposed);
         Gruposed.setBounds(0, 0, 340, 690);
@@ -496,7 +497,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         );
 
         cursosed.add(Ngrupesc);
-        Ngrupesc.setBounds(20, 80, 260, 240);
+        Ngrupesc.setBounds(20, 150, 260, 240);
 
         Ncursoenc.setOpaque(false);
 
@@ -548,7 +549,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         );
 
         cursosed.add(Ncursoenc);
-        Ncursoenc.setBounds(20, 340, 260, 220);
+        Ncursoenc.setBounds(20, 190, 260, 220);
 
         edit.add(cursosed);
         cursosed.setBounds(340, 10, 300, 680);
@@ -684,7 +685,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         );
 
         opcionsed.add(Ncursoesc);
-        Ncursoesc.setBounds(40, 110, 440, 210);
+        Ncursoesc.setBounds(50, 210, 440, 210);
 
         Nopcenc.setOpaque(false);
 
@@ -739,7 +740,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         );
 
         opcionsed.add(Nopcenc);
-        Nopcenc.setBounds(90, 380, 360, 210);
+        Nopcenc.setBounds(90, 200, 360, 210);
 
         edit.add(opcionsed);
         opcionsed.setBounds(640, 10, 540, 680);
@@ -1186,7 +1187,44 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         
         setLocation(x-move.getX()-15,y+move.getY()-25);
     }//GEN-LAST:event_moveMouseDragged
-
+    
+    
+    private void revisarEmpties(){
+        if (grupo.isEmpty()) {
+            Ngrupenc.setVisible(true);
+        }else{
+            Ngrupenc.setVisible(false);
+        }
+        
+        
+        
+        if (groupChosen == null) {
+            Ngrupesc.setVisible(true);
+            Ncursoenc.setVisible(false);
+        } else if (curso.isEmpty()) {
+            Ncursoenc.setVisible(true);
+            Ngrupesc.setVisible(false);
+        } else {
+            Ncursoenc.setVisible(false);
+            Ngrupesc.setVisible(false);
+        }
+        
+        
+        if (cursoChosen == null) {
+            Ncursoesc.setVisible(true);
+            Nopcenc.setVisible(false);
+        } else if (opcion.isEmpty()) {
+            Nopcenc.setVisible(true);
+            Ncursoesc.setVisible(false);
+        } else{
+            Ncursoesc.setVisible(false);
+            Nopcenc.setVisible(false);
+        }
+        
+        
+    }
+    
+    
     
     //<editor-fold defaultstate="collapsed" desc=" GROUPCARDS METODOS">
     
@@ -1213,21 +1251,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             
             
         }
-        if (grupo.isEmpty()) {
-       Ngrupenc.setVisible(true);
-       Ncursoenc.setVisible(true);
-       Ngrupesc.setVisible(true);
-       Ncursoesc.setVisible(true);
-       Nopcenc.setVisible(true);
-       Nhorarios.setVisible(true);
-        }else{
-             Ngrupenc.setVisible(false);
-       Ncursoenc.setVisible(false);
-       Ngrupesc.setVisible(false);
-       Ncursoesc.setVisible(false);
-       Nopcenc.setVisible(false);
-       Nhorarios.setVisible(false);
-        }
+        this.revisarEmpties();
     }
     
     public void unchoseChosen(){
@@ -1249,6 +1273,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public void UpdateGroupCards(){
         RemoveGroupscards();
         GroupCards();
+        revisarEmpties();
     }
     
     
@@ -1304,15 +1329,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             
             actual = actual.getSig();
             comp++;
-        
-            
-        }
-        if (!grupo.isEmpty()) {
-        Ncursoenc.setVisible(false);
-        Ngrupesc.setVisible(false);
-        }else{
-             Ncursoenc.setVisible(true);
-             Ngrupesc.setVisible(true);
         }
     }
     
@@ -1335,6 +1351,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     public void UpdateCursoCards(){
         RemoveCursocards();
         CursoCards();
+        revisarEmpties();
     }
     
     
@@ -1402,14 +1419,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         
             
         }
-        if (grupo.isEmpty()) {
-             Ncursoesc.setVisible(true);
-              Nopcenc.setVisible(true);
-        }else{
-            Ncursoesc.setVisible(false);
-       Nopcenc.setVisible(false);
-        }
-        
     }
     
     public void unchoseChosenopcion(){
@@ -1428,6 +1437,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         CODE.setText("codigo");
         RemoveOpcioncards();
         OpcionCards();
+        revisarEmpties();
     }
     
     
@@ -1890,6 +1900,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         
         if (best != null) filts.remove(best);
         
+        if (groupChosen.getHor().best == null) return;
+        
         HorarioCard nuevo = new HorarioCard();
         nuevo.setHorario(groupChosen.getHor().best);
         nuevo.setVentana(this);
@@ -1967,6 +1979,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     
     
     public void setFiltros(){
+        if (groupChosen==null) return;
         horario  ho = groupChosen.getHora();
         
         ho.setDiasmax(diasmax.getValue());
