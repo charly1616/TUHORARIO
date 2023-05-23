@@ -58,6 +58,7 @@ public class CrearOpc extends javax.swing.JPanel {
         ELDIA = new custom.MySpinnerDia();
 
         setBackground(new java.awt.Color(176, 235, 176));
+        setOpaque(false);
 
         bg.setBackground(new java.awt.Color(169, 209, 142));
         bg.setForeground(new java.awt.Color(0, 0, 0));

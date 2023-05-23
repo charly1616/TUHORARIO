@@ -66,10 +66,11 @@ public class CrearCurso extends javax.swing.JPanel {
         ndias.setModel(new javax.swing.SpinnerNumberModel(1, 1, 3, 1));
         ndias.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        setBackground(new java.awt.Color(176, 235, 176));
+        setBackground(new java.awt.Color(169, 209, 142));
 
         bg.setBackground(new java.awt.Color(169, 209, 142));
         bg.setForeground(new java.awt.Color(176, 235, 176));
+        bg.setOpaque(false);
         bg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         creandog.setBackground(new java.awt.Color(169, 209, 142));
