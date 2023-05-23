@@ -760,8 +760,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         filts.add(schetxt);
         schetxt.setBounds(60, 290, 140, 30);
 
-        jLabel2.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 15)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(102, 102, 102));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Dias restringidos");
         filts.add(jLabel2);
@@ -1049,6 +1049,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         filts.add(Filt);
         Filt.setBounds(200, 290, 30, 30);
 
+        hormax.setForeground(new java.awt.Color(102, 102, 102));
         hormax.setBtnBack(new java.awt.Color(153, 195, 172));
         hormax.setMaxVal(9);
         hormax.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -1069,6 +1070,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         filts.add(hormax);
         hormax.setBounds(110, 360, 80, 20);
 
+        hormin.setForeground(new java.awt.Color(102, 102, 102));
         hormin.setBtnBack(new java.awt.Color(153, 195, 172));
         hormin.setMinVal(6);
         hormin.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
@@ -1079,10 +1081,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         filts.add(hormin);
         hormin.setBounds(110, 390, 80, 20);
 
+        espmax.setForeground(new java.awt.Color(102, 102, 102));
         espmax.setBtnBack(new java.awt.Color(153, 195, 172));
         filts.add(espmax);
         espmax.setBounds(110, 450, 80, 20);
 
+        diasmax.setForeground(new java.awt.Color(102, 102, 102));
         diasmax.setBtnBack(new java.awt.Color(153, 195, 172));
         diasmax.setMaxVal(6);
         filts.add(diasmax);
