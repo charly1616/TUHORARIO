@@ -163,16 +163,22 @@ public class CrearOpc extends javax.swing.JPanel {
         comboEstudio2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ninguno", "Primaria", "Bachiller", "Técnico", "Pregrado", "Especialista", "Magister", "Doctorado" }));
         bg.add(comboEstudio2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 310, 180, -1));
 
+        HENTRA.setForeground(new java.awt.Color(127, 127, 127));
         HENTRA.setBtnBack(new java.awt.Color(153, 195, 172));
         HENTRA.setMinVal(6);
+        HENTRA.setTxtFore(new java.awt.Color(102, 102, 102));
         bg.add(HENTRA, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 110, -1, -1));
 
+        HSALI.setForeground(new java.awt.Color(127, 127, 127));
         HSALI.setBtnBack(new java.awt.Color(153, 195, 172));
         HSALI.setMaxVal(9);
+        HSALI.setTxtFore(new java.awt.Color(102, 102, 102));
         bg.add(HSALI, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 150, -1, -1));
 
+        ELDIA.setForeground(new java.awt.Color(127, 127, 127));
         ELDIA.setBtnBack(new java.awt.Color(153, 195, 172));
         ELDIA.setTxtBack(new java.awt.Color(204, 255, 204));
+        ELDIA.setTxtFore(new java.awt.Color(102, 102, 102));
         bg.add(ELDIA, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 70, 160, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

@@ -18,9 +18,9 @@ public class COLORPALETTE {
     public static Color LDarkText  = new Color(204,204,204);
     
     
-    public static Color Button  = new Color(153,195,172);
-    public static Color DrkButton = new Color(101,163,130);
+    public static Color WeirdDGreen = new Color(101,163,130);
+    public static Color WeirdGreen = new Color(153,195,172);
     
-    public static Color GreenText = new Color(153,195,172);
+    public static Color GreenTextField = new Color(204,255,204);
     
 }

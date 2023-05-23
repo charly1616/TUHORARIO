@@ -190,7 +190,7 @@ public class CursoCard extends javax.swing.JPanel {
         jPanel1.setBounds(0, 0, 6, 60);
 
         name.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
-        name.setForeground(new java.awt.Color(104, 104, 104));
+        name.setForeground(new java.awt.Color(102, 102, 102));
         name.setText("DESARROLLO");
         bg.add(name);
         name.setBounds(30, 10, 130, 30);

@@ -127,6 +127,7 @@ public class CrearCurso extends javax.swing.JPanel {
 
         name.setBackground(new java.awt.Color(204, 255, 204));
         name.setBorder(null);
+        name.setForeground(new java.awt.Color(102, 102, 102));
         name.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         name.setText("nombre");
         name.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
@@ -135,6 +136,7 @@ public class CrearCurso extends javax.swing.JPanel {
 
         nddias.setBtnBack(new java.awt.Color(153, 195, 172));
         nddias.setMaxVal(6);
+        nddias.setTxtFore(new java.awt.Color(102, 102, 102));
         bg.add(nddias, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 120, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

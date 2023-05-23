@@ -754,14 +754,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         filts.setLayout(null);
 
         schetxt.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
-        schetxt.setForeground(new java.awt.Color(102, 102, 102));
+        schetxt.setForeground(new java.awt.Color(90, 90, 90));
         schetxt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         schetxt.setText("Filtros");
         filts.add(schetxt);
         schetxt.setBounds(60, 290, 140, 30);
 
         jLabel2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel2.setForeground(new java.awt.Color(90, 90, 90));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Dias restringidos");
         filts.add(jLabel2);
@@ -806,13 +806,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         back3.setBounds(30, 290, 26, 27);
 
         Horas.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
-        Horas.setForeground(new java.awt.Color(102, 102, 102));
+        Horas.setForeground(new java.awt.Color(127, 127, 127));
         Horas.setText("Dias");
         filts.add(Horas);
         Horas.setBounds(200, 500, 50, 19);
 
         Horamax.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
-        Horamax.setForeground(new java.awt.Color(102, 102, 102));
+        Horamax.setForeground(new java.awt.Color(127, 127, 127));
         Horamax.setText("Hora Máx.");
         filts.add(Horamax);
         Horamax.setBounds(20, 360, 80, 19);
@@ -862,25 +862,25 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         Hmin.setBounds(200, 390, 40, 17);
 
         Horamin.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
-        Horamin.setForeground(new java.awt.Color(102, 102, 102));
+        Horamin.setForeground(new java.awt.Color(127, 127, 127));
         Horamin.setText("Hora Min.");
         filts.add(Horamin);
         Horamin.setBounds(20, 390, 80, 19);
 
         Espacio1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
-        Espacio1.setForeground(new java.awt.Color(102, 102, 102));
+        Espacio1.setForeground(new java.awt.Color(127, 127, 127));
         Espacio1.setText("Dias Máx.");
         filts.add(Espacio1);
         Espacio1.setBounds(20, 500, 80, 19);
 
         Espacio2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
-        Espacio2.setForeground(new java.awt.Color(102, 102, 102));
+        Espacio2.setForeground(new java.awt.Color(127, 127, 127));
         Espacio2.setText("Espa. Máx.");
         filts.add(Espacio2);
         Espacio2.setBounds(20, 450, 80, 19);
 
         Horas1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
-        Horas1.setForeground(new java.awt.Color(102, 102, 102));
+        Horas1.setForeground(new java.awt.Color(127, 127, 127));
         Horas1.setText("Horas");
         filts.add(Horas1);
         Horas1.setBounds(200, 450, 50, 19);
@@ -913,7 +913,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         Hmax.setBounds(200, 360, 40, 17);
 
         Vie.setBorder(null);
-        Vie.setForeground(new java.awt.Color(153, 153, 153));
+        Vie.setForeground(new java.awt.Color(204, 204, 204));
         Vie.setText("Vie");
         Vie.setBorderColor(new java.awt.Color(255, 255, 255));
         Vie.setBorderPainted(false);
@@ -937,7 +937,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         Vie.setBounds(100, 630, 60, 20);
 
         Lun.setBorder(null);
-        Lun.setForeground(new java.awt.Color(153, 153, 153));
+        Lun.setForeground(new java.awt.Color(204, 204, 204));
         Lun.setText("Lun");
         Lun.setBorderColor(new java.awt.Color(255, 255, 255));
         Lun.setBorderPainted(false);
@@ -961,7 +961,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         Lun.setBounds(30, 600, 60, 20);
 
         Sab.setBorder(null);
-        Sab.setForeground(new java.awt.Color(153, 153, 153));
+        Sab.setForeground(new java.awt.Color(204, 204, 204));
         Sab.setText("Sab");
         Sab.setBorderColor(new java.awt.Color(255, 255, 255));
         Sab.setBorderPainted(false);
@@ -1010,7 +1010,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         Mar.setBounds(100, 600, 60, 20);
 
         Mie.setBorder(null);
-        Mie.setForeground(new java.awt.Color(153, 153, 153));
+        Mie.setForeground(new java.awt.Color(204, 204, 204));
         Mie.setText("Mié");
         Mie.setBorderColor(new java.awt.Color(255, 255, 255));
         Mie.setBorderPainted(false);
@@ -1047,7 +1047,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         filts.add(Filt);
         Filt.setBounds(200, 290, 30, 30);
 
-        hormax.setForeground(new java.awt.Color(102, 102, 102));
+        hormax.setForeground(new java.awt.Color(127, 127, 127));
         hormax.setBtnBack(new java.awt.Color(153, 195, 172));
         hormax.setMaxVal(9);
         hormax.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -1068,7 +1068,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         filts.add(hormax);
         hormax.setBounds(110, 360, 80, 20);
 
-        hormin.setForeground(new java.awt.Color(102, 102, 102));
+        hormin.setForeground(new java.awt.Color(127, 127, 127));
         hormin.setBtnBack(new java.awt.Color(153, 195, 172));
         hormin.setMinVal(6);
         hormin.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
@@ -1079,12 +1079,12 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         filts.add(hormin);
         hormin.setBounds(110, 390, 80, 20);
 
-        espmax.setForeground(new java.awt.Color(102, 102, 102));
+        espmax.setForeground(new java.awt.Color(127, 127, 127));
         espmax.setBtnBack(new java.awt.Color(153, 195, 172));
         filts.add(espmax);
         espmax.setBounds(110, 450, 80, 20);
 
-        diasmax.setForeground(new java.awt.Color(102, 102, 102));
+        diasmax.setForeground(new java.awt.Color(127, 127, 127));
         diasmax.setBtnBack(new java.awt.Color(153, 195, 172));
         diasmax.setMaxVal(6);
         filts.add(diasmax);

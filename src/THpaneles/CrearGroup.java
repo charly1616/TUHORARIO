@@ -126,13 +126,16 @@ public class CrearGroup extends javax.swing.JPanel {
 
         name.setBackground(new java.awt.Color(204, 255, 204));
         name.setBorder(null);
+        name.setForeground(new java.awt.Color(102, 102, 102));
         name.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         name.setText("nombre");
         name.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         name.setRound(25);
         bg.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 70, 150, 20));
 
+        semestre.setForeground(new java.awt.Color(102, 102, 102));
         semestre.setBtnBack(new java.awt.Color(153, 195, 172));
+        semestre.setTxtFore(new java.awt.Color(102, 102, 102));
         bg.add(semestre, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 120, -1, -1));
 
         add(bg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 220));

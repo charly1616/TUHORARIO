@@ -1122,7 +1122,7 @@
                       <Font name="Arial Rounded MT Bold" size="24" style="1"/>
                     </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="66" green="66" red="66" type="rgb"/>
+                      <Color blue="5a" green="5a" red="5a" type="rgb"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="text" type="java.lang.String" value="Filtros"/>
@@ -1139,7 +1139,7 @@
                       <Font name="Arial Rounded MT Bold" size="15" style="0"/>
                     </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="66" green="66" red="66" type="rgb"/>
+                      <Color blue="5a" green="5a" red="5a" type="rgb"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="text" type="java.lang.String" value="Dias restringidos"/>
@@ -1246,7 +1246,7 @@
                       <Font name="Arial Rounded MT Bold" size="15" style="0"/>
                     </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="66" green="66" red="66" type="rgb"/>
+                      <Color blue="7f" green="7f" red="7f" type="rgb"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Dias"/>
                   </Properties>
@@ -1262,7 +1262,7 @@
                       <Font name="Arial Rounded MT Bold" size="15" style="0"/>
                     </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="66" green="66" red="66" type="rgb"/>
+                      <Color blue="7f" green="7f" red="7f" type="rgb"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Hora M&#xe1;x."/>
                   </Properties>
@@ -1356,7 +1356,7 @@
                       <Font name="Arial Rounded MT Bold" size="15" style="0"/>
                     </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="66" green="66" red="66" type="rgb"/>
+                      <Color blue="7f" green="7f" red="7f" type="rgb"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Hora Min."/>
                   </Properties>
@@ -1372,7 +1372,7 @@
                       <Font name="Arial Rounded MT Bold" size="15" style="0"/>
                     </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="66" green="66" red="66" type="rgb"/>
+                      <Color blue="7f" green="7f" red="7f" type="rgb"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Dias M&#xe1;x."/>
                   </Properties>
@@ -1388,7 +1388,7 @@
                       <Font name="Arial Rounded MT Bold" size="15" style="0"/>
                     </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="66" green="66" red="66" type="rgb"/>
+                      <Color blue="7f" green="7f" red="7f" type="rgb"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Espa. M&#xe1;x."/>
                   </Properties>
@@ -1404,7 +1404,7 @@
                       <Font name="Arial Rounded MT Bold" size="15" style="0"/>
                     </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="66" green="66" red="66" type="rgb"/>
+                      <Color blue="7f" green="7f" red="7f" type="rgb"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Horas"/>
                   </Properties>
@@ -1475,7 +1475,7 @@
                       <Border info="null"/>
                     </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="99" green="99" red="99" type="rgb"/>
+                      <Color blue="cc" green="cc" red="cc" type="rgb"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Vie"/>
                     <Property name="borderColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -1511,7 +1511,7 @@
                       <Border info="null"/>
                     </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="99" green="99" red="99" type="rgb"/>
+                      <Color blue="cc" green="cc" red="cc" type="rgb"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Lun"/>
                     <Property name="borderColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -1547,7 +1547,7 @@
                       <Border info="null"/>
                     </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="99" green="99" red="99" type="rgb"/>
+                      <Color blue="cc" green="cc" red="cc" type="rgb"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Sab"/>
                     <Property name="borderColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -1624,7 +1624,7 @@
                       <Border info="null"/>
                     </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="99" green="99" red="99" type="rgb"/>
+                      <Color blue="cc" green="cc" red="cc" type="rgb"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Mi&#xe9;"/>
                     <Property name="borderColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -1677,7 +1677,7 @@
                 <Component class="custom.MySpinner" name="hormax">
                   <Properties>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="66" green="66" red="66" type="rgb"/>
+                      <Color blue="7f" green="7f" red="7f" type="rgb"/>
                     </Property>
                     <Property name="btnBack" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ac" green="c3" red="99" type="rgb"/>
@@ -1698,7 +1698,7 @@
                 <Component class="custom.MySpinner" name="hormin">
                   <Properties>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="66" green="66" red="66" type="rgb"/>
+                      <Color blue="7f" green="7f" red="7f" type="rgb"/>
                     </Property>
                     <Property name="btnBack" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ac" green="c3" red="99" type="rgb"/>
@@ -1717,7 +1717,7 @@
                 <Component class="custom.MySpinner" name="espmax">
                   <Properties>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="66" green="66" red="66" type="rgb"/>
+                      <Color blue="7f" green="7f" red="7f" type="rgb"/>
                     </Property>
                     <Property name="btnBack" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ac" green="c3" red="99" type="rgb"/>
@@ -1732,7 +1732,7 @@
                 <Component class="custom.MySpinner" name="diasmax">
                   <Properties>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="66" green="66" red="66" type="rgb"/>
+                      <Color blue="7f" green="7f" red="7f" type="rgb"/>
                     </Property>
                     <Property name="btnBack" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ac" green="c3" red="99" type="rgb"/>
