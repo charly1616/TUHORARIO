@@ -92,7 +92,7 @@ public class HorarioCurso extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bgMouseClicked
-        System.out.println(franja.getBounds());
+        
     }//GEN-LAST:event_bgMouseClicked
 
     public dia getDIA() {
@@ -156,7 +156,7 @@ public class HorarioCurso extends javax.swing.JPanel {
         if (DIA== null) return;
         
         bg.setBounds(0,0,120, 30*DIA.Hcant());
-        System.out.println("ALTU " +  bg.getHeight());
+        //System.out.println("ALTU " +  bg.getHeight());
         this.revalidate();
         this.repaint();
         bg.revalidate();

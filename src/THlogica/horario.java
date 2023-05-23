@@ -11,11 +11,13 @@ public class horario extends Listacursos {
     
     public Hopcion hhead;
     public Hopcion hact;
-
+    
+    public Hopcion best;
+    
     public int cont = 0;
     public int diasmax = 6;
-    public int horamaxm = 23;
-    public int horaminm = 2;
+    public int horamaxm = 21;
+    public int horaminm = 6;
     public int huecomax = 12;
     private boolean[] diasrestrin = new boolean[6]; //{true,false,false,false,false,true}
 
@@ -139,6 +141,12 @@ public class horario extends Listacursos {
             hact = nuevo;
         }
         
+        if (best == null) {
+            best = nuevo;
+        }else if (best.getScore() < nuevo.getScore()) {
+            best = nuevo;
+            //System.out.println("ESCORE ES " + nuevo.getScore());
+        }
     }
 
     public Hopcion getHhead() {
@@ -275,6 +283,7 @@ public class horario extends Listacursos {
 
     public void generarH() {
         cont = 0;
+        best = null;
         eraseallh();
         permutate(null);
         //mostrarallh();

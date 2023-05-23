@@ -7,7 +7,8 @@ public class Hopcion {
     private int HMAX;
     private int HMIN;
     private int huecos;
-
+    private double Score;
+    
     public Hopcion sig;
     public Hopcion ant;
 
@@ -17,9 +18,32 @@ public class Hopcion {
         this.HMAX = HMAX;
         this.HMIN = HMIN;
         this.huecos = huecos;
+        calculateScore();
         //System.out.println(horario);
     }
+    
+    private void calculateScore(){
+        double diasquesevan = (6.0-diastogo)/(5.0);
+        double horamaxima = (21.0-HMAX)/(13.0);
+        double horaminima = (HMIN - 6.0)/(13.0);
+        double huecoshuecos = (Math.log(13-huecos))/(Math.log(13));
+        
+        
+        Score = diasquesevan*0.35 + horamaxima*0.25 + horaminima*0.2 + huecoshuecos*0.2;
+        System.out.println("LA SCORE: " + Score);
+    }
 
+    public double getScore() {
+        calculateScore();
+        return Score;
+    }
+
+    public void setScore(double Score) {
+        this.Score = Score;
+    }
+    
+    
+    
     public int[] tovector() {
         
         int[] vec = new int[horario.length()];

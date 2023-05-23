@@ -56,6 +56,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private int Page = 0;
     
     public opcion creada = null;
+    private HorarioCard best = null;
     
     public VentanaPrincipal() {
         
@@ -165,7 +166,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         hormin = new custom.MySpinner();
         espmax = new custom.MySpinner();
         diasmax = new custom.MySpinner();
-        horarioCard5 = new THpaneles.HorarioCard();
         view = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -1089,8 +1089,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         diasmax.setMaxVal(6);
         filts.add(diasmax);
         diasmax.setBounds(110, 500, 80, 20);
-        filts.add(horarioCard5);
-        horarioCard5.setBounds(30, 130, 210, 100);
 
         See.add(filts, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 680));
 
@@ -1887,6 +1885,19 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         if (schetxt1.getText().equals("0")) {
             Nhorarios.setVisible(true);
         }
+        
+        
+        if (best != null) filts.remove(best);
+        
+        HorarioCard nuevo = new HorarioCard();
+        nuevo.setHorario(groupChosen.getHor().best);
+        nuevo.setVentana(this);
+        nuevo.setLocation(30, 130);
+        nuevo.setSize(210, 102);
+        filts.add(nuevo);
+        filts.repaint();
+        
+        best = nuevo;
     }//GEN-LAST:event_FiltMouseClicked
 
     private void FiltMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FiltMouseEntered
@@ -2038,13 +2049,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         if (boton.getText().equals("AM")){
             boton.setSelected(true);
             boton.setText("PM");
-            boton.setBackground(new Color(84,130,53));
-            boton.setColor(new Color(84,130,53));
+            boton.setBackground(new Color(101,163,130));
+            boton.setColor(new Color(101,163,130));
         } else{
             boton.setText("AM");
             boton.setSelected(false);
-            boton.setBackground(new Color(112,173,71));
-            boton.setColor(new Color(112,173,71));
+            boton.setBackground(new Color(153,195,172));
+            boton.setColor(new Color(153,195,172));
         }
     }
     
@@ -2121,7 +2132,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel exit;
     private javax.swing.JPanel filts;
     private javax.swing.JPanel header;
-    private THpaneles.HorarioCard horarioCard5;
     private custom.MySpinner hormax;
     private custom.MySpinner hormin;
     private javax.swing.JButton jButton1;
