@@ -49,7 +49,7 @@ public class MySpinner extends javax.swing.JPanel {
 
     public void setMaxVal(int MaxVal) {
         this.MaxVal = MaxVal;
-        if (Value < MaxVal) {
+        if (Value > MaxVal) {
             Value = MaxVal;
         }
         this.editor.setText(Value+"");
@@ -62,7 +62,7 @@ public class MySpinner extends javax.swing.JPanel {
 
     public void setMinVal(int MinVal) {
         this.MinVal = MinVal;
-        if (Value > MinVal) {
+        if (Value < MinVal) {
             Value = MinVal;
         }
         this.editor.setText(Value+"");

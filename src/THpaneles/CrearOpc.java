@@ -50,12 +50,12 @@ public class CrearOpc extends javax.swing.JPanel {
         Cancelar = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        bttsalida = new custom.MyButton();
-        bttentrada2 = new custom.MyButton();
+        BTSALI = new custom.MyButton();
+        BTENTRA = new custom.MyButton();
         comboEstudio2 = new javax.swing.JComboBox<>();
-        nEntrada = new custom.MySpinner();
-        nSalida = new custom.MySpinner();
-        mySpinnerDia2 = new custom.MySpinnerDia();
+        HENTRA = new custom.MySpinner();
+        HSALI = new custom.MySpinner();
+        ELDIA = new custom.MySpinnerDia();
 
         setBackground(new java.awt.Color(176, 235, 176));
 
@@ -96,6 +96,7 @@ public class CrearOpc extends javax.swing.JPanel {
         jButton1.setText("Cancelar");
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.setFocusPainted(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,6 +112,7 @@ public class CrearOpc extends javax.swing.JPanel {
         jButton2.setText("Guardar");
         jButton2.setBorderPainted(false);
         jButton2.setContentAreaFilled(false);
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton2.setFocusPainted(false);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -119,56 +121,60 @@ public class CrearOpc extends javax.swing.JPanel {
         });
         bg.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 260, -1, -1));
 
-        bttsalida.setBackground(new java.awt.Color(84, 130, 53));
-        bttsalida.setBorder(null);
-        bttsalida.setForeground(new java.awt.Color(255, 255, 255));
-        bttsalida.setText("PM");
-        bttsalida.setBorderColor(new java.awt.Color(84, 130, 53));
-        bttsalida.setBorderPainted(false);
-        bttsalida.setColor(new java.awt.Color(84, 130, 53));
-        bttsalida.setColorClick(new java.awt.Color(84, 130, 53));
-        bttsalida.setColorOver(new java.awt.Color(84, 130, 53));
-        bttsalida.setFocusPainted(false);
-        bttsalida.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 15)); // NOI18N
-        bttsalida.setRadius(20);
-        bttsalida.addActionListener(new java.awt.event.ActionListener() {
+        BTSALI.setBackground(new java.awt.Color(84, 130, 53));
+        BTSALI.setBorder(null);
+        BTSALI.setForeground(new java.awt.Color(255, 255, 255));
+        BTSALI.setText("PM");
+        BTSALI.setBorderColor(new java.awt.Color(84, 130, 53));
+        BTSALI.setBorderPainted(false);
+        BTSALI.setColor(new java.awt.Color(84, 130, 53));
+        BTSALI.setColorClick(new java.awt.Color(84, 130, 53));
+        BTSALI.setColorOver(new java.awt.Color(84, 130, 53));
+        BTSALI.setFocusPainted(false);
+        BTSALI.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 15)); // NOI18N
+        BTSALI.setRadius(20);
+        BTSALI.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bttsalidaActionPerformed(evt);
+                BTSALIActionPerformed(evt);
             }
         });
-        bg.add(bttsalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, 60, 20));
+        bg.add(BTSALI, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, 60, 20));
 
-        bttentrada2.setBackground(new java.awt.Color(112, 173, 71));
-        bttentrada2.setBorder(null);
-        bttentrada2.setForeground(new java.awt.Color(255, 255, 255));
-        bttentrada2.setText("AM");
-        bttentrada2.setBorderColor(new java.awt.Color(112, 173, 71));
-        bttentrada2.setBorderPainted(false);
-        bttentrada2.setColor(new java.awt.Color(112, 173, 71));
-        bttentrada2.setColorClick(new java.awt.Color(112, 173, 71));
-        bttentrada2.setColorOver(new java.awt.Color(112, 173, 71));
-        bttentrada2.setFocusPainted(false);
-        bttentrada2.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 15)); // NOI18N
-        bttentrada2.setRadius(20);
-        bttentrada2.addActionListener(new java.awt.event.ActionListener() {
+        BTENTRA.setBackground(new java.awt.Color(112, 173, 71));
+        BTENTRA.setBorder(null);
+        BTENTRA.setForeground(new java.awt.Color(255, 255, 255));
+        BTENTRA.setText("AM");
+        BTENTRA.setBorderColor(new java.awt.Color(112, 173, 71));
+        BTENTRA.setBorderPainted(false);
+        BTENTRA.setColor(new java.awt.Color(112, 173, 71));
+        BTENTRA.setColorClick(new java.awt.Color(112, 173, 71));
+        BTENTRA.setColorOver(new java.awt.Color(112, 173, 71));
+        BTENTRA.setFocusPainted(false);
+        BTENTRA.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 15)); // NOI18N
+        BTENTRA.setRadius(20);
+        BTENTRA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bttentrada2ActionPerformed(evt);
+                BTENTRAActionPerformed(evt);
             }
         });
-        bg.add(bttentrada2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 140, 60, 20));
+        bg.add(BTENTRA, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 140, 60, 20));
 
         comboEstudio2.setFont(new java.awt.Font("Arial Rounded MT Bold", 2, 18)); // NOI18N
         comboEstudio2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ninguno", "Primaria", "Bachiller", "Técnico", "Pregrado", "Especialista", "Magister", "Doctorado" }));
         bg.add(comboEstudio2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 310, 180, -1));
 
-        nEntrada.setBtnBack(new java.awt.Color(153, 195, 172));
-        bg.add(nEntrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, -1, -1));
+        HENTRA.setBtnBack(new java.awt.Color(153, 195, 172));
+        HENTRA.setMinVal(6);
+        HENTRA.setValue(6);
+        bg.add(HENTRA, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, -1, -1));
 
-        nSalida.setBtnBack(new java.awt.Color(153, 195, 172));
-        bg.add(nSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, -1, -1));
+        HSALI.setBtnBack(new java.awt.Color(153, 195, 172));
+        HSALI.setMaxVal(9);
+        HSALI.setValue(1);
+        bg.add(HSALI, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, -1, -1));
 
-        mySpinnerDia2.setBtnBack(new java.awt.Color(153, 195, 172));
-        bg.add(mySpinnerDia2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 70, -1, -1));
+        ELDIA.setBtnBack(new java.awt.Color(153, 195, 172));
+        bg.add(ELDIA, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 70, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -183,22 +189,58 @@ public class CrearOpc extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       variable.nuevaopcion(true);
-         
+       if (padre.creada == null) return;
+       
+       int enplus = (BTENTRA.getText().equals("PM"))?12:0;
+       int saplus = (BTSALI.getText().equals("PM"))?12:0;
+       padre.creada.creardia(ELDIA.getValue(), HENTRA.getValue()+enplus, HSALI.getValue()+saplus);
+       
+       padre.UpdateOpcionCards(); 
+       GlassPanePopup.closePopupLast();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
           GlassPanePopup.closePopupLast();       
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void bttsalidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttsalidaActionPerformed
-       cmbiarM(this.bttsalida);
-    }//GEN-LAST:event_bttsalidaActionPerformed
-
-    private void bttentrada2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttentrada2ActionPerformed
-        cmbiarM(this.bttentrada2);
+    private void BTSALIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTSALIActionPerformed
+       cmbiarM(this.BTSALI);
+       if (BTSALI.getText().equals("PM")) {
+            HSALI.setMaxVal(9);
+            HSALI.setMinVal(1);
+        }else {
+            HSALI.setMaxVal(12);
+            HSALI.setMinVal(6);
+        }
+        if (BTENTRA.getText().equals("PM") && BTSALI.getText().equals("AM")) {
+            BTENTRA.doClick();
+        }
+        if (BTENTRA.getText().equals(BTSALI.getText()) && HSALI.getValue() < HENTRA.getValue()) {
+            HENTRA.setValue(HSALI.getValue());
+        }
         
-    }//GEN-LAST:event_bttentrada2ActionPerformed
+        
+    }//GEN-LAST:event_BTSALIActionPerformed
+
+    private void BTENTRAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTENTRAActionPerformed
+        cmbiarM(this.BTENTRA);
+        
+        if (BTENTRA.getText().equals("PM")) {
+            HENTRA.setMaxVal(9);
+            HENTRA.setMinVal(1);
+        }else {
+            HENTRA.setMaxVal(12);
+            HENTRA.setMinVal(6);
+        }
+        
+        if (BTENTRA.getText().equals("PM") && BTSALI.getText().equals("AM")) {
+            BTENTRA.doClick();
+        }
+        if (BTENTRA.getText().equals(BTSALI.getText()) && HSALI.getValue() < HENTRA.getValue()) {
+            HENTRA.setValue(HSALI.getValue());
+        }
+        
+    }//GEN-LAST:event_BTENTRAActionPerformed
     
     
     public void cmbiarM(custom.MyButton boton){
@@ -291,19 +333,19 @@ public class CrearOpc extends javax.swing.JPanel {
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private custom.MyButton BTENTRA;
+    private custom.MyButton BTSALI;
     private javax.swing.JLabel Cancelar;
     private javax.swing.JLabel Dia;
+    private custom.MySpinnerDia ELDIA;
+    private custom.MySpinner HENTRA;
+    private custom.MySpinner HSALI;
     private javax.swing.JLabel Salida;
     private javax.swing.JPanel bg;
-    private custom.MyButton bttentrada2;
-    private custom.MyButton bttsalida;
     private javax.swing.JComboBox<String> comboEstudio2;
     private javax.swing.JLabel creandog;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JSeparator jSeparator1;
-    private custom.MySpinnerDia mySpinnerDia2;
-    private custom.MySpinner nEntrada;
-    private custom.MySpinner nSalida;
     // End of variables declaration//GEN-END:variables
 }

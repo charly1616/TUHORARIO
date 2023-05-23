@@ -55,6 +55,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private int totalpages = 0;
     private int Page = 0;
     
+    public opcion creada = null;
+    
     public VentanaPrincipal() {
         
        
@@ -1664,11 +1666,16 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private void add3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add3ActionPerformed
         if (this.cursoChosen == null) return;
         
+        creada = cursoChosen.getListaopc().nuevaopcion(false);
+        
+        if (creada == null) return;
+        
         for (int i = 0; i < cursoChosen.ndias; i++) {
             CrearOpc nuevo = new CrearOpc();
             nuevo.variable = this.cursoChosen.getListaopc();
             nuevo.setSize(400, 300);
-
+            nuevo.setPadre(this);
+            
             GlassPanePopup.showPopup(nuevo);
 
             nuevo.repaint();

@@ -181,7 +181,9 @@ public class opciones {
         contaropciones();
         return nueva;
     }
-
+    
+    
+    
     public String ListaOpciones() { // CREA UNA LISTA DE OPCIONES PARA MOSTRAE
         String Most = "";
         int cont = 1;
