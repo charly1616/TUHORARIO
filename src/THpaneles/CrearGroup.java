@@ -98,7 +98,7 @@ public class CrearGroup extends javax.swing.JPanel {
         jButton2.setBorder(null);
         jButton2.setBorderPainted(false);
         jButton2.setContentAreaFilled(false);
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton2.setFocusPainted(false);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -115,7 +115,7 @@ public class CrearGroup extends javax.swing.JPanel {
         jButton1.setBorder(null);
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton1.setFocusPainted(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -133,7 +133,7 @@ public class CrearGroup extends javax.swing.JPanel {
         bg.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 70, 150, 20));
 
         semestre.setBtnBack(new java.awt.Color(153, 195, 172));
-        bg.add(semestre, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 120, -1, -1));
+        bg.add(semestre, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 120, -1, -1));
 
         add(bg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 220));
     }// </editor-fold>//GEN-END:initComponents

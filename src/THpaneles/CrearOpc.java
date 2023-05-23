@@ -59,9 +59,8 @@ public class CrearOpc extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(176, 235, 176));
 
-        bg.setBackground(new java.awt.Color(176, 235, 176));
+        bg.setBackground(new java.awt.Color(169, 209, 142));
         bg.setForeground(new java.awt.Color(0, 0, 0));
-        bg.setOpaque(false);
         bg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         creandog.setBackground(new java.awt.Color(169, 209, 142));
@@ -73,21 +72,21 @@ public class CrearOpc extends javax.swing.JPanel {
         Dia.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 16)); // NOI18N
         Dia.setForeground(new java.awt.Color(255, 255, 255));
         Dia.setText("Dia");
-        bg.add(Dia, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, 50, -1));
+        bg.add(Dia, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, 50, -1));
 
         Salida.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 16)); // NOI18N
         Salida.setForeground(new java.awt.Color(255, 255, 255));
         Salida.setText("Salida");
-        bg.add(Salida, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 70, -1));
+        bg.add(Salida, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 70, -1));
 
         jSeparator1.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
-        bg.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, 300, 10));
+        bg.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 340, 10));
 
         Cancelar.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 16)); // NOI18N
         Cancelar.setForeground(new java.awt.Color(255, 255, 255));
         Cancelar.setText("Entrada");
-        bg.add(Cancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, 70, -1));
+        bg.add(Cancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 70, -1));
 
         jButton1.setBackground(new java.awt.Color(141, 196, 162));
         jButton1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
@@ -96,14 +95,14 @@ public class CrearOpc extends javax.swing.JPanel {
         jButton1.setText("Cancelar");
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton1.setFocusPainted(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        bg.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, -1, 30));
+        bg.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, -1, 30));
 
         jButton2.setBackground(new java.awt.Color(141, 196, 162));
         jButton2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
@@ -112,14 +111,14 @@ public class CrearOpc extends javax.swing.JPanel {
         jButton2.setText("Guardar");
         jButton2.setBorderPainted(false);
         jButton2.setContentAreaFilled(false);
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton2.setFocusPainted(false);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        bg.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 260, -1, -1));
+        bg.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, -1, -1));
 
         BTSALI.setBackground(new java.awt.Color(84, 130, 53));
         BTSALI.setBorder(null);
@@ -138,7 +137,7 @@ public class CrearOpc extends javax.swing.JPanel {
                 BTSALIActionPerformed(evt);
             }
         });
-        bg.add(BTSALI, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, 60, 20));
+        bg.add(BTSALI, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 160, 60, 20));
 
         BTENTRA.setBackground(new java.awt.Color(112, 173, 71));
         BTENTRA.setBorder(null);
@@ -157,7 +156,7 @@ public class CrearOpc extends javax.swing.JPanel {
                 BTENTRAActionPerformed(evt);
             }
         });
-        bg.add(BTENTRA, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 140, 60, 20));
+        bg.add(BTENTRA, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 120, 60, 20));
 
         comboEstudio2.setFont(new java.awt.Font("Arial Rounded MT Bold", 2, 18)); // NOI18N
         comboEstudio2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ninguno", "Primaria", "Bachiller", "Técnico", "Pregrado", "Especialista", "Magister", "Doctorado" }));
@@ -165,26 +164,25 @@ public class CrearOpc extends javax.swing.JPanel {
 
         HENTRA.setBtnBack(new java.awt.Color(153, 195, 172));
         HENTRA.setMinVal(6);
-        HENTRA.setValue(6);
-        bg.add(HENTRA, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, -1, -1));
+        bg.add(HENTRA, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 120, -1, -1));
 
         HSALI.setBtnBack(new java.awt.Color(153, 195, 172));
         HSALI.setMaxVal(9);
-        HSALI.setValue(1);
-        bg.add(HSALI, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, -1, -1));
+        bg.add(HSALI, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 160, -1, -1));
 
         ELDIA.setBtnBack(new java.awt.Color(153, 195, 172));
-        bg.add(ELDIA, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 70, -1, -1));
+        ELDIA.setTxtBack(new java.awt.Color(204, 255, 204));
+        bg.add(ELDIA, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 70, 160, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(bg, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(bg, javax.swing.GroupLayout.PREFERRED_SIZE, 379, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(bg, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(bg, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
     }// </editor-fold>//GEN-END:initComponents
 

@@ -68,9 +68,8 @@ public class CrearCurso extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(176, 235, 176));
 
-        bg.setBackground(new java.awt.Color(176, 235, 176));
-        bg.setForeground(new java.awt.Color(0, 0, 0));
-        bg.setOpaque(false);
+        bg.setBackground(new java.awt.Color(169, 209, 142));
+        bg.setForeground(new java.awt.Color(176, 235, 176));
         bg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         creandog.setBackground(new java.awt.Color(169, 209, 142));
@@ -82,16 +81,16 @@ public class CrearCurso extends javax.swing.JPanel {
         Dia.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 16)); // NOI18N
         Dia.setForeground(new java.awt.Color(255, 255, 255));
         Dia.setText("Nombre del curso:");
-        bg.add(Dia, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, 160, -1));
+        bg.add(Dia, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 160, -1));
 
         Entrada.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 16)); // NOI18N
         Entrada.setForeground(new java.awt.Color(255, 255, 255));
         Entrada.setText("Numero de dias:");
-        bg.add(Entrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, 170, -1));
+        bg.add(Entrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, 170, -1));
 
         jSeparator1.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
-        bg.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 300, 10));
+        bg.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, 320, 10));
 
         jButton2.setBackground(new java.awt.Color(141, 196, 162));
         jButton2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
@@ -107,7 +106,7 @@ public class CrearCurso extends javax.swing.JPanel {
                 jButton2ActionPerformed(evt);
             }
         });
-        bg.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 260, -1, -1));
+        bg.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 180, -1, -1));
 
         jButton1.setBackground(new java.awt.Color(141, 196, 162));
         jButton1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
@@ -123,27 +122,29 @@ public class CrearCurso extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
-        bg.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, -1, 30));
+        bg.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, -1, 30));
 
         name.setBackground(new java.awt.Color(204, 255, 204));
         name.setBorder(null);
         name.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         name.setText("nombre");
+        name.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         name.setRound(25);
-        bg.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 80, 150, 20));
+        bg.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 70, 150, 20));
 
+        nddias.setBtnBack(new java.awt.Color(153, 195, 172));
         nddias.setMaxVal(6);
-        bg.add(nddias, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 160, -1, -1));
+        bg.add(nddias, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 120, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(bg, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(bg, javax.swing.GroupLayout.DEFAULT_SIZE, 401, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(bg, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(bg, javax.swing.GroupLayout.DEFAULT_SIZE, 222, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
