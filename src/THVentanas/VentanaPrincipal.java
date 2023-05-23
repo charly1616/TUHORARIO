@@ -1126,7 +1126,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         Nhorarios.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 170, -1, -1));
 
         view.add(Nhorarios);
-        Nhorarios.setBounds(230, 180, 390, 240);
+        Nhorarios.setBounds(230, 200, 390, 240);
 
         jButton1.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 48)); // NOI18N
         jButton1.setForeground(new java.awt.Color(153, 195, 172));
@@ -1175,6 +1175,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_minMouseClicked
 
     private void exitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitMouseClicked
+        this.grupos.SaveGrupos();
         System.exit(0);
     }//GEN-LAST:event_exitMouseClicked
 
@@ -1802,7 +1803,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_CODEFocusGained
 
     private void toCustomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toCustomActionPerformed
-        this.grupos.SaveGrupos();
+        
     }//GEN-LAST:event_toCustomActionPerformed
 
     private void back3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back3ActionPerformed

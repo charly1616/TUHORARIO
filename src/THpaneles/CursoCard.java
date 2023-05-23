@@ -47,7 +47,7 @@ public class CursoCard extends javax.swing.JPanel {
             this.delete.setLocation(200,0);
             this.delete.setEnabled(true);
             
-            this.bg.setBackground(COLORPALETTE.EnPane);
+            this.bg.setBackground(Color.white);
             this.jPanel1.setSize(18,60);
             
             this.bg.repaint();
@@ -61,7 +61,7 @@ public class CursoCard extends javax.swing.JPanel {
             this.delete.setLocation(270,0);
             this.delete.setEnabled(false);
             
-            this.bg.setBackground(COLORPALETTE.DisPane);
+            this.bg.setBackground(new Color(245,245,245));
             this.jPanel1.setSize(6,60);
             
             this.bg.repaint();

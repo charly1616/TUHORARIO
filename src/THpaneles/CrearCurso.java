@@ -131,7 +131,7 @@ public class CrearCurso extends javax.swing.JPanel {
         name.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         name.setText("nombre");
         name.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
-        name.setRound(25);
+        name.setRound(20);
         bg.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 70, 150, 20));
 
         nddias.setBtnBack(new java.awt.Color(153, 195, 172));
