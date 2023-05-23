@@ -396,7 +396,7 @@
                           <Font name="Arial Rounded MT Bold" size="14" style="0"/>
                         </Property>
                         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="85" green="a7" red="69" type="rgb"/>
+                          <Color blue="ac" green="c3" red="99" type="rgb"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="text" type="java.lang.String" value="Crea tu grupo y disfr&#xfa;talo "/>
@@ -408,7 +408,7 @@
                           <Font name="Arial Rounded MT Bold" size="19" style="1"/>
                         </Property>
                         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="85" green="a7" red="69" type="rgb"/>
+                          <Color blue="ac" green="c3" red="99" type="rgb"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="text" type="java.lang.String" value="encontrado"/>
@@ -420,7 +420,7 @@
                           <Font name="Arial Rounded MT Bold" size="19" style="1"/>
                         </Property>
                         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="85" green="a7" red="69" type="rgb"/>
+                          <Color blue="ac" green="c3" red="99" type="rgb"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="text" type="java.lang.String" value="Ning&#xfa;n grupo "/>
@@ -612,7 +612,7 @@
                           <Font name="Arial Rounded MT Bold" size="19" style="1"/>
                         </Property>
                         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="85" green="a7" red="69" type="rgb"/>
+                          <Color blue="ac" green="c3" red="99" type="rgb"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="text" type="java.lang.String" value="Ning&#xfa;n grupo escogido"/>
@@ -624,7 +624,7 @@
                           <Font name="Arial Rounded MT Bold" size="14" style="0"/>
                         </Property>
                         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="85" green="a7" red="69" type="rgb"/>
+                          <Color blue="ac" green="c3" red="99" type="rgb"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="text" type="java.lang.String" value="Selecciona el grupo para"/>
@@ -636,7 +636,7 @@
                           <Font name="Arial Rounded MT Bold" size="14" style="0"/>
                         </Property>
                         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="85" green="a7" red="69" type="rgb"/>
+                          <Color blue="ac" green="c3" red="99" type="rgb"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="text" type="java.lang.String" value="poder editarlo"/>
@@ -705,7 +705,7 @@
                           <Font name="Arial Rounded MT Bold" size="19" style="1"/>
                         </Property>
                         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="85" green="a7" red="69" type="rgb"/>
+                          <Color blue="ac" green="c3" red="99" type="rgb"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="text" type="java.lang.String" value="Ning&#xfa;n curso"/>
@@ -717,7 +717,7 @@
                           <Font name="Arial Rounded MT Bold" size="19" style="1"/>
                         </Property>
                         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="85" green="a7" red="69" type="rgb"/>
+                          <Color blue="ac" green="c3" red="99" type="rgb"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="text" type="java.lang.String" value="encontrado"/>
@@ -729,7 +729,7 @@
                           <Font name="Arial Rounded MT Bold" size="14" style="0"/>
                         </Property>
                         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="85" green="a7" red="69" type="rgb"/>
+                          <Color blue="ac" green="c3" red="99" type="rgb"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Crea un curso para poder editar "/>
                       </Properties>
@@ -962,7 +962,7 @@
                           <Font name="Arial Rounded MT Bold" size="19" style="1"/>
                         </Property>
                         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="85" green="a7" red="69" type="rgb"/>
+                          <Color blue="ac" green="c3" red="99" type="rgb"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="Ning&#xfa;n curso escogido"/>
                       </Properties>
@@ -973,7 +973,7 @@
                           <Font name="Arial Rounded MT Bold" size="14" style="0"/>
                         </Property>
                         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="85" green="a7" red="69" type="rgb"/>
+                          <Color blue="ac" green="c3" red="99" type="rgb"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="text" type="java.lang.String" value="Selecciona el curso para poder editar sus opciones "/>
@@ -1045,7 +1045,7 @@
                           <Font name="Arial Rounded MT Bold" size="19" style="1"/>
                         </Property>
                         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="85" green="a7" red="69" type="rgb"/>
+                          <Color blue="ac" green="c3" red="99" type="rgb"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="text" type="java.lang.String" value="Ninguna opci&#xf3;n encontrada "/>
@@ -1057,7 +1057,7 @@
                           <Font name="Arial Rounded MT Bold" size="14" style="0"/>
                         </Property>
                         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="85" green="a7" red="69" type="rgb"/>
+                          <Color blue="ac" green="c3" red="99" type="rgb"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="text" type="java.lang.String" value="Ingresa las opciones del curso para "/>
@@ -1069,7 +1069,7 @@
                           <Font name="Arial Rounded MT Bold" size="14" style="0"/>
                         </Property>
                         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="85" green="a7" red="69" type="rgb"/>
+                          <Color blue="ac" green="c3" red="99" type="rgb"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="text" type="java.lang.String" value="generar los horarios"/>
@@ -1315,9 +1315,6 @@
                 </Component>
                 <Component class="custom.MyButton" name="Hmin">
                   <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="47" green="ad" red="70" type="rgb"/>
-                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
                     </Property>
@@ -1326,17 +1323,17 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="AM"/>
                     <Property name="borderColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="35" green="82" red="54" type="rgb"/>
+                      <Color blue="ac" green="c3" red="99" type="rgb"/>
                     </Property>
                     <Property name="borderPainted" type="boolean" value="false"/>
                     <Property name="color" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="47" green="ad" red="70" type="rgb"/>
+                      <Color blue="ac" green="c3" red="99" type="rgb"/>
                     </Property>
                     <Property name="colorClick" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="35" green="82" red="54" type="rgb"/>
+                      <Color blue="ac" green="c3" red="99" type="rgb"/>
                     </Property>
                     <Property name="colorOver" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="35" green="82" red="54" type="rgb"/>
+                      <Color blue="ac" green="c3" red="99" type="rgb"/>
                     </Property>
                     <Property name="focusPainted" type="boolean" value="false"/>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -1436,9 +1433,6 @@
                 </Component>
                 <Component class="custom.MyButton" name="Hmax">
                   <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="35" green="82" red="54" type="rgb"/>
-                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
                     </Property>
@@ -1447,17 +1441,17 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="PM"/>
                     <Property name="borderColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="47" green="ad" red="70" type="rgb"/>
+                      <Color blue="82" green="a3" red="65" type="rgb"/>
                     </Property>
                     <Property name="borderPainted" type="boolean" value="false"/>
                     <Property name="color" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="35" green="82" red="54" type="rgb"/>
+                      <Color blue="82" green="a3" red="65" type="rgb"/>
                     </Property>
                     <Property name="colorClick" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="47" green="ad" red="70" type="rgb"/>
+                      <Color blue="82" green="a3" red="65" type="rgb"/>
                     </Property>
                     <Property name="colorOver" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="47" green="ad" red="70" type="rgb"/>
+                      <Color blue="82" green="a3" red="65" type="rgb"/>
                     </Property>
                     <Property name="focusPainted" type="boolean" value="false"/>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -1840,14 +1834,14 @@
                           <Font name="Arial Rounded MT Bold" size="19" style="1"/>
                         </Property>
                         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="85" green="a7" red="69" type="rgb"/>
+                          <Color blue="ac" green="c3" red="99" type="rgb"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="text" type="java.lang.String" value="No hay ning&#xfa;n horario encontrado "/>
                       </Properties>
                       <Constraints>
                         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                          <AbsoluteConstraints x="22" y="140" width="-1" height="-1"/>
+                          <AbsoluteConstraints x="21" y="140" width="340" height="-1"/>
                         </Constraint>
                       </Constraints>
                     </Component>
@@ -1857,7 +1851,7 @@
                           <Font name="Arial Rounded MT Bold" size="14" style="0"/>
                         </Property>
                         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="85" green="a7" red="69" type="rgb"/>
+                          <Color blue="ac" green="c3" red="99" type="rgb"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
                         <Property name="text" type="java.lang.String" value="No hay horarios generados "/>
@@ -1876,7 +1870,7 @@
                       <Font name="Berlin Sans FB Demi" size="48" style="1"/>
                     </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="c2" green="d7" red="97" type="rgb"/>
+                      <Color blue="ac" green="c3" red="99" type="rgb"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="&gt;"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -1904,7 +1898,7 @@
                       <Font name="Berlin Sans FB Demi" size="48" style="1"/>
                     </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="c2" green="d7" red="97" type="rgb"/>
+                      <Color blue="ac" green="c3" red="99" type="rgb"/>
                     </Property>
                     <Property name="mnemonic" type="int" value="32"/>
                     <Property name="text" type="java.lang.String" value="&lt;"/>

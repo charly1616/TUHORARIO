@@ -336,17 +336,17 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         Ngrupenc.setOpaque(false);
 
         jLabel8.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel8.setForeground(new java.awt.Color(153, 195, 172));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Crea tu grupo y disfrútalo ");
 
         jLabel18.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 19)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel18.setForeground(new java.awt.Color(153, 195, 172));
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel18.setText("encontrado");
 
         jLabel9.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 19)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel9.setForeground(new java.awt.Color(153, 195, 172));
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("Ningún grupo ");
 
@@ -448,17 +448,17 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/icons8_lost_and_found_100px_1.png"))); // NOI18N
 
         jLabel24.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 19)); // NOI18N
-        jLabel24.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel24.setForeground(new java.awt.Color(153, 195, 172));
         jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel24.setText("Ningún grupo escogido");
 
         jLabel22.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
-        jLabel22.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel22.setForeground(new java.awt.Color(153, 195, 172));
         jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel22.setText("Selecciona el grupo para");
 
         jLabel19.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel19.setForeground(new java.awt.Color(153, 195, 172));
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel19.setText("poder editarlo");
 
@@ -503,17 +503,17 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/icons8_nothing_found_100px.png"))); // NOI18N
 
         jLabel17.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 19)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel17.setForeground(new java.awt.Color(153, 195, 172));
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel17.setText("Ningún curso");
 
         jLabel10.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 19)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel10.setForeground(new java.awt.Color(153, 195, 172));
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setText("encontrado");
 
         jLabel14.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel14.setForeground(new java.awt.Color(153, 195, 172));
         jLabel14.setText("Crea un curso para poder editar ");
 
         javax.swing.GroupLayout NcursoencLayout = new javax.swing.GroupLayout(Ncursoenc);
@@ -647,11 +647,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/icons8_lost_and_found_100px_1.png"))); // NOI18N
 
         jLabel11.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 19)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel11.setForeground(new java.awt.Color(153, 195, 172));
         jLabel11.setText("Ningún curso escogido");
 
         jLabel25.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
-        jLabel25.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel25.setForeground(new java.awt.Color(153, 195, 172));
         jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel25.setText("Selecciona el curso para poder editar sus opciones ");
 
@@ -691,17 +691,17 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/icons8_nothing_found_100px.png"))); // NOI18N
 
         jLabel21.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 19)); // NOI18N
-        jLabel21.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel21.setForeground(new java.awt.Color(153, 195, 172));
         jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel21.setText("Ninguna opción encontrada ");
 
         jLabel26.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
-        jLabel26.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel26.setForeground(new java.awt.Color(153, 195, 172));
         jLabel26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel26.setText("Ingresa las opciones del curso para ");
 
         jLabel15.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel15.setForeground(new java.awt.Color(153, 195, 172));
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel15.setText("generar los horarios");
 
@@ -842,15 +842,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         filts.add(Jue);
         Jue.setBounds(30, 630, 60, 20);
 
-        Hmin.setBackground(new java.awt.Color(112, 173, 71));
         Hmin.setBorder(null);
         Hmin.setForeground(new java.awt.Color(255, 255, 255));
         Hmin.setText("AM");
-        Hmin.setBorderColor(new java.awt.Color(84, 130, 53));
+        Hmin.setBorderColor(new java.awt.Color(153, 195, 172));
         Hmin.setBorderPainted(false);
-        Hmin.setColor(new java.awt.Color(112, 173, 71));
-        Hmin.setColorClick(new java.awt.Color(84, 130, 53));
-        Hmin.setColorOver(new java.awt.Color(84, 130, 53));
+        Hmin.setColor(new java.awt.Color(153, 195, 172));
+        Hmin.setColorClick(new java.awt.Color(153, 195, 172));
+        Hmin.setColorOver(new java.awt.Color(153, 195, 172));
         Hmin.setFocusPainted(false);
         Hmin.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
         Hmin.setRadius(20);
@@ -893,15 +892,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         filts.add(jLabel6);
         jLabel6.setBounds(50, 250, 160, 17);
 
-        Hmax.setBackground(new java.awt.Color(84, 130, 53));
         Hmax.setBorder(null);
         Hmax.setForeground(new java.awt.Color(255, 255, 255));
         Hmax.setText("PM");
-        Hmax.setBorderColor(new java.awt.Color(112, 173, 71));
+        Hmax.setBorderColor(new java.awt.Color(101, 163, 130));
         Hmax.setBorderPainted(false);
-        Hmax.setColor(new java.awt.Color(84, 130, 53));
-        Hmax.setColorClick(new java.awt.Color(112, 173, 71));
-        Hmax.setColorOver(new java.awt.Color(112, 173, 71));
+        Hmax.setColor(new java.awt.Color(101, 163, 130));
+        Hmax.setColorClick(new java.awt.Color(101, 163, 130));
+        Hmax.setColorOver(new java.awt.Color(101, 163, 130));
         Hmax.setFocusPainted(false);
         Hmax.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
         Hmax.setRadius(20);
@@ -1118,13 +1116,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         Nhorarios.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, -1, -1));
 
         jLabel28.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 19)); // NOI18N
-        jLabel28.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel28.setForeground(new java.awt.Color(153, 195, 172));
         jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel28.setText("No hay ningún horario encontrado ");
-        Nhorarios.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 140, -1, -1));
+        Nhorarios.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 140, 340, -1));
 
         jLabel29.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
-        jLabel29.setForeground(new java.awt.Color(105, 167, 133));
+        jLabel29.setForeground(new java.awt.Color(153, 195, 172));
         jLabel29.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel29.setText("No hay horarios generados ");
         Nhorarios.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 170, -1, -1));
@@ -1133,7 +1131,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         Nhorarios.setBounds(230, 180, 390, 240);
 
         jButton1.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 48)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(151, 215, 194));
+        jButton1.setForeground(new java.awt.Color(153, 195, 172));
         jButton1.setText(">");
         jButton1.setBorder(null);
         jButton1.setBorderPainted(false);
@@ -1149,7 +1147,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jButton1.setBounds(590, 600, 50, 50);
 
         jButton2.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 48)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(151, 215, 194));
+        jButton2.setForeground(new java.awt.Color(153, 195, 172));
         jButton2.setMnemonic(' ');
         jButton2.setText("<");
         jButton2.setBorder(null);
