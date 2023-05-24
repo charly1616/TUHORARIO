@@ -184,6 +184,8 @@ public class GroupCard extends javax.swing.JPanel {
         ventana.unchoseChosencurso();
         ventana.unchoseChosenopcion();
         ventana.unchoseChosen();
+        
+        ventana.revisarEmpties();
     }//GEN-LAST:event_deleteActionPerformed
     
     

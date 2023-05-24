@@ -358,7 +358,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         NgrupencLayout.setHorizontalGroup(
             NgrupencLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, NgrupencLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(14, Short.MAX_VALUE)
                 .addGroup(NgrupencLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(NgrupencLayout.createSequentialGroup()
                         .addGap(60, 60, 60)
@@ -497,7 +497,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         );
 
         cursosed.add(Ngrupesc);
-        Ngrupesc.setBounds(20, 150, 260, 240);
+        Ngrupesc.setBounds(20, 200, 260, 240);
 
         Ncursoenc.setOpaque(false);
 
@@ -1189,7 +1189,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_moveMouseDragged
     
     
-    private void revisarEmpties(){
+    public void revisarEmpties(){
         if (grupo.isEmpty()) {
             Ngrupenc.setVisible(true);
         }else{
@@ -1530,7 +1530,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     
     
     private void moveAllHorarios(int dir){
-        System.out.println(Hopcions.size());
+        ///System.out.println(Hopcions.size());
         for (int i = 0; i < Hopcions.size(); i++) {
             HorarioCard here = Hopcions.get(i);
             if (here.getPage() == Page || here.getPage() == Page - dir) {

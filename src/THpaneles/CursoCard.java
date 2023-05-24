@@ -273,6 +273,8 @@ public class CursoCard extends javax.swing.JPanel {
         ventana.UpdateOpcionCards();
         ventana.unchoseChosencurso();
         ventana.unchoseChosenopcion();
+        
+        ventana.revisarEmpties();
     }//GEN-LAST:event_deleteActionPerformed
 
 

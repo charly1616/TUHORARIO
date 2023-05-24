@@ -30,7 +30,7 @@ public class Hopcion {
         
         
         Score = diasquesevan*0.35 + horamaxima*0.25 + horaminima*0.2 + huecoshuecos*0.2;
-        System.out.println("LA SCORE: " + Score);
+        //System.out.println("LA SCORE: " + Score);
     }
 
     public double getScore() {

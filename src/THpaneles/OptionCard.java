@@ -242,6 +242,8 @@ public class OptionCard extends javax.swing.JPanel {
         
         ventana.UpdateOpcionCards();
         ventana.unchoseChosenopcion();
+        
+        ventana.revisarEmpties();
     }//GEN-LAST:event_delActionPerformed
     
     
