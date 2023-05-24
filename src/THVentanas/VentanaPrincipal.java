@@ -222,7 +222,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         exit.setForeground(new java.awt.Color(255, 102, 102));
         exit.setText("•");
         exit.setToolTipText("");
-        exit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        exit.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         exit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 exitMouseClicked(evt);
@@ -239,7 +239,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         toCustom.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/customWhite35.png"))); // NOI18N
         toCustom.setContentAreaFilled(false);
-        toCustom.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        toCustom.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         toCustom.setDefaultCapable(false);
         toCustom.setFocusPainted(false);
         toCustom.addActionListener(new java.awt.event.ActionListener() {
@@ -252,7 +252,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         toEDIT.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/editWhite35.png"))); // NOI18N
         toEDIT.setContentAreaFilled(false);
-        toEDIT.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        toEDIT.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         toEDIT.setDefaultCapable(false);
         toEDIT.setFocusPainted(false);
         toEDIT.addActionListener(new java.awt.event.ActionListener() {
@@ -266,7 +266,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         toGENER.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/menuWhite35.png"))); // NOI18N
         toGENER.setBorderPainted(false);
         toGENER.setContentAreaFilled(false);
-        toGENER.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        toGENER.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         toGENER.setDefaultCapable(false);
         toGENER.setFocusPainted(false);
         toGENER.setHideActionText(true);
@@ -323,7 +323,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         add.setForeground(new java.awt.Color(127, 127, 127));
         add.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/editfuntions/addGray20.png"))); // NOI18N
         add.setContentAreaFilled(false);
-        add.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        add.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         add.setFocusPainted(false);
         add.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -400,7 +400,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         back.setForeground(new java.awt.Color(127, 127, 127));
         back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/editfuntions/backGray20.png"))); // NOI18N
         back.setContentAreaFilled(false);
-        back.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        back.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         back.setFocusPainted(false);
         back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -420,7 +420,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         add2.setForeground(new java.awt.Color(127, 127, 127));
         add2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/editfuntions/addGray20.png"))); // NOI18N
         add2.setContentAreaFilled(false);
-        add2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        add2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         add2.setFocusPainted(false);
         add2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -434,7 +434,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         brush.setForeground(new java.awt.Color(127, 127, 127));
         brush.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/editfuntions/clearGray20.png"))); // NOI18N
         brush.setContentAreaFilled(false);
-        brush.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        brush.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         brush.setFocusPainted(false);
         brush.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -562,7 +562,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         brush2.setForeground(new java.awt.Color(127, 127, 127));
         brush2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/editfuntions/clearGray20.png"))); // NOI18N
         brush2.setContentAreaFilled(false);
-        brush2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        brush2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         brush2.setFocusPainted(false);
         brush2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -584,7 +584,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
         opcionsed.add(key);
-        key.setBounds(440, 60, 26, 20);
+        key.setBounds(440, 60, 28, 20);
 
         labelop.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         labelop.setForeground(new java.awt.Color(127, 127, 127));
@@ -596,7 +596,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         back2.setForeground(new java.awt.Color(127, 127, 127));
         back2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/editfuntions/backGray20.png"))); // NOI18N
         back2.setContentAreaFilled(false);
-        back2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        back2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         back2.setFocusPainted(false);
         back2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -610,7 +610,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         add3.setForeground(new java.awt.Color(127, 127, 127));
         add3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/editfuntions/addGray20.png"))); // NOI18N
         add3.setContentAreaFilled(false);
-        add3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        add3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         add3.setFocusPainted(false);
         add3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -804,7 +804,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
         filts.add(back3);
-        back3.setBounds(30, 290, 26, 27);
+        back3.setBounds(30, 290, 28, 28);
 
         Horas.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 15)); // NOI18N
         Horas.setForeground(new java.awt.Color(127, 127, 127));
@@ -1112,22 +1112,22 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         Nhorarios.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/THimages/icons8_nothing_found_100px.png"))); // NOI18N
-        Nhorarios.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, -1, -1));
+        Nhorarios.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 30, -1, -1));
 
         jLabel28.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 19)); // NOI18N
         jLabel28.setForeground(new java.awt.Color(153, 195, 172));
         jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel28.setText("No hay ningún horario encontrado ");
-        Nhorarios.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 140, 340, -1));
+        Nhorarios.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 140, 420, -1));
 
         jLabel29.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 14)); // NOI18N
         jLabel29.setForeground(new java.awt.Color(153, 195, 172));
         jLabel29.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel29.setText("No hay horarios generados ");
-        Nhorarios.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 170, -1, -1));
+        Nhorarios.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 170, 280, -1));
 
         view.add(Nhorarios);
-        Nhorarios.setBounds(230, 200, 390, 240);
+        Nhorarios.setBounds(230, 200, 450, 240);
 
         jButton1.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 48)); // NOI18N
         jButton1.setForeground(new java.awt.Color(153, 195, 172));
@@ -1135,7 +1135,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jButton1.setBorder(null);
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton1.setFocusPainted(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1152,7 +1152,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jButton2.setBorder(null);
         jButton2.setBorderPainted(false);
         jButton2.setContentAreaFilled(false);
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton2.setFocusPainted(false);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1371,9 +1371,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             });
         }
         
-        if (cursosed.getComponentCount() <= 4) {
-            this.curso.clear();
-        }
+        
+        curso.clear();
+        
         
         this.repaint();
         revisarEmpties();
@@ -1732,10 +1732,15 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     private void brushActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_brushActionPerformed
         this.groupChosen.getHor().limpiarcurs();
+        
+        this.cursoChosen = null;
+        this.opcionChosen = null;
+        
+        System.out.println("CANTIDAD DE CARDS:   " + curso.size());
         this.UpdateCursoCards();
         this.UpdateGroupCards();
         this.UpdateOpcionCards();
-        
+        this.revisarEmpties();
     }//GEN-LAST:event_brushActionPerformed
 
     private void add2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add2ActionPerformed
@@ -1758,6 +1763,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
         this.groupChosen.getHor().Undo();
         this.UpdateCursoCards();
+        this.UpdateGroupCards();
     }//GEN-LAST:event_backActionPerformed
 
     private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
