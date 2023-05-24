@@ -135,6 +135,7 @@ public class CrearGroup extends javax.swing.JPanel {
 
         semestre.setForeground(new java.awt.Color(102, 102, 102));
         semestre.setBtnBack(new java.awt.Color(153, 195, 172));
+        semestre.setMaxVal(10);
         semestre.setTxtFore(new java.awt.Color(102, 102, 102));
         bg.add(semestre, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 120, -1, -1));
 
